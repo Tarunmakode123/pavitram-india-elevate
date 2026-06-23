@@ -69,8 +69,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const FAVICON =
-  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230A0F1E'/><path d='M32 12l4.5 13.5H50l-11 8 4.2 13.5L32 38.5 20.8 47l4.2-13.5-11-8h13.5z' fill='%23C9952A'/></svg>";
+import logoAsset from "@/assets/pavitram-logo.png.asset.json";
+const FAVICON = logoAsset.url;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: FAVICON },
+      { rel: "icon", type: "image/png", href: FAVICON },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

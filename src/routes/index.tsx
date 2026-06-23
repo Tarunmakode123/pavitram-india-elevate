@@ -8,6 +8,9 @@ import {
   Globe, ShieldCheck, BarChart3, Building, CheckCircle2, UsersRound, Handshake,
   Quote, MessageCircle, Facebook, Instagram, Youtube, Twitter, Sparkles,
 } from "lucide-react";
+import logoAsset from "@/assets/pavitram-logo.png.asset.json";
+
+const LOGO_URL = logoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,9 +88,9 @@ function SectionHeader({
 
 function Logo({ light = true }: { light?: boolean }) {
   return (
-    <a href="#" className="group flex items-center gap-2.5">
-      <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-gold to-gold-light shadow-[0_0_20px_rgba(201,149,42,0.35)]">
-        <Sparkles className="h-5 w-5 text-navy" strokeWidth={2.5} />
+    <a href="#" className="group flex items-center gap-3">
+      <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-navy ring-1 ring-gold/40 shadow-[0_0_20px_rgba(201,149,42,0.35)] transition group-hover:shadow-[0_0_28px_rgba(201,149,42,0.55)]">
+        <img src={LOGO_URL} alt="Pavitram India" className="h-11 w-11 object-contain" />
       </span>
       <span className={`font-display text-lg font-bold tracking-tight ${light ? "text-white" : "text-ink"}`}>
         Pavitram <span className="text-gold">India</span>
@@ -214,8 +217,8 @@ function HeroDiagram() {
 
       {/* center logo */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="grid h-24 w-24 place-items-center rounded-full bg-gradient-to-br from-gold to-gold-light animate-pulse-glow">
-          <Sparkles className="h-10 w-10 text-navy" strokeWidth={2.5} />
+        <div className="grid h-28 w-28 place-items-center overflow-hidden rounded-full bg-navy ring-2 ring-gold/60 animate-pulse-glow">
+          <img src={LOGO_URL} alt="Pavitram India" className="h-24 w-24 object-contain" />
         </div>
       </div>
 
@@ -531,10 +534,8 @@ function NetworkRings() {
       <span className="absolute top-[14%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-mist shadow">Society</span>
       <span className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-haze px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-ink shadow">Family</span>
 
-      <div className="absolute left-1/2 top-1/2 grid h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-navy animate-pulse-glow">
-        <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-gold to-gold-light">
-          <Sparkles className="h-7 w-7 text-navy" strokeWidth={2.5} />
-        </div>
+      <div className="absolute left-1/2 top-1/2 grid h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center overflow-hidden rounded-full bg-navy ring-2 ring-gold/60 animate-pulse-glow">
+        <img src={LOGO_URL} alt="Pavitram India" className="h-24 w-24 object-contain" />
       </div>
     </div>
   );
