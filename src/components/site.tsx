@@ -160,14 +160,24 @@ export function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
+  const clearTransCookie = () => {
+    if (typeof document === "undefined") return;
+    document.cookie = "googtrans=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    const host = window.location.hostname;
+    const parts = host.split(".");
+    while (parts.length > 0) {
+      const domain = parts.join(".");
+      document.cookie = `googtrans=; Path=/; Domain=${domain}; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
+      document.cookie = `googtrans=; Path=/; Domain=.${domain}; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
+      parts.shift();
+    }
+  };
+
   const toggleLanguage = () => {
     const select = document.querySelector(".goog-te-combo") as HTMLSelectElement;
     if (isHindi) {
       // Revert to English: clear cookies and reload to restore original state
-      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      document.cookie =
-        "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" +
-        window.location.hostname;
+      clearTransCookie();
 
       if (select) {
         select.value = "en";
