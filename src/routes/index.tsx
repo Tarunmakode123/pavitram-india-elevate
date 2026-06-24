@@ -816,22 +816,18 @@ function Footer() {
 
 function Index() {
   return (
-    <div className="bg-haze">
-      <Navbar />
-      <main>
-        <Hero />
-        <Stats />
-        <Pillars />
-        <ValuesBanner />
-        <Services />
-        <Opportunities />
-        <Network />
-        <Collaborators />
-        <Testimonials />
-        <CTABanner />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <Stats />
+      <Pillars />
+      <ValuesBanner />
+      <Services />
+      <Opportunities />
+      <Network />
+      <Collaborators />
+      <Testimonials />
+      <CTABanner />
+      <FinalCTA />
+    </>
   );
 }
