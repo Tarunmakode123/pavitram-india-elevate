@@ -120,12 +120,40 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { Navbar, Footer, ScrollToTop, ToastHost } from "@/components/site";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouterState } from "@tanstack/react-router";
+
+function AnimatedOutlet() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={pathname}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.25 }}
+      >
+        <Outlet />
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="bg-haze">
+        <Navbar />
+        <main className="min-h-screen">
+          <AnimatedOutlet />
+        </main>
+        <Footer />
+        <ScrollToTop />
+        <ToastHost />
+      </div>
     </QueryClientProvider>
   );
 }
