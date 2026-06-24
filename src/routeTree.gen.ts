@@ -9,38 +9,138 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as OpportunitiesRouteImport } from './routes/opportunities'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutVisionRouteImport } from './routes/about.vision'
+import { Route as AboutPhilosophyRouteImport } from './routes/about.philosophy'
+import { Route as AboutMissionRouteImport } from './routes/about.mission'
 
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OpportunitiesRoute = OpportunitiesRouteImport.update({
+  id: '/opportunities',
+  path: '/opportunities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutVisionRoute = AboutVisionRouteImport.update({
+  id: '/vision',
+  path: '/vision',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutPhilosophyRoute = AboutPhilosophyRouteImport.update({
+  id: '/philosophy',
+  path: '/philosophy',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutMissionRoute = AboutMissionRouteImport.update({
+  id: '/mission',
+  path: '/mission',
+  getParentRoute: () => AboutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/opportunities': typeof OpportunitiesRoute
+  '/services': typeof ServicesRoute
+  '/about/mission': typeof AboutMissionRoute
+  '/about/philosophy': typeof AboutPhilosophyRoute
+  '/about/vision': typeof AboutVisionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/opportunities': typeof OpportunitiesRoute
+  '/services': typeof ServicesRoute
+  '/about/mission': typeof AboutMissionRoute
+  '/about/philosophy': typeof AboutPhilosophyRoute
+  '/about/vision': typeof AboutVisionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/opportunities': typeof OpportunitiesRoute
+  '/services': typeof ServicesRoute
+  '/about/mission': typeof AboutMissionRoute
+  '/about/philosophy': typeof AboutPhilosophyRoute
+  '/about/vision': typeof AboutVisionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/opportunities'
+    | '/services'
+    | '/about/mission'
+    | '/about/philosophy'
+    | '/about/vision'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/opportunities'
+    | '/services'
+    | '/about/mission'
+    | '/about/philosophy'
+    | '/about/vision'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/opportunities'
+    | '/services'
+    | '/about/mission'
+    | '/about/philosophy'
+    | '/about/vision'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRouteWithChildren
+  OpportunitiesRoute: typeof OpportunitiesRoute
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/opportunities': {
+      id: '/opportunities'
+      path: '/opportunities'
+      fullPath: '/opportunities'
+      preLoaderRoute: typeof OpportunitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +148,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/vision': {
+      id: '/about/vision'
+      path: '/vision'
+      fullPath: '/about/vision'
+      preLoaderRoute: typeof AboutVisionRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/philosophy': {
+      id: '/about/philosophy'
+      path: '/philosophy'
+      fullPath: '/about/philosophy'
+      preLoaderRoute: typeof AboutPhilosophyRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/mission': {
+      id: '/about/mission'
+      path: '/mission'
+      fullPath: '/about/mission'
+      preLoaderRoute: typeof AboutMissionRouteImport
+      parentRoute: typeof AboutRoute
+    }
   }
 }
 
+interface AboutRouteChildren {
+  AboutMissionRoute: typeof AboutMissionRoute
+  AboutPhilosophyRoute: typeof AboutPhilosophyRoute
+  AboutVisionRoute: typeof AboutVisionRoute
+}
+
+const AboutRouteChildren: AboutRouteChildren = {
+  AboutMissionRoute: AboutMissionRoute,
+  AboutPhilosophyRoute: AboutPhilosophyRoute,
+  AboutVisionRoute: AboutVisionRoute,
+}
+
+const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRouteWithChildren,
+  OpportunitiesRoute: OpportunitiesRoute,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
