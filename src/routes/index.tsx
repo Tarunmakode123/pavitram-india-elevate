@@ -1276,12 +1276,14 @@ function Testimonials() {
               key={t.name}
               variants={fadeUp}
               whileHover={{ y: -6 }}
-              className="group relative rounded-[20px] border-l-4 border-transparent bg-haze p-8 transition hover:border-gold hover:card-shadow-lg"
+              className="group relative flex flex-col justify-between rounded-[20px] border-l-4 border-transparent bg-haze p-8 transition hover:border-gold hover:card-shadow-lg"
             >
-              <Quote className="h-10 w-10 text-gold/70" />
-              <p className="mt-4 text-[16px] leading-[1.8] text-ink/85">{t.quote}</p>
+              <div>
+                <Quote className="h-10 w-10 text-gold/70" />
+                <p className="mt-4 text-[16px] leading-[1.8] text-ink/85">{t.quote}</p>
+              </div>
               <div className="mt-8 flex items-center gap-4">
-                <div className="grid h-12 w-12 place-items-center rounded-full bg-navy font-display text-lg font-bold text-white">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy font-display text-lg font-bold text-white">
                   {t.initial}
                 </div>
                 <div>
