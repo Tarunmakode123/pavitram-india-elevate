@@ -58,6 +58,7 @@ import {
 } from "lucide-react";
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
 import { PremiumModal, type ModalData } from "@/components/premium-modal";
+import { FinalCTA } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
