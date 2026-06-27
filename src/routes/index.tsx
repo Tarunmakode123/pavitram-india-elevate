@@ -1537,7 +1537,6 @@ function Opportunities() {
       title: "As an Investor",
       hi: "निवेश के रूप में",
       to: "/opportunities/investor",
-      filled: true,
     },
     {
       icon: BriefcaseBusiness,
@@ -1568,13 +1567,7 @@ function Opportunities() {
                 className="group flex flex-1 flex-col items-center justify-between rounded-[20px] border border-haze bg-white p-7 text-center card-shadow transition-all hover:border-gold hover:card-shadow-lg"
               >
                 <div className="flex flex-col items-center">
-                  <div
-                    className={`mx-auto grid h-16 w-16 place-items-center rounded-full transition ${
-                      it.filled
-                        ? "bg-navy text-white group-hover:bg-gold group-hover:text-navy"
-                        : "bg-[#FDF3E0] text-gold group-hover:bg-gold group-hover:text-white"
-                    }`}
-                  >
+                  <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#FDF3E0] text-gold transition group-hover:bg-gold group-hover:text-white">
                     <it.icon className="h-7 w-7" />
                   </div>
                   <h3 className="mt-6 font-display text-xl font-bold text-ink">{it.title}</h3>
