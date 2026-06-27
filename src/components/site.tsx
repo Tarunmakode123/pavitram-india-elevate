@@ -436,7 +436,7 @@ export function Navbar() {
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-navy/95 backdrop-blur-xl">
           <div className="flex flex-col px-6 py-4">
-            <Link to="/" className="py-3 text-white/85">
+            <Link to="/" onClick={() => setOpen(false)} className="py-3 text-white/85">
               Home
             </Link>
             <details className="group">
@@ -445,13 +445,18 @@ export function Navbar() {
               </summary>
               <div className="pl-4">
                 {ABOUT_ITEMS.map((i) => (
-                  <Link key={i.to} to={i.to} className="block py-2 text-sm text-white/70">
+                  <Link
+                    key={i.to}
+                    to={i.to}
+                    onClick={() => setOpen(false)}
+                    className="block py-2 text-sm text-white/70"
+                  >
                     {i.label}
                   </Link>
                 ))}
               </div>
             </details>
-            <Link to="/services" className="py-3 text-white/85">
+            <Link to="/services" onClick={() => setOpen(false)} className="py-3 text-white/85">
               Services
             </Link>
             <details className="group">
@@ -460,16 +465,21 @@ export function Navbar() {
               </summary>
               <div className="pl-4">
                 {OPP_ITEMS.map((i) => (
-                  <Link key={i.to} to={i.to} className="block py-2 text-sm text-white/70">
+                  <Link
+                    key={i.to}
+                    to={i.to}
+                    onClick={() => setOpen(false)}
+                    className="block py-2 text-sm text-white/70"
+                  >
                     {i.label}
                   </Link>
                 ))}
               </div>
             </details>
-            <Link to="/faq" className="py-3 text-white/85">
+            <Link to="/faq" onClick={() => setOpen(false)} className="py-3 text-white/85">
               FAQ
             </Link>
-            <Link to="/contact" className="py-3 text-white/85">
+            <Link to="/contact" onClick={() => setOpen(false)} className="py-3 text-white/85">
               Contact
             </Link>
             <button
@@ -483,6 +493,7 @@ export function Navbar() {
             </button>
             <Link
               to="/contact"
+              onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-white px-5 py-3 text-center font-bold text-navy"
             >
               Join the Community
