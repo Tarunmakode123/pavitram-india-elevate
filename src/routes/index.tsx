@@ -677,46 +677,168 @@ function SectionHeader({
 
 /* ─────────── Hero & Stats ─────────── */
 
+function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true });
+  const mv = useMotionValue(0);
+  const rounded = useTransform(mv, (v) => Math.round(v).toLocaleString());
+  useEffect(() => {
+    if (inView) animate(mv, to, { duration: 2.2, ease: [0.2, 0.7, 0.2, 1] });
+  }, [inView, mv, to]);
+  return (
+    <span ref={ref}>
+      <motion.span>{rounded}</motion.span>
+      {suffix}
+    </span>
+  );
+}
+
+function HeroDiagram() {
+  const labels = [
+    { text: "Intellectual Citizen", pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
+    { text: "Prosperous Family", pos: "right-0 top-1/2 translate-x-1/2 -translate-y-1/2" },
+    { text: "Developed India", pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" },
+    { text: "Self-Reliant Society", pos: "left-0 top-1/2 -translate-x-1/2 -translate-y-1/2" },
+  ];
+
+  return (
+    <div className="relative mx-auto aspect-square w-full max-w-[270px] sm:max-w-[360px] md:max-w-[460px] py-6 sm:py-0">
+      {/* dot grid */}
+      <div
+        className="absolute inset-[-20px] sm:inset-[-40px] opacity-30"
+        style={{
+          backgroundImage: "radial-gradient(rgba(201,149,42,0.35) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+          maskImage: "radial-gradient(circle, black 40%, transparent 75%)",
+        }}
+      />
+
+      {/* circle + traveling arrow */}
+      <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full animate-spin-slow">
+        <defs>
+          <linearGradient id="ring" x1="0" x2="1">
+            <stop offset="0" stopColor="#C9952A" stopOpacity="0.2" />
+            <stop offset="0.5" stopColor="#E8B84B" />
+            <stop offset="1" stopColor="#C9952A" stopOpacity="0.2" />
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="170" fill="none" stroke="url(#ring)" strokeWidth="1.5" />
+        <circle
+          cx="200"
+          cy="200"
+          r="170"
+          fill="none"
+          stroke="#C9952A"
+          strokeWidth="2"
+          strokeDasharray="40 1028"
+          strokeLinecap="round"
+        />
+        {/* arrow head at end of dash */}
+        <g transform="translate(200 30)">
+          <polygon points="0,-6 10,0 0,6" fill="#E8B84B" />
+        </g>
+      </svg>
+
+      {/* center logo */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="grid h-20 w-20 sm:h-28 sm:w-28 place-items-center overflow-hidden rounded-full bg-navy ring-2 ring-gold/60 animate-pulse-glow">
+          <img
+            src={LOGO_URL}
+            alt="Pavitram India"
+            className="h-16 w-16 sm:h-24 sm:w-24 object-contain"
+          />
+        </div>
+      </div>
+
+      {/* labels */}
+      {labels.map((l) => (
+        <div key={l.text} className={`absolute ${l.pos} z-10`}>
+          <div className="glass-card whitespace-nowrap rounded-full border-gold/40 px-2.5 py-1 text-[10px] sm:px-4 sm:py-2 sm:text-xs font-semibold text-white shadow-[0_0_24px_rgba(201,149,42,0.18)]">
+            {l.text}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Hero() {
   return (
-    <section id="home" className="relative isolate overflow-hidden bg-navy pt-32 pb-24 md:py-44">
-      <div className="mx-auto max-w-7xl px-6 text-center">
-        <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gold backdrop-blur-md">
-            <Sparkles className="h-3.5 w-3.5" /> Empowering 10,000+ Families
-          </span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mx-auto mt-6 max-w-4xl font-display text-5xl font-bold leading-[1.15] text-white md:text-7xl">
-            Building a Self-Reliant & Prosperous <span className="text-gold">India</span>
-          </h1>
-        </Reveal>
-        <Reveal delay={0.15}>
-          <p className="mx-auto mt-4 font-deva text-xl font-semibold text-gold md:text-2xl">
-            प्रबुद्ध नागरिक · समृद्ध परिवार · आत्मनिर्भर समाज · विकसित भारत
-          </p>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
-            Pavitram India connects citizens across daily needs, education, health, real estate, and
-            financial services to create a transparent, cooperative economic ecosystem.
-          </p>
-        </Reveal>
-        <Reveal delay={0.25}>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="#services"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold text-navy transition hover:bg-white hover:scale-105 shadow-lg shadow-gold/20"
-            >
-              Explore Ecosystem <ArrowRight className="h-4 w-4" />
-            </a>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white transition hover:bg-white/10 hover:border-gold"
-            >
-              About Our Movement
-            </Link>
-          </div>
+    <section id="home" className="relative isolate overflow-hidden bg-navy">
+      {/* particles */}
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 30%, rgba(201,149,42,0.12), transparent 60%)",
+          }}
+        />
+        {Array.from({ length: 22 }).map((_, i) => (
+          <span
+            key={i}
+            className="absolute h-1 w-1 rounded-full bg-gold/40"
+            style={{
+              top: `${(i * 53) % 100}%`,
+              left: `${(i * 37) % 100}%`,
+              animation: `float-particle ${6 + (i % 5)}s ease-in-out ${i * 0.2}s infinite`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 pb-24 pt-36 lg:grid-cols-[1.2fr_1fr]">
+        <div>
+          <Reveal>
+            <GoldLabel>Pavitram India</GoldLabel>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl lg:text-[80px]">
+              Pavitram{" "}
+              <span className="relative inline-block">
+                India
+                <span className="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-gradient-to-r from-gold to-gold-light animate-draw-underline" />
+              </span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-8 font-display text-xl italic text-gold md:text-[22px]">
+              Intellectual Citizen, Prosperous Family,
+              <br />
+              Self-Reliant Society, Developed India
+            </p>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="mt-6 max-w-[520px] text-[17px] leading-[1.8] text-white/65">
+              Pavitram India is a self-reliant community where the needs of the members are
+              fulfilled by the members themselves, including daily needs, education, health, real
+              estate, and essential services. As a family, the Pavitram India community connects the
+              capabilities and needs of all its members to form a self-sustaining ecosystem, helping
+              them increase their income and reduce expenses.
+            </p>
+          </Reveal>
+          <Reveal delay={0.4}>
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <a
+                href="#join"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-gold hover:scale-[1.03] hover:shadow-[0_12px_40px_-8px_rgba(232,184,75,0.6)]"
+              >
+                Join the Community
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#services"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-gold"
+              >
+                Explore Services
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.3}>
+          <HeroDiagram />
         </Reveal>
       </div>
     </section>
@@ -724,27 +846,28 @@ function Hero() {
 }
 
 function Stats() {
-  const stats = [
-    { num: 10000, suffix: "+", label: "Members Connected", sub: "Across 15+ states" },
-    { num: 12, suffix: "", label: "Cooperative Services", sub: "Unified ecosystem" },
-    { num: 27, suffix: "", label: "Golden Rules", sub: "Guiding principles" },
-    { num: 100, suffix: "%", label: "Transparent Governance", sub: "Member owned" },
+  const items = [
+    { icon: UsersRound, value: 10000, suffix: "+", label: "Community Members" },
+    { icon: Cpu, value: 8, suffix: "", label: "Service Sectors" },
+    { icon: BookOpen, value: 27, suffix: "", label: "Golden Rules" },
+    { icon: Globe, value: 15, suffix: "+", label: "States Covered" },
   ];
   return (
-    <section className="bg-white py-12 border-b border-haze">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-3xl sm:text-4xl font-bold text-gold">
-                {s.num.toLocaleString()}
-                {s.suffix}
-              </div>
-              <div className="mt-1 text-sm font-bold text-ink">{s.label}</div>
-              <div className="text-xs text-mist">{s.sub}</div>
+    <section className="bg-white">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-6 py-16 md:grid-cols-4 md:divide-x md:divide-haze md:gap-y-0">
+        {items.map((it, i) => (
+          <Reveal key={i} delay={i * 0.08} className="flex flex-col items-center text-center">
+            <div className="grid h-14 w-14 place-items-center rounded-full bg-[#FDF3E0]">
+              <it.icon className="h-6 w-6 text-gold" />
             </div>
-          ))}
-        </div>
+            <div className="mt-4 font-display text-4xl font-bold text-ink md:text-[42px]">
+              <CountUp to={it.value} suffix={it.suffix} />
+            </div>
+            <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-mist">
+              {it.label}
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
