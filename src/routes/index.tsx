@@ -1095,7 +1095,8 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
 
                 <div className="mt-6 text-left">
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
-                    {c.title}
+                    {c.title.split(" — ")[0]} —<br />
+                    {c.title.split(" — ")[1]}
                   </h3>
                   <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
