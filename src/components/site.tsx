@@ -123,6 +123,22 @@ const SERVICES_GRID: [string, string][] = [
   ["Pavitram Foundation", ""],
 ];
 
+const SERVICE_SLUGS: Record<string, string> = {
+  "Pavitram Technology": "/services/technology",
+  "Pavitram Mart": "/services/mart",
+  "Pavitram Properties": "/services/properties",
+  "Pavitram Wellness": "/services/wellness",
+  "Pavitram Gyan": "/services/gyan",
+  "Pavitram Finance": "/services/finance",
+  "Pavitram Travels": "/services/travels",
+  "Pavitram Rishta": "/services/rishta",
+  "Pavitram Rozgar": "/services/rozgar",
+  "Pavitram Services": "/services/services",
+  "Pavitram Media": "/services/media",
+  "Pavitram Delivery": "/services/delivery",
+  "Pavitram Foundation": "/services/foundation",
+};
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -336,7 +352,7 @@ export function Navbar() {
                 {SERVICES_GRID.flat()
                   .filter(Boolean)
                   .map((s) => (
-                    <Link key={s} to="/services" className={linkCls}>
+                    <Link key={s} to={SERVICE_SLUGS[s] || "/services"} className={linkCls}>
                       {s}
                     </Link>
                   ))}
@@ -649,7 +665,10 @@ export function Footer() {
             <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
               {services.map((s) => (
                 <li key={s}>
-                  <Link to="/services" className="text-sm text-white/70 transition hover:text-gold">
+                  <Link
+                    to={SERVICE_SLUGS[s] || "/services"}
+                    className="text-sm text-white/70 transition hover:text-gold"
+                  >
                     {s}
                   </Link>
                 </li>

@@ -15,12 +15,26 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as OpportunitiesIndexRouteImport } from './routes/opportunities.index'
 import { Route as AboutIndexRouteImport } from './routes/about.index'
+import { Route as ServicesWellnessRouteImport } from './routes/services.wellness'
+import { Route as ServicesTravelsRouteImport } from './routes/services.travels'
+import { Route as ServicesTechnologyRouteImport } from './routes/services.technology'
+import { Route as ServicesServicesRouteImport } from './routes/services.services'
+import { Route as ServicesRozgarRouteImport } from './routes/services.rozgar'
+import { Route as ServicesRishtaRouteImport } from './routes/services.rishta'
+import { Route as ServicesPropertiesRouteImport } from './routes/services.properties'
+import { Route as ServicesMediaRouteImport } from './routes/services.media'
+import { Route as ServicesMartRouteImport } from './routes/services.mart'
+import { Route as ServicesGyanRouteImport } from './routes/services.gyan'
+import { Route as ServicesFoundationRouteImport } from './routes/services.foundation'
+import { Route as ServicesFinanceRouteImport } from './routes/services.finance'
+import { Route as ServicesDeliveryRouteImport } from './routes/services.delivery'
 import { Route as OpportunitiesMerchantRouteImport } from './routes/opportunities.merchant'
 import { Route as OpportunitiesInvestorRouteImport } from './routes/opportunities.investor'
 import { Route as OpportunitiesConsumerRouteImport } from './routes/opportunities.consumer'
 import { Route as OpportunitiesCareerRouteImport } from './routes/opportunities.career'
 import { Route as AboutVisionRouteImport } from './routes/about.vision'
 import { Route as AboutPhilosophyRouteImport } from './routes/about.philosophy'
+import { Route as AboutNetworkRouteImport } from './routes/about.network'
 import { Route as AboutMissionRouteImport } from './routes/about.mission'
 
 const ServicesRoute = ServicesRouteImport.update({
@@ -53,6 +67,71 @@ const AboutIndexRoute = AboutIndexRouteImport.update({
   path: '/about/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWellnessRoute = ServicesWellnessRouteImport.update({
+  id: '/wellness',
+  path: '/wellness',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesTravelsRoute = ServicesTravelsRouteImport.update({
+  id: '/travels',
+  path: '/travels',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesTechnologyRoute = ServicesTechnologyRouteImport.update({
+  id: '/technology',
+  path: '/technology',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesServicesRoute = ServicesServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesRozgarRoute = ServicesRozgarRouteImport.update({
+  id: '/rozgar',
+  path: '/rozgar',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesRishtaRoute = ServicesRishtaRouteImport.update({
+  id: '/rishta',
+  path: '/rishta',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesPropertiesRoute = ServicesPropertiesRouteImport.update({
+  id: '/properties',
+  path: '/properties',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesMediaRoute = ServicesMediaRouteImport.update({
+  id: '/media',
+  path: '/media',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesMartRoute = ServicesMartRouteImport.update({
+  id: '/mart',
+  path: '/mart',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesGyanRoute = ServicesGyanRouteImport.update({
+  id: '/gyan',
+  path: '/gyan',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesFoundationRoute = ServicesFoundationRouteImport.update({
+  id: '/foundation',
+  path: '/foundation',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesFinanceRoute = ServicesFinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesDeliveryRoute = ServicesDeliveryRouteImport.update({
+  id: '/delivery',
+  path: '/delivery',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const OpportunitiesMerchantRoute = OpportunitiesMerchantRouteImport.update({
   id: '/opportunities/merchant',
   path: '/opportunities/merchant',
@@ -83,6 +162,11 @@ const AboutPhilosophyRoute = AboutPhilosophyRouteImport.update({
   path: '/about/philosophy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutNetworkRoute = AboutNetworkRouteImport.update({
+  id: '/about/network',
+  path: '/about/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutMissionRoute = AboutMissionRouteImport.update({
   id: '/about/mission',
   path: '/about/mission',
@@ -93,14 +177,28 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/about/mission': typeof AboutMissionRoute
+  '/about/network': typeof AboutNetworkRoute
   '/about/philosophy': typeof AboutPhilosophyRoute
   '/about/vision': typeof AboutVisionRoute
   '/opportunities/career': typeof OpportunitiesCareerRoute
   '/opportunities/consumer': typeof OpportunitiesConsumerRoute
   '/opportunities/investor': typeof OpportunitiesInvestorRoute
   '/opportunities/merchant': typeof OpportunitiesMerchantRoute
+  '/services/delivery': typeof ServicesDeliveryRoute
+  '/services/finance': typeof ServicesFinanceRoute
+  '/services/foundation': typeof ServicesFoundationRoute
+  '/services/gyan': typeof ServicesGyanRoute
+  '/services/mart': typeof ServicesMartRoute
+  '/services/media': typeof ServicesMediaRoute
+  '/services/properties': typeof ServicesPropertiesRoute
+  '/services/rishta': typeof ServicesRishtaRoute
+  '/services/rozgar': typeof ServicesRozgarRoute
+  '/services/services': typeof ServicesServicesRoute
+  '/services/technology': typeof ServicesTechnologyRoute
+  '/services/travels': typeof ServicesTravelsRoute
+  '/services/wellness': typeof ServicesWellnessRoute
   '/about/': typeof AboutIndexRoute
   '/opportunities/': typeof OpportunitiesIndexRoute
 }
@@ -108,14 +206,28 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/about/mission': typeof AboutMissionRoute
+  '/about/network': typeof AboutNetworkRoute
   '/about/philosophy': typeof AboutPhilosophyRoute
   '/about/vision': typeof AboutVisionRoute
   '/opportunities/career': typeof OpportunitiesCareerRoute
   '/opportunities/consumer': typeof OpportunitiesConsumerRoute
   '/opportunities/investor': typeof OpportunitiesInvestorRoute
   '/opportunities/merchant': typeof OpportunitiesMerchantRoute
+  '/services/delivery': typeof ServicesDeliveryRoute
+  '/services/finance': typeof ServicesFinanceRoute
+  '/services/foundation': typeof ServicesFoundationRoute
+  '/services/gyan': typeof ServicesGyanRoute
+  '/services/mart': typeof ServicesMartRoute
+  '/services/media': typeof ServicesMediaRoute
+  '/services/properties': typeof ServicesPropertiesRoute
+  '/services/rishta': typeof ServicesRishtaRoute
+  '/services/rozgar': typeof ServicesRozgarRoute
+  '/services/services': typeof ServicesServicesRoute
+  '/services/technology': typeof ServicesTechnologyRoute
+  '/services/travels': typeof ServicesTravelsRoute
+  '/services/wellness': typeof ServicesWellnessRoute
   '/about': typeof AboutIndexRoute
   '/opportunities': typeof OpportunitiesIndexRoute
 }
@@ -124,14 +236,28 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/about/mission': typeof AboutMissionRoute
+  '/about/network': typeof AboutNetworkRoute
   '/about/philosophy': typeof AboutPhilosophyRoute
   '/about/vision': typeof AboutVisionRoute
   '/opportunities/career': typeof OpportunitiesCareerRoute
   '/opportunities/consumer': typeof OpportunitiesConsumerRoute
   '/opportunities/investor': typeof OpportunitiesInvestorRoute
   '/opportunities/merchant': typeof OpportunitiesMerchantRoute
+  '/services/delivery': typeof ServicesDeliveryRoute
+  '/services/finance': typeof ServicesFinanceRoute
+  '/services/foundation': typeof ServicesFoundationRoute
+  '/services/gyan': typeof ServicesGyanRoute
+  '/services/mart': typeof ServicesMartRoute
+  '/services/media': typeof ServicesMediaRoute
+  '/services/properties': typeof ServicesPropertiesRoute
+  '/services/rishta': typeof ServicesRishtaRoute
+  '/services/rozgar': typeof ServicesRozgarRoute
+  '/services/services': typeof ServicesServicesRoute
+  '/services/technology': typeof ServicesTechnologyRoute
+  '/services/travels': typeof ServicesTravelsRoute
+  '/services/wellness': typeof ServicesWellnessRoute
   '/about/': typeof AboutIndexRoute
   '/opportunities/': typeof OpportunitiesIndexRoute
 }
@@ -143,12 +269,26 @@ export interface FileRouteTypes {
     | '/faq'
     | '/services'
     | '/about/mission'
+    | '/about/network'
     | '/about/philosophy'
     | '/about/vision'
     | '/opportunities/career'
     | '/opportunities/consumer'
     | '/opportunities/investor'
     | '/opportunities/merchant'
+    | '/services/delivery'
+    | '/services/finance'
+    | '/services/foundation'
+    | '/services/gyan'
+    | '/services/mart'
+    | '/services/media'
+    | '/services/properties'
+    | '/services/rishta'
+    | '/services/rozgar'
+    | '/services/services'
+    | '/services/technology'
+    | '/services/travels'
+    | '/services/wellness'
     | '/about/'
     | '/opportunities/'
   fileRoutesByTo: FileRoutesByTo
@@ -158,12 +298,26 @@ export interface FileRouteTypes {
     | '/faq'
     | '/services'
     | '/about/mission'
+    | '/about/network'
     | '/about/philosophy'
     | '/about/vision'
     | '/opportunities/career'
     | '/opportunities/consumer'
     | '/opportunities/investor'
     | '/opportunities/merchant'
+    | '/services/delivery'
+    | '/services/finance'
+    | '/services/foundation'
+    | '/services/gyan'
+    | '/services/mart'
+    | '/services/media'
+    | '/services/properties'
+    | '/services/rishta'
+    | '/services/rozgar'
+    | '/services/services'
+    | '/services/technology'
+    | '/services/travels'
+    | '/services/wellness'
     | '/about'
     | '/opportunities'
   id:
@@ -173,12 +327,26 @@ export interface FileRouteTypes {
     | '/faq'
     | '/services'
     | '/about/mission'
+    | '/about/network'
     | '/about/philosophy'
     | '/about/vision'
     | '/opportunities/career'
     | '/opportunities/consumer'
     | '/opportunities/investor'
     | '/opportunities/merchant'
+    | '/services/delivery'
+    | '/services/finance'
+    | '/services/foundation'
+    | '/services/gyan'
+    | '/services/mart'
+    | '/services/media'
+    | '/services/properties'
+    | '/services/rishta'
+    | '/services/rozgar'
+    | '/services/services'
+    | '/services/technology'
+    | '/services/travels'
+    | '/services/wellness'
     | '/about/'
     | '/opportunities/'
   fileRoutesById: FileRoutesById
@@ -187,8 +355,9 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
   AboutMissionRoute: typeof AboutMissionRoute
+  AboutNetworkRoute: typeof AboutNetworkRoute
   AboutPhilosophyRoute: typeof AboutPhilosophyRoute
   AboutVisionRoute: typeof AboutVisionRoute
   OpportunitiesCareerRoute: typeof OpportunitiesCareerRoute
@@ -243,6 +412,97 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/wellness': {
+      id: '/services/wellness'
+      path: '/wellness'
+      fullPath: '/services/wellness'
+      preLoaderRoute: typeof ServicesWellnessRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/travels': {
+      id: '/services/travels'
+      path: '/travels'
+      fullPath: '/services/travels'
+      preLoaderRoute: typeof ServicesTravelsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/technology': {
+      id: '/services/technology'
+      path: '/technology'
+      fullPath: '/services/technology'
+      preLoaderRoute: typeof ServicesTechnologyRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/services': {
+      id: '/services/services'
+      path: '/services'
+      fullPath: '/services/services'
+      preLoaderRoute: typeof ServicesServicesRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/rozgar': {
+      id: '/services/rozgar'
+      path: '/rozgar'
+      fullPath: '/services/rozgar'
+      preLoaderRoute: typeof ServicesRozgarRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/rishta': {
+      id: '/services/rishta'
+      path: '/rishta'
+      fullPath: '/services/rishta'
+      preLoaderRoute: typeof ServicesRishtaRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/properties': {
+      id: '/services/properties'
+      path: '/properties'
+      fullPath: '/services/properties'
+      preLoaderRoute: typeof ServicesPropertiesRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/media': {
+      id: '/services/media'
+      path: '/media'
+      fullPath: '/services/media'
+      preLoaderRoute: typeof ServicesMediaRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/mart': {
+      id: '/services/mart'
+      path: '/mart'
+      fullPath: '/services/mart'
+      preLoaderRoute: typeof ServicesMartRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/gyan': {
+      id: '/services/gyan'
+      path: '/gyan'
+      fullPath: '/services/gyan'
+      preLoaderRoute: typeof ServicesGyanRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/foundation': {
+      id: '/services/foundation'
+      path: '/foundation'
+      fullPath: '/services/foundation'
+      preLoaderRoute: typeof ServicesFoundationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/finance': {
+      id: '/services/finance'
+      path: '/finance'
+      fullPath: '/services/finance'
+      preLoaderRoute: typeof ServicesFinanceRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/delivery': {
+      id: '/services/delivery'
+      path: '/delivery'
+      fullPath: '/services/delivery'
+      preLoaderRoute: typeof ServicesDeliveryRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/opportunities/merchant': {
       id: '/opportunities/merchant'
       path: '/opportunities/merchant'
@@ -285,6 +545,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutPhilosophyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/network': {
+      id: '/about/network'
+      path: '/about/network'
+      fullPath: '/about/network'
+      preLoaderRoute: typeof AboutNetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about/mission': {
       id: '/about/mission'
       path: '/about/mission'
@@ -295,12 +562,49 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface ServicesRouteChildren {
+  ServicesDeliveryRoute: typeof ServicesDeliveryRoute
+  ServicesFinanceRoute: typeof ServicesFinanceRoute
+  ServicesFoundationRoute: typeof ServicesFoundationRoute
+  ServicesGyanRoute: typeof ServicesGyanRoute
+  ServicesMartRoute: typeof ServicesMartRoute
+  ServicesMediaRoute: typeof ServicesMediaRoute
+  ServicesPropertiesRoute: typeof ServicesPropertiesRoute
+  ServicesRishtaRoute: typeof ServicesRishtaRoute
+  ServicesRozgarRoute: typeof ServicesRozgarRoute
+  ServicesServicesRoute: typeof ServicesServicesRoute
+  ServicesTechnologyRoute: typeof ServicesTechnologyRoute
+  ServicesTravelsRoute: typeof ServicesTravelsRoute
+  ServicesWellnessRoute: typeof ServicesWellnessRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesDeliveryRoute: ServicesDeliveryRoute,
+  ServicesFinanceRoute: ServicesFinanceRoute,
+  ServicesFoundationRoute: ServicesFoundationRoute,
+  ServicesGyanRoute: ServicesGyanRoute,
+  ServicesMartRoute: ServicesMartRoute,
+  ServicesMediaRoute: ServicesMediaRoute,
+  ServicesPropertiesRoute: ServicesPropertiesRoute,
+  ServicesRishtaRoute: ServicesRishtaRoute,
+  ServicesRozgarRoute: ServicesRozgarRoute,
+  ServicesServicesRoute: ServicesServicesRoute,
+  ServicesTechnologyRoute: ServicesTechnologyRoute,
+  ServicesTravelsRoute: ServicesTravelsRoute,
+  ServicesWellnessRoute: ServicesWellnessRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
   AboutMissionRoute: AboutMissionRoute,
+  AboutNetworkRoute: AboutNetworkRoute,
   AboutPhilosophyRoute: AboutPhilosophyRoute,
   AboutVisionRoute: AboutVisionRoute,
   OpportunitiesCareerRoute: OpportunitiesCareerRoute,
