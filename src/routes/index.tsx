@@ -1252,6 +1252,13 @@ function Testimonials() {
       initial: "R",
       role: "Community Member · Jabalpur",
     },
+    {
+      quote:
+        "Through Pavitram Gyan and Rozgar, our youth are gaining valuable skills and dignified employment right within our region.",
+      name: "Sunita Sharma",
+      initial: "S",
+      role: "Education Coordinator · Gwalior",
+    },
   ];
   return (
     <section className="bg-white py-24 md:py-32">
@@ -1262,7 +1269,7 @@ function Testimonials() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="mt-14 grid gap-6 md:grid-cols-3"
+          className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
           {items.map((t) => (
             <motion.div
