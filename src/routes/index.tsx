@@ -1304,28 +1304,24 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
       title: "With Government",
       hi: "सरकार के साथ",
       body: "Aligning with government policies, schemes, and initiatives to bring their benefits directly to our community members across India.",
-      tag: "Government Policies & Schemes",
     },
     {
       icon: Briefcase,
       title: "With Govt Departments",
       hi: "सरकारी विभागों के साथ",
       body: "Partnering with government departments for effective on-ground implementation of welfare schemes and development programs.",
-      tag: "Implementation Partner",
     },
     {
       icon: Users,
       title: "With Beneficiaries",
       hi: "लाभार्थियों के साथ",
       body: "Directly connecting with and empowering the real beneficiaries — families, farmers, workers, and entrepreneurs — who need support.",
-      tag: "लाभार्थी / हितग्राही",
     },
     {
       icon: NetworkIcon,
       title: "With Organizations",
       hi: "संगठनों के साथ",
       body: "Collaborating with NGOs, cooperatives, professional bodies, and community organizations to strengthen our nationwide network.",
-      tag: "संगठन",
     },
   ];
 
@@ -1375,11 +1371,6 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
                   Click to explore <ArrowRight className="h-3.5 w-3.5" />
                 </span>
-                <div className="mt-4 border-t border-haze pt-4 text-left">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold">
-                    {c.tag}
-                  </span>
-                </div>
               </div>
             </motion.div>
           ))}
