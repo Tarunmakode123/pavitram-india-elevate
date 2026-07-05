@@ -806,24 +806,6 @@ function Hero() {
               them increase their income and reduce expenses.
             </p>
           </Reveal>
-          <Reveal delay={0.4}>
-            <div className="mt-10 flex flex-wrap items-center gap-5">
-              <a
-                href="#join"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-gold hover:scale-[1.03] hover:shadow-[0_12px_40px_-8px_rgba(232,184,75,0.6)]"
-              >
-                Join the Community
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#services"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-gold"
-              >
-                Explore Services
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </Reveal>
         </div>
 
         <Reveal delay={0.3}>
@@ -1296,10 +1278,6 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
             Our Strategic Partners
           </h2>
           <p className="mt-3 font-deva text-lg font-semibold text-gold">रणनीतिक सहभागिता</p>
-          <p className="mx-auto mt-6 max-w-xl text-mist">
-            Pavitram India builds powerful associations at every level — from government bodies to
-            grassroots organizations — to create maximum impact for our members.
-          </p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1346,12 +1324,6 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
 
 function Services() {
   const items = [
-    {
-      icon: Cpu,
-      title: "Pavitram Technology",
-      text: "Technology, digital and software services",
-      to: "/services/technology",
-    },
     {
       icon: ShoppingBag,
       title: "Pavitram Mart",
@@ -1417,6 +1389,12 @@ function Services() {
       title: "Pavitram Delivery",
       text: "Logistics, anything, anywhere, anytime",
       to: "/services/delivery",
+    },
+    {
+      icon: Cpu,
+      title: "Pavitram Technology",
+      text: "Technology, digital and software services",
+      to: "/services/technology",
     },
   ];
 
@@ -1762,8 +1740,6 @@ function Index() {
       <Mission onOpenModal={(data) => setModalData(data)} />
       {/* 6) Our Philosophy */}
       <Philosophy onOpenModal={(data) => setModalData(data)} />
-      {/* 7) Our Service (12) */}
-      <Services />
       {/* 8) Opportunities */}
       <Opportunities />
       {/* 9) Association With */}
@@ -1772,6 +1748,8 @@ function Index() {
       <Network />
       {/* 10) Our Presence */}
       <Presence onOpenModal={(data) => setModalData(data)} />
+      {/* 7) Our Service (12) */}
+      <Services />
       {/* 12) Be Organised */}
       <FinalCTA />
       {/* 13) Comment (Testimonials) */}

@@ -114,12 +114,12 @@ const OPP_ITEMS = [
 ];
 
 const SERVICES_GRID: [string, string][] = [
-  ["Pavitram Technology", "Pavitram Mart"],
-  ["Pavitram Properties", "Pavitram Wellness"],
-  ["Pavitram Gyan", "Pavitram Finance"],
-  ["Pavitram Travels", "Pavitram Rishta"],
-  ["Pavitram Rozgar", "Pavitram Services"],
-  ["Pavitram Media", "Pavitram Delivery"],
+  ["Pavitram Mart", "Pavitram Properties"],
+  ["Pavitram Wellness", "Pavitram Gyan"],
+  ["Pavitram Finance", "Pavitram Travels"],
+  ["Pavitram Rishta", "Pavitram Rozgar"],
+  ["Pavitram Services", "Pavitram Media"],
+  ["Pavitram Delivery", "Pavitram Technology"],
 ];
 
 const SERVICE_SLUGS: Record<string, string> = {
