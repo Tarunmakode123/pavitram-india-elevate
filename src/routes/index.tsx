@@ -799,11 +799,10 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.3}>
             <p className="mt-6 max-w-[520px] text-[17px] leading-[1.8] text-white/65">
-              Pavitram India is a self-reliant community where the needs of the members are
-              fulfilled by the members themselves, including daily needs, education, health, real
-              estate, and essential services. As a family, the Pavitram India community connects the
-              capabilities and needs of all its members to form a self-sustaining ecosystem, helping
-              them increase their income and reduce expenses.
+              The dream of a prosperous, self-reliant India starts not in policy — but in people.
+              Pavitram India brings that dream to life through a cooperative community where every
+              farmer, every woman, every youth, and every family grows together — sharing resources,
+              reducing costs, and building a better life from within.
             </p>
           </Reveal>
         </div>
