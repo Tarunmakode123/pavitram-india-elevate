@@ -599,6 +599,109 @@ const ASSOCIATION_MODALS: Record<string, ModalData> = {
   },
 };
 
+const NETWORK_MODALS: Record<string, ModalData> = {
+  Manufacturer: {
+    icon: Factory,
+    hindi: "उत्पादक / निर्माता",
+    title: "Manufacturer",
+    philosophy: "Empowering local production and raw material processing.",
+    tag: "Business Network",
+    highlights: [
+      {
+        point: "Direct Sourcing Links",
+        desc: "Manufacturers connect directly to wholesalers and retailers, eliminating unnecessary agent markups.",
+      },
+      {
+        point: "Assured Demand",
+        desc: "Access a guaranteed internal buyer base consisting of 10,000+ community members.",
+      },
+      {
+        point: "Quality Standards",
+        desc: "All manufacturing partners follow strict compliance rules to deliver high-grade products.",
+      },
+      {
+        point: "Value Creation",
+        desc: "Focus on domestic local production to build a self-reliant economy.",
+      },
+    ],
+  },
+  Wholesaler: {
+    icon: Warehouse,
+    hindi: "थोक व्यापारी",
+    title: "Wholesaler",
+    philosophy: "Bulk distribution and supply chain connectivity.",
+    tag: "Business Network",
+    highlights: [
+      {
+        point: "Bulk Logistics Support",
+        desc: "Integrated transport and courier logistics through Pavitram Delivery.",
+      },
+      {
+        point: "Transparent Inventory",
+        desc: "Shared digital inventory systems for instant demand-matching across regions.",
+      },
+      {
+        point: "Stable Trade Volumes",
+        desc: "Assured volume requirements driven by our network-wide consumption networks.",
+      },
+      {
+        point: "Fair Pricing Schemes",
+        desc: "Maintained price control to guarantee fair returns for merchants and wholesalers.",
+      },
+    ],
+  },
+  Retailer: {
+    icon: Store,
+    hindi: "खुदरा विक्रेता",
+    title: "Retailer",
+    philosophy: "Direct consumer storefronts and local market presence.",
+    tag: "Business Network",
+    highlights: [
+      {
+        point: "Free Digital Tools",
+        desc: "Vite and cloud-powered e-commerce store setups with direct consumer order routing.",
+      },
+      {
+        point: "Dedicated Buyer Flow",
+        desc: "Community members are incentivized to buy locally from Pavitram Retailers.",
+      },
+      {
+        point: "Direct Sourcing",
+        desc: "Source inventory directly from verified community manufacturers and wholesalers.",
+      },
+      {
+        point: "Merchant Empowerment",
+        desc: "Grow sales figures while retaining business autonomy and independence.",
+      },
+    ],
+  },
+  "Service Provider": {
+    icon: Wrench,
+    hindi: "सेवा प्रदाता",
+    title: "Service Provider",
+    philosophy: "Professional maintenance, digital, and household services.",
+    tag: "Business Network",
+    highlights: [
+      {
+        point: "Verified Lead Generation",
+        desc: "Receive customer service booking requests directly from community families.",
+      },
+      {
+        point: "Standardized Fair Pricing",
+        desc: "Ethical service pricing cards that protect both the provider's livelihood and the user's budget.",
+      },
+      {
+        point: "Professional Skill Building",
+        desc: "Free capacity-building workshops and certifications through Pavitram Gyan.",
+      },
+      {
+        point: "Zero Listing Commission",
+        desc: "Keep 100% of your earnings; the platform charges zero commissions from service providers.",
+      },
+    ],
+  },
+};
+
 /* ─────────── helpers ─────────── */
 
 const fadeUp: Variants = {
@@ -1535,15 +1638,11 @@ function NetworkRings() {
       <span className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-haze px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-ink shadow">
         Family
       </span>
-
-      <div className="absolute left-1/2 top-1/2 grid h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center overflow-hidden rounded-full bg-navy ring-2 ring-gold/60 animate-pulse-glow">
-        <img src={LOGO_URL} alt="Pavitram India" className="h-24 w-24 object-contain" />
-      </div>
     </div>
   );
 }
 
-function Network() {
+function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
   const feats = [
     {
       icon: Factory,
@@ -1605,13 +1704,21 @@ function Network() {
               key={f.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="group flex flex-col items-center text-center rounded-[20px] border border-haze bg-white p-7 card-shadow transition-all duration-300 hover:border-gold"
+              onClick={() => onOpenModal(NETWORK_MODALS[f.title])}
+              className="group cursor-pointer flex flex-col justify-between rounded-[20px] border border-transparent bg-white p-7 card-shadow transition-all duration-300 hover:border-gold"
             >
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#FDF3E0] text-gold transition-colors group-hover:bg-gold group-hover:text-white">
-                <f.icon className="h-6 w-6" />
+              <div className="text-center flex flex-col items-center">
+                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#FDF3E0] text-gold transition-colors group-hover:bg-gold group-hover:text-white">
+                  <f.icon className="h-6 w-6" />
+                </div>
+                <h4 className="mt-6 font-display text-xl font-bold text-ink">{f.title}</h4>
+                <p className="mt-3 text-sm leading-[1.7] text-mist">{f.text}</p>
               </div>
-              <h4 className="mt-6 font-display text-xl font-bold text-ink">{f.title}</h4>
-              <p className="mt-3 text-sm leading-[1.7] text-mist">{f.text}</p>
+              <div className="mt-5 text-center">
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
+                  Click to explore <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -1744,7 +1851,7 @@ function Index() {
       {/* 9) Association With */}
       <AssociationWith onOpenModal={(data) => setModalData(data)} />
       {/* 9) Business Network */}
-      <Network />
+      <Network onOpenModal={(data) => setModalData(data)} />
       {/* 10) Our Presence */}
       <Presence onOpenModal={(data) => setModalData(data)} />
       {/* 7) Our Service (12) */}
