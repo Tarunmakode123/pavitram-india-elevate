@@ -1,15 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
-import { type ReactNode } from "react";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -80,92 +70,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-import FAVICON from "@/assets/pavitram-logo.jpg";
+import { Navbar, Footer, ScrollToTop, ToastHost } from "@/components/site";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Pavitram India — Intellectual Citizen · Prosperous Family · Self-Reliant Society" },
-      {
-        name: "description",
-        content:
-          "Pavitram India is a cooperative self-reliant community connecting members across daily needs, education, health, real estate and essential services.",
-      },
-      { name: "author", content: "Pavitram India" },
-      { property: "og:title", content: "Pavitram India" },
-      {
-        property: "og:description",
-        content:
-          "A cooperative self-reliant community building Intellectual Citizens, Prosperous Families and a Self-Reliant Society.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-    links: [
-      { rel: "icon", type: "image/png", href: FAVICON },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap",
-      },
-      { rel: "stylesheet", href: appCss },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                  pageLanguage: 'en',
-                  includedLanguages: 'hi',
-                  autoDisplay: false
-                }, 'google_translate_element');
-              }
-            `,
-          }}
-        />
-        <script
-          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          async
-          defer
-        />
-        <style>{`
-          /* Hide editor badge overlay if present */
-          #lovable-badge, [data-lovable-badge], a[href*="lovable.dev"][class*="badge"] { display: none !important; }
-          
-          /* Hide Google Translate top bar and elements */
-          .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
-            display: none !important;
-          }
-          body {
-            top: 0 !important;
-          }
-        `}</style>
-      </head>
-      <body>
-        <div id="google_translate_element" style={{ display: "none" }}></div>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
-import { Navbar, Footer, ScrollToTop, ToastHost } from "@/components/site";
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

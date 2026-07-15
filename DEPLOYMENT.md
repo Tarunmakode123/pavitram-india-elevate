@@ -1,121 +1,62 @@
-# Pavitram India — Deployment Guide
+# Pavitram India — Static Deployment Guide
 
-This project is built using **TanStack Start** (React + Vite + Nitro Server engine). Because it is a full-stack, server-side rendered (SSR) application, it compiles to a standalone Node.js server rather than basic static HTML files.
+This project is a standard client-side **React Single Page Application (SPA)** powered by **Vite** and **TanStack Router**.
 
-Follow these instructions to build and run the application on **Hostinger** (or any Node.js/VPS hosting).
-
----
-
-## 1. Preparing the Build for Node.js Server
-
-To deploy on Hostinger (either via Hostinger VPS or Hostinger's cPanel Node.js Selector), you must compile the application using the **`node-server`** Nitro preset.
-
-### Step 1: Run the Build Command
-
-Depending on your developer machine's operating system, run one of the following commands:
-
-- **Linux / macOS / Git Bash / Hostinger SSH Terminal**:
-  ```bash
-  NITRO_PRESET=node-server npm run build
-  ```
-- **Windows PowerShell**:
-  ```powershell
-  $env:NITRO_PRESET="node-server"; npm run build
-  ```
-- **Windows Command Prompt (cmd)**:
-  ```cmd
-  set NITRO_PRESET=node-server && npm run build
-  ```
-
-### Step 2: Check the Output
-
-The build process compiles everything into a folder named **`.output/`** in the root of the project:
-
-- **`.output/public/`**: Static assets, images, and client-side JavaScript bundles.
-- **`.output/server/index.mjs`**: The compiled Node.js application server.
+It does **not** require any Node.js server engine (no Nitro, no SSR) to run. The production build generates pure static HTML, CSS, and JavaScript files that can be hosted directly on any standard shared hosting platform like **Hostinger**.
 
 ---
 
-## 2. Deploying on Hostinger Node.js Selector (Shared/Cloud Hosting)
+## 1. Compiling the Production Build
 
-If you are using Hostinger's built-in Node.js app selectors:
-
-1.  Upload the entire project files (including `.output`, `package.json`, etc.) to your directory.
-2.  In the Hostinger Node.js configuration panel:
-    - Set the **Node.js Version** to `18` or `20`.
-    - Set the **Application Startup File** to:
-      ```text
-      .output/server/index.mjs
-      ```
-    - Set the **Document Root** to the folder containing your files.
-3.  Click **Run npm install** (if deploying raw source, otherwise not needed if `.output` is pre-compiled).
-4.  Start the application.
-
----
-
-## 3. Deploying on Hostinger VPS (Ubuntu / Debian)
-
-If you are deploying on a clean Hostinger VPS, follow these standard steps:
-
-### Step 1: Install Node.js
-
-Make sure Node.js (v18+) is installed on the server:
+To generate the static assets, run the standard build script on your developer machine:
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
+npm run build
 ```
 
-### Step 2: Upload Files
+This compiles your application and places all output files in a directory named **`dist/`** in the root of the project.
 
-Upload the compiled **`.output`** directory and the **`package.json`** to your target folder on the VPS (e.g. `/var/www/pavitram-website`).
+---
 
-### Step 3: Run the Server using PM2
+## 2. Deploying on Hostinger Shared / Cloud Hosting
 
-It is highly recommended to run the Node server in the background using **PM2** so it stays online and restarts automatically:
+Since the output consists of static files, you can deploy them using Hostinger's standard File Manager or FTP:
 
-1.  Install PM2 globally:
-    ```bash
-    sudo npm install -g pm2
-    ```
-2.  Start the server (default port is `3000`):
-    ```bash
-    pm2 start .output/server/index.mjs --name "pavitram-website"
-    ```
-3.  Ensure PM2 starts on boot:
-    ```bash
-    pm2 startup
-    pm2 save
-    ```
+1.  Log in to your **Hostinger hPanel**.
+2.  Navigate to **Files** ➜ **File Manager** for your domain.
+3.  Go to the **`public_html`** directory (this is your website's root folder).
+4.  Upload the **contents** of your local **`dist/`** folder directly into `public_html`.
+    - _Note: Upload the files inside `dist/`, not the `dist/` folder itself, so that `index.html` is located directly in `public_html/index.html`._
 
-### Step 4: Configure Nginx Reverse Proxy
+---
 
-To point your domain (e.g. `pavitramindia.com`) to the running Node server (port 3000):
+## 3. Configuring Routing (Nginx/Apache `.htaccess`)
 
-1.  Install Nginx:
-    ```bash
-    sudo apt install nginx
-    ```
-2.  Edit your Nginx server block config (`/etc/nginx/sites-available/default`):
+Since this is a Single Page Application (SPA), the client-side router handles page changes. If a user refreshes the page on a sub-route (e.g. `yourdomain.com/opportunities`), Hostinger's server might return a `404 Not Found` error because it searches for a physical `/opportunities` folder.
 
-    ```nginx
-    server {
-        listen 80;
-        server_name yourdomain.com www.yourdomain.com;
+To prevent this, you must configure the web server to redirect all requests to `index.html`.
 
-        location / {
-            proxy_pass http://localhost:3000;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection 'upgrade';
-            proxy_set_header Host $host;
-            proxy_cache_bypass $http_upgrade;
-        }
-    }
-    ```
+### If Hostinger is running Apache (Default for Shared Hosting):
 
-3.  Test and restart Nginx:
-    ```bash
-    sudo nginx -t
-    sudo systemctl restart nginx
-    ```
+Create a file named **`.htaccess`** directly inside the `public_html` directory on Hostinger and add the following configuration:
+
+```apache
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+```
+
+### If Hostinger is running Nginx (VPS or customized setup):
+
+Update your Nginx virtual host configuration:
+
+```nginx
+location / {
+    try_files $uri $uri/ /index.html;
+}
+```
