@@ -296,7 +296,7 @@ const MISSION_MODALS: Record<string, ModalData> = {
 };
 
 const PHILOSOPHY_MODALS: Record<string, ModalData> = {
-  "Akhanda — Integrity": {
+  Integrity: {
     icon: ShieldCheck,
     hindi: "अखंडता",
     title: "Integrity",
@@ -321,7 +321,7 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Paardarsita — Transparency": {
+  Transparency: {
     icon: Eye,
     hindi: "पारदर्शिता",
     title: "Transparency",
@@ -346,7 +346,7 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Navaachar — Innovation": {
+  Innovation: {
     icon: Lightbulb,
     hindi: "नवाचार",
     title: "Innovation",
@@ -371,7 +371,7 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Gathbandhan — Collaboration": {
+  Collaboration: {
     icon: Link2,
     hindi: "गठबंधन",
     title: "Collaboration",
@@ -399,7 +399,7 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
 };
 
 const CORE_VALUES_MODALS: Record<string, ModalData> = {
-  "Equality — समानता": {
+  Equality: {
     icon: Scale,
     hindi: "समानता",
     title: "Equality",
@@ -424,7 +424,7 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Liberty — स्वतंत्रता": {
+  Liberty: {
     icon: Unlock,
     hindi: "स्वतंत्रता",
     title: "Liberty",
@@ -449,7 +449,7 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Fraternity — बंधुत्व": {
+  Fraternity: {
     icon: Users,
     hindi: "बंधुत्व",
     title: "Fraternity",
@@ -474,7 +474,7 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Unity — एकता": {
+  Unity: {
     icon: Link2,
     hindi: "एकता",
     title: "Unity",
@@ -502,7 +502,7 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
 };
 
 const OUR_ETHICS_MODALS: Record<string, ModalData> = {
-  "Rights — अधिकार": {
+  Rights: {
     icon: Shield,
     hindi: "अधिकार",
     title: "Rights",
@@ -527,7 +527,7 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Responsibility — उत्तरदायित्व": {
+  Responsibility: {
     icon: UserCheck,
     hindi: "उत्तरदायित्व",
     title: "Responsibility",
@@ -552,7 +552,7 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Accountability — जवाबदेही": {
+  Accountability: {
     icon: ClipboardCheck,
     hindi: "जवाबदेही",
     title: "Accountability",
@@ -577,7 +577,7 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
       },
     ],
   },
-  "Outcome — परिणाम": {
+  Outcome: {
     icon: Target,
     hindi: "परिणाम",
     title: "Outcome",
@@ -1291,25 +1291,25 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
   const cards = [
     {
       icon: ShieldCheck,
-      title: "Akhanda — Integrity",
+      title: "Integrity",
       hi: "अखंडता",
       body: "We conduct ourselves with complete honesty, fairness, and ethical principles in every interaction, decision, and partnership within our cooperative network.",
     },
     {
       icon: Eye,
-      title: "Paardarsita — Transparency",
+      title: "Transparency",
       hi: "पारदर्शिता",
       body: "Every process, transaction, and decision in our network is open and visible to all members. We believe transparency builds the trust that holds our community together.",
     },
     {
       icon: Lightbulb,
-      title: "Navaachar — Innovation",
+      title: "Innovation",
       hi: "नवाचार",
       body: "We continuously embrace new ideas, technologies, and approaches to solve real problems and create better opportunities for our members and society.",
     },
     {
       icon: Link2,
-      title: "Gathbandhan — Collaboration",
+      title: "Collaboration",
       hi: "गठबंधन",
       body: "Our strength lies in unity. By forging meaningful partnerships between individuals, businesses, and organizations, we create an ecosystem far stronger than the sum of its parts.",
     },
@@ -1353,8 +1353,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
 
                 <div className="mt-6 text-left">
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
-                    {c.title.split(" — ")[0]} —<br />
-                    {c.title.split(" — ")[1]}
+                    {c.title}
                   </h3>
                   <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
@@ -1377,25 +1376,25 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
   const cards = [
     {
       icon: Scale,
-      title: "Equality — समानता",
+      title: "Equality",
       hi: "समानता",
       body: "We believe in equal rights, equal status, and equal opportunities for every member of our community, breaking all traditional barriers.",
     },
     {
       icon: Unlock,
-      title: "Liberty — स्वतंत्रता",
+      title: "Liberty",
       hi: "स्वतंत्रता",
       body: "We empower individuals with financial freedom, independent choices, and the power to build their own prosperous livelihoods.",
     },
     {
       icon: Users,
-      title: "Fraternity — बंधुत्व",
+      title: "Fraternity",
       hi: "बंधुत्व",
       body: "We foster a deep sense of brotherhood, mutual trust, and cooperative solidarity across all states and sectors of our network.",
     },
     {
       icon: Link2,
-      title: "Unity — एकता",
+      title: "Unity",
       hi: "एकता",
       body: "Stronger together. By combining our strengths and organizing collectively, we build an unbreakable path to regional and national growth.",
     },
@@ -1431,13 +1430,12 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
             >
               <div>
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy text-gold ring-2 ring-gold/20">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#FDF3E0] text-gold transition group-hover:bg-gold group-hover:text-white">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <div className="mt-6 text-left">
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
-                    {c.title.split(" — ")[0]} —<br />
-                    {c.title.split(" — ")[1]}
+                    {c.title}
                   </h3>
                   <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
@@ -1460,25 +1458,25 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
   const cards = [
     {
       icon: Shield,
-      title: "Rights — अधिकार",
+      title: "Rights",
       hi: "अधिकार",
       body: "We protect and advocate for the rights of all farmers, workers, women, and service providers, ensuring they receive their fair due.",
     },
     {
       icon: UserCheck,
-      title: "Responsibility — उत्तरदायित्व",
+      title: "Responsibility",
       hi: "उत्तरदायित्व",
       body: "We share a collective duty to elevate each other, support local community merchants, and contribute directly to society's upliftment.",
     },
     {
       icon: ClipboardCheck,
-      title: "Accountability — जवाबदेही",
+      title: "Accountability",
       hi: "जवाबदेही",
       body: "We practice transparent audits, ethical financial reporting, and clean governance rules to remain fully answerable to our members.",
     },
     {
       icon: Target,
-      title: "Outcome — परिणाम",
+      title: "Outcome",
       hi: "परिणाम",
       body: "We focus on real, tangible, and measurable progress — bringing direct savings, income boosts, and educational growth to every home.",
     },
@@ -1514,13 +1512,12 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
             >
               <div>
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy text-gold ring-2 ring-gold/20">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#FDF3E0] text-gold transition group-hover:bg-gold group-hover:text-white">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <div className="mt-6 text-left">
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
-                    {c.title.split(" — ")[0]} —<br />
-                    {c.title.split(" — ")[1]}
+                    {c.title}
                   </h3>
                   <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
