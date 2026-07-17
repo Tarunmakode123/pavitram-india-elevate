@@ -12,6 +12,11 @@ import {
   Instagram,
   Youtube,
   Twitter,
+  UsersRound,
+  GraduationCap,
+  Zap,
+  Plus,
+  Sparkles,
 } from "lucide-react";
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
 
@@ -579,9 +584,32 @@ export function PageHero({
 /* ─────────── Final CTA ─────────── */
 
 export function FinalCTA() {
+  const cards = [
+    {
+      icon: UsersRound,
+      en: "Be Organised, Do Organised",
+      hi: "संगठित बनो, संगठित करो",
+    },
+    {
+      icon: GraduationCap,
+      en: "Be Educated, Make Educated",
+      hi: "शिक्षित बनो, शिक्षित करो",
+    },
+    {
+      icon: Zap,
+      en: "Be Empowered, Make Empowered",
+      hi: "सशक्त बनो, सशक्त करो",
+    },
+    {
+      icon: Sparkles,
+      en: "Be Striving, Do Strive",
+      hi: "संघर्षी बनो, संघर्ष करो",
+    },
+  ];
+
   return (
     <section
-      className="relative isolate overflow-hidden py-28"
+      className="relative isolate overflow-hidden py-24 md:py-32"
       style={{ background: "linear-gradient(135deg, #0A0F1E 0%, #131a4a 60%, #1a237e 100%)" }}
     >
       <div
@@ -591,33 +619,75 @@ export function FinalCTA() {
             "radial-gradient(circle at 20% 30%, rgba(201,149,42,0.45), transparent 50%), radial-gradient(circle at 80% 70%, rgba(232,184,75,0.3), transparent 50%)",
         }}
       />
-      <Reveal className="relative mx-auto max-w-4xl px-6 text-center">
-        <h2 className="font-display text-2xl font-bold text-white text-balance sm:text-3xl md:text-[42px] lg:text-[46px] leading-[1.2]">
-          Be Organised, Do Organised · Be Educated, Make Educated ·{" "}
-          <span className="text-gold">Be Empowered, Make Empowered</span>
-        </h2>
-        <p className="mt-5 font-deva text-lg sm:text-xl text-white/70">
-          संगठित बनो, संगठित करो · शिक्षित बनो, शिक्षित करो · सशक्त बनो, सशक्त करो
-        </p>
-        <p className="mx-auto mt-6 max-w-2xl text-white/70">
-          Join thousands of network partners working together for a self-reliant, prosperous India.
-          Your contribution matters.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-gold hover:scale-[1.03]"
-          >
-            Join Pavitram India <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-gold"
-          >
-            Contact Us <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </Reveal>
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
+            OUR MOTTO
+          </div>
+          <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
+            Our Core Mantras
+          </h2>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा मंत्र</p>
+          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+        </Reveal>
+
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.15 } },
+          }}
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          {cards.map((c, index) => (
+            <motion.div
+              key={index}
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.02, boxShadow: "0 0 25px rgba(201, 149, 42, 0.25)" }}
+              transition={{ duration: 0.3 }}
+              className="group relative overflow-hidden rounded-[20px] border border-gold/30 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold/10 text-gold transition group-hover:bg-gold group-hover:text-white">
+                  <c.icon className="h-6 w-6" />
+                </div>
+                <div className="mt-6 text-left">
+                  <h3 className="font-display text-2xl font-bold text-white leading-snug">
+                    {c.en}
+                  </h3>
+                  <p className="mt-2 font-deva text-base font-semibold text-gold leading-relaxed">
+                    {c.hi}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <Reveal delay={0.2} className="mt-16 text-center">
+          <p className="mx-auto max-w-2xl text-white/70">
+            Join thousands of network partners working together for a self-reliant, prosperous
+            India. Your contribution matters.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-gold hover:scale-[1.03]"
+            >
+              Join Pavitram India <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-gold"
+            >
+              Contact Us <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }
