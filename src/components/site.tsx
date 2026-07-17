@@ -602,8 +602,8 @@ export function FinalCTA() {
     },
     {
       icon: Sparkles,
-      en: "Be Striving, Do Strive",
-      hi: "संघर्षी बनो, संघर्ष करो",
+      en: "Be Striving, Make Striving",
+      hi: "संघर्षशील बनो, संघर्षशील बनाओ",
     },
   ];
 

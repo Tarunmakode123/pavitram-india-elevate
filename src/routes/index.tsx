@@ -1323,7 +1323,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             Our Philosophy
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा दर्शन</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारे सिद्धांत</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
