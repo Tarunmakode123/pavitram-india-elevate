@@ -1667,7 +1667,7 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>OUR PRESENCE</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
-            Pan-India Reach & Impact
+            Our Reach & Impact
           </h2>
           <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा विस्तार</p>
           <p className="mx-auto mt-6 max-w-xl text-white/70">
@@ -2233,10 +2233,10 @@ function Index() {
       <AssociationWith onOpenModal={(data) => setModalData(data)} />
       {/* 9) Business Network */}
       <Network onOpenModal={(data) => setModalData(data)} />
-      {/* 10) Our Presence */}
-      <Presence onOpenModal={(data) => setModalData(data)} />
       {/* 7) Our Service (12) */}
       <Services />
+      {/* 10) Our Presence */}
+      <Presence onOpenModal={(data) => setModalData(data)} />
       {/* 12) Be Organised */}
       <FinalCTA />
       {/* 13) Comment (Testimonials) */}

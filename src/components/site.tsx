@@ -608,23 +608,13 @@ export function FinalCTA() {
   ];
 
   return (
-    <section
-      className="relative isolate overflow-hidden py-24 md:py-32"
-      style={{ background: "linear-gradient(135deg, #0A0F1E 0%, #131a4a 60%, #1a237e 100%)" }}
-    >
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          background:
-            "radial-gradient(circle at 20% 30%, rgba(201,149,42,0.45), transparent 50%), radial-gradient(circle at 80% 70%, rgba(232,184,75,0.3), transparent 50%)",
-        }}
-      />
+    <section className="bg-haze py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
             OUR MOTTO
           </div>
-          <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
+          <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             Our Core Mantras
           </h2>
           <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा मंत्र</p>
@@ -645,17 +635,17 @@ export function FinalCTA() {
             <motion.div
               key={index}
               variants={fadeUp}
-              whileHover={{ y: -6, scale: 1.02, boxShadow: "0 0 25px rgba(201, 149, 42, 0.25)" }}
+              whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="group relative overflow-hidden rounded-[20px] border border-gold/30 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 flex flex-col justify-between"
+              className="group relative overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <div>
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gold/10 text-gold transition group-hover:bg-gold group-hover:text-white">
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-[#FDF3E0] text-gold transition group-hover:bg-gold group-hover:text-white">
                   <c.icon className="h-6 w-6" />
                 </div>
                 <div className="mt-6 text-left">
-                  <h3 className="font-display text-2xl font-bold text-white leading-snug">
+                  <h3 className="font-display text-2xl font-bold text-ink leading-snug transition-colors group-hover:text-gold">
                     {c.en}
                   </h3>
                   <p className="mt-2 font-deva text-base font-semibold text-gold leading-relaxed">
@@ -668,20 +658,20 @@ export function FinalCTA() {
         </motion.div>
 
         <Reveal delay={0.2} className="mt-16 text-center">
-          <p className="mx-auto max-w-2xl text-white/70">
+          <p className="mx-auto max-w-2xl text-mist">
             Join thousands of network partners working together for a self-reliant, prosperous
             India. Your contribution matters.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-gold hover:scale-[1.03]"
+              className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white transition hover:bg-gold hover:text-navy hover:scale-[1.03]"
             >
               Join Pavitram India <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-gold"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy transition hover:text-gold"
             >
               Contact Us <ArrowRight className="h-4 w-4" />
             </Link>
