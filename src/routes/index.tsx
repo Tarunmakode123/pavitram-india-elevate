@@ -57,6 +57,11 @@ import {
   Link2,
   Map,
   Network as NetworkIcon,
+  Scale,
+  Unlock,
+  UserCheck,
+  ClipboardCheck,
+  Target,
 } from "lucide-react";
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
 import { PremiumModal, type ModalData } from "@/components/premium-modal";
@@ -388,6 +393,212 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
       {
         point: "Network Effect",
         desc: "Every new member makes the entire network more valuable for everyone",
+      },
+    ],
+  },
+};
+
+const CORE_VALUES_MODALS: Record<string, ModalData> = {
+  "Equality — समानता": {
+    icon: Scale,
+    hindi: "समानता",
+    title: "Equality",
+    philosophy: "Equal opportunities, rights, and treatment for every citizen.",
+    tag: "Core Values",
+    highlights: [
+      {
+        point: "Social Equality",
+        desc: "Eliminating any discrimination based on caste, class, gender, or belief.",
+      },
+      {
+        point: "Economic Opportunity",
+        desc: "Giving all members equal access to cooperative wealth generation.",
+      },
+      {
+        point: "Equal Voice",
+        desc: "One member, one vote structure for transparent governance.",
+      },
+      {
+        point: "Human Dignity",
+        desc: "Respecting and protecting the dignity of every individual in our network.",
+      },
+    ],
+  },
+  "Liberty — स्वतंत्रता": {
+    icon: Unlock,
+    hindi: "स्वतंत्रता",
+    title: "Liberty",
+    philosophy: "Empowering citizens to think, express, and live freely.",
+    tag: "Core Values",
+    highlights: [
+      {
+        point: "Financial Freedom",
+        desc: "Freeing families from high-interest debt cycles and intermediaries.",
+      },
+      {
+        point: "Choice of Livelihood",
+        desc: "Empowering members to pursue and grow in their chosen careers.",
+      },
+      {
+        point: "Independent Thought",
+        desc: "Fostering rational learning and intellectual freedom.",
+      },
+      {
+        point: "Local Autonomy",
+        desc: "Supporting local merchants and farmers to operate independently.",
+      },
+    ],
+  },
+  "Fraternity — बंधुत्व": {
+    icon: Users,
+    hindi: "बंधुत्व",
+    title: "Fraternity",
+    philosophy: "Promoting brotherhood and mutual support among all sections of society.",
+    tag: "Core Values",
+    highlights: [
+      {
+        point: "Unified Community",
+        desc: "Building a nationwide family of 10,000+ cooperative members.",
+      },
+      {
+        point: "Mutual Support",
+        desc: "Fostering a community culture where members stand by members in times of need.",
+      },
+      {
+        point: "Shared Progress",
+        desc: "Collective action ensuring that local prosperity is distributed evenly.",
+      },
+      {
+        point: "Social Harmony",
+        desc: "Celebrating diversity while maintaining absolute unity.",
+      },
+    ],
+  },
+  "Unity — एकता": {
+    icon: Link2,
+    hindi: "एकता",
+    title: "Unity",
+    philosophy: "Stronger together — building national unity through community action.",
+    tag: "Core Values",
+    highlights: [
+      {
+        point: "National Integration",
+        desc: "Aligning regional cooperative networks across 15+ states.",
+      },
+      {
+        point: "Slogan Alignment",
+        desc: "Living the mantra of 'Be Organised, Do Organised' collectively.",
+      },
+      {
+        point: "Common Purpose",
+        desc: "Working toward the singular goal of a prosperous, developed India.",
+      },
+      {
+        point: "Strong Institution",
+        desc: "A unified structure that remains stable and resilient over the long term.",
+      },
+    ],
+  },
+};
+
+const OUR_ETHICS_MODALS: Record<string, ModalData> = {
+  "Rights — अधिकार": {
+    icon: Shield,
+    hindi: "अधिकार",
+    title: "Rights",
+    philosophy: "Securing fundamental rights and entitlements for every individual.",
+    tag: "Our Ethics",
+    highlights: [
+      {
+        point: "Constitutional Awareness",
+        desc: "Educating members about their rights as citizens.",
+      },
+      {
+        point: "Fair Trade Rights",
+        desc: "Guaranteeing fair purchase prices for producers and fair pricing for consumers.",
+      },
+      {
+        point: "Voice & Representation",
+        desc: "Ensuring every member has a voice in cooperative decisions.",
+      },
+      {
+        point: "Social Security",
+        desc: "Building cooperative safety nets for health, education, and security.",
+      },
+    ],
+  },
+  "Responsibility — उत्तरदायित्व": {
+    icon: UserCheck,
+    hindi: "उत्तरदायित्व",
+    title: "Responsibility",
+    philosophy: "Embracing duty towards our family, community, and nation.",
+    tag: "Our Ethics",
+    highlights: [
+      {
+        point: "Individual Contribution",
+        desc: "Actively sharing skills, resources, and mentoring others.",
+      },
+      {
+        point: "Community Support",
+        desc: "Supporting fellow local merchants and purchasing locally.",
+      },
+      {
+        point: "Civic Responsibility",
+        desc: "Maintaining high ethical standards in all public and business dealings.",
+      },
+      {
+        point: "Nation Building",
+        desc: "Aligning our daily efforts with the long-term goal of a developed India.",
+      },
+    ],
+  },
+  "Accountability — जवाबदेही": {
+    icon: ClipboardCheck,
+    hindi: "जवाबदेही",
+    title: "Accountability",
+    philosophy: "Being answerable for our commitments, actions, and transactions.",
+    tag: "Our Ethics",
+    highlights: [
+      {
+        point: "Transparent Auditing",
+        desc: "Open accounting logs for all business transactions.",
+      },
+      {
+        point: "Clean Governance",
+        desc: "Strict rules for management to prevent any personal gain.",
+      },
+      {
+        point: "Quality Assured",
+        desc: "Accountable delivery systems ensuring top service standards.",
+      },
+      {
+        point: "Clear Metrics",
+        desc: "Regular reports on community returns and wealth distribution.",
+      },
+    ],
+  },
+  "Outcome — परिणाम": {
+    icon: Target,
+    hindi: "परिणाम",
+    title: "Outcome",
+    philosophy: "Focused on real, measurable impact and positive results for people.",
+    tag: "Our Ethics",
+    highlights: [
+      {
+        point: "Tangible Development",
+        desc: "Measurable increase in member incomes and savings.",
+      },
+      {
+        point: "Skill Acquisition",
+        desc: "Clear educational outcomes and employment match rates.",
+      },
+      {
+        point: "Ground-level Progress",
+        desc: "Direct benefits reaching the intended final beneficiaries.",
+      },
+      {
+        point: "Long-Term Growth",
+        desc: "Reinvesting yields into sustainable community infrastructures.",
       },
     ],
   },
@@ -1160,6 +1371,172 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
   );
 }
 
+/* ─────────── Core Values ─────────── */
+
+function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
+  const cards = [
+    {
+      icon: Scale,
+      title: "Equality — समानता",
+      hi: "समानता",
+      body: "We believe in equal rights, equal status, and equal opportunities for every member of our community, breaking all traditional barriers.",
+    },
+    {
+      icon: Unlock,
+      title: "Liberty — स्वतंत्रता",
+      hi: "स्वतंत्रता",
+      body: "We empower individuals with financial freedom, independent choices, and the power to build their own prosperous livelihoods.",
+    },
+    {
+      icon: Users,
+      title: "Fraternity — बंधुत्व",
+      hi: "बंधुत्व",
+      body: "We foster a deep sense of brotherhood, mutual trust, and cooperative solidarity across all states and sectors of our network.",
+    },
+    {
+      icon: Link2,
+      title: "Unity — एकता",
+      hi: "एकता",
+      body: "Stronger together. By combining our strengths and organizing collectively, we build an unbreakable path to regional and national growth.",
+    },
+  ];
+
+  return (
+    <section className="bg-haze py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <GoldLabel>CORE VALUES</GoldLabel>
+          <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
+            Core Values
+          </h2>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">मुख्य मूल्य</p>
+          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+        </Reveal>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          {cards.map((c) => (
+            <motion.div
+              key={c.title}
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => onOpenModal(CORE_VALUES_MODALS[c.title])}
+              className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
+            >
+              <div>
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy text-gold ring-2 ring-gold/20">
+                  <c.icon className="h-5 w-5" />
+                </div>
+                <div className="mt-6 text-left">
+                  <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
+                    {c.title.split(" — ")[0]} —<br />
+                    {c.title.split(" — ")[1]}
+                  </h3>
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
+                </div>
+              </div>
+              <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────── Our Ethics ─────────── */
+
+function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
+  const cards = [
+    {
+      icon: Shield,
+      title: "Rights — अधिकार",
+      hi: "अधिकार",
+      body: "We protect and advocate for the rights of all farmers, workers, women, and service providers, ensuring they receive their fair due.",
+    },
+    {
+      icon: UserCheck,
+      title: "Responsibility — उत्तरदायित्व",
+      hi: "उत्तरदायित्व",
+      body: "We share a collective duty to elevate each other, support local community merchants, and contribute directly to society's upliftment.",
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Accountability — जवाबदेही",
+      hi: "जवाबदेही",
+      body: "We practice transparent audits, ethical financial reporting, and clean governance rules to remain fully answerable to our members.",
+    },
+    {
+      icon: Target,
+      title: "Outcome — परिणाम",
+      hi: "परिणाम",
+      body: "We focus on real, tangible, and measurable progress — bringing direct savings, income boosts, and educational growth to every home.",
+    },
+  ];
+
+  return (
+    <section className="bg-white py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <GoldLabel>OUR ETHICS</GoldLabel>
+          <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
+            Our Ethics
+          </h2>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारी नैतिकता</p>
+          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+        </Reveal>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          {cards.map((c) => (
+            <motion.div
+              key={c.title}
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => onOpenModal(OUR_ETHICS_MODALS[c.title])}
+              className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
+            >
+              <div>
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy text-gold ring-2 ring-gold/20">
+                  <c.icon className="h-5 w-5" />
+                </div>
+                <div className="mt-6 text-left">
+                  <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
+                    {c.title.split(" — ")[0]} —<br />
+                    {c.title.split(" — ")[1]}
+                  </h3>
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
+                </div>
+              </div>
+              <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────── Journey Strip & Presence ─────────── */
 
 function IndiaFlagIcon() {
@@ -1846,6 +2223,10 @@ function Index() {
       <Mission onOpenModal={(data) => setModalData(data)} />
       {/* 6) Our Philosophy */}
       <Philosophy onOpenModal={(data) => setModalData(data)} />
+      {/* Core Values */}
+      <CoreValues onOpenModal={(data) => setModalData(data)} />
+      {/* Our Ethics */}
+      <OurEthics onOpenModal={(data) => setModalData(data)} />
       {/* 8) Opportunities */}
       <Opportunities />
       {/* 9) Association With */}
