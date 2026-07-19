@@ -407,6 +407,47 @@ function ContactPage() {
         </div>
       </section>
 
+      {/* Interactive Google Map Section */}
+      <section className="bg-haze pb-24 pt-4">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal className="rounded-[24px] border border-gold/30 bg-white p-6 md:p-8 card-shadow overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-haze">
+              <div>
+                <GoldLabel>LOCATION MAP</GoldLabel>
+                <h3 className="mt-1 font-display text-2xl font-bold text-ink">
+                  Find Us on Google Maps
+                </h3>
+                <p className="font-deva text-sm font-semibold text-gold">
+                  गूगल मैप्स पर हमारा स्थान
+                </p>
+              </div>
+              <a
+                href="https://www.google.com/maps?q=22.623899677230373,75.81073416067343"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-gold hover:text-navy self-start sm:self-auto cursor-pointer"
+              >
+                Open Directions in Google Maps <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="mt-6 overflow-hidden rounded-[18px] border border-haze shadow-inner">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963.3866960429234!2d75.81073416067343!3d22.623899677230373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb002840f491%3A0x9eea1480470096c7!2z4KS44KSu4KSw4KWN4KSlIOCkquCliOCksOCkvuCkoeCkvuCkh-CknA!5e1!3m2!1sen!2sin!4v1784489621811!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Pavitram India Google Map Location"
+                className="w-full h-[380px] md:h-[450px]"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <FinalCTA />
     </>
   );
