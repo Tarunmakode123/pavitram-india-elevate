@@ -62,6 +62,8 @@ import {
   UserCheck,
   ClipboardCheck,
   Target,
+  HeartHandshake,
+  Sprout,
 } from "lucide-react";
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
 import { PremiumModal, type ModalData } from "@/components/premium-modal";
@@ -599,6 +601,112 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
       {
         point: "Long-Term Growth",
         desc: "Reinvesting yields into sustainable community infrastructures.",
+      },
+    ],
+  },
+};
+
+const OUR_FOCUS_MODALS: Record<string, ModalData> = {
+  Garib: {
+    icon: HeartHandshake,
+    hindi: "गरीब (कल्याण एवं सामाजिक सुरक्षा)",
+    title: "Economically Weaker & Underprivileged",
+    philosophy:
+      "Uplifting low-income families through direct savings, cooperative safety nets, and self-reliance.",
+    tag: "Our Focus",
+    highlights: [
+      {
+        point: "Cost Reduction",
+        desc: "Lowering daily household expenses through cooperative buying networks.",
+      },
+      {
+        point: "Cooperative Safety Net",
+        desc: "Emergency financial, medical, and social support for vulnerable families.",
+      },
+      {
+        point: "Dignified Livelihoods",
+        desc: "Creating accessible earning opportunities through local micro-tasks and services.",
+      },
+      {
+        point: "Equal Access",
+        desc: "Ensuring zero discrimination in accessing all 12 Pavitram services.",
+      },
+    ],
+  },
+  Yuva: {
+    icon: GraduationCap,
+    hindi: "युवा (कौशल एवं रोजगार)",
+    title: "Youth Empowerment",
+    philosophy:
+      "Equipping young minds with modern skills, digital tools, and dignified employment opportunities.",
+    tag: "Our Focus",
+    highlights: [
+      {
+        point: "Pavitram Rozgar",
+        desc: "Matching youth qualifications with verified local and national job opportunities.",
+      },
+      {
+        point: "Skill Development",
+        desc: "Practical training in technology, digital commerce, and modern business management.",
+      },
+      {
+        point: "Entrepreneurship Support",
+        desc: "Guiding young entrepreneurs to launch their own micro-businesses within the cooperative network.",
+      },
+      {
+        point: "Rational Learning",
+        desc: "Fostering leadership, constitutional awareness, and civic responsibility.",
+      },
+    ],
+  },
+  Mahila: {
+    icon: Sparkles,
+    hindi: "महिला (महिला सशक्तिकरण)",
+    title: "Women Empowerment",
+    philosophy: "Fostering financial independence and leadership for women in every household.",
+    tag: "Our Focus",
+    highlights: [
+      {
+        point: "Self-Help Enterprise",
+        desc: "Supporting women-led micro-enterprises and home-based production units.",
+      },
+      {
+        point: "Pavitram Rishta & Health",
+        desc: "Dedicated healthcare, preventive wellness, and trusted family network support.",
+      },
+      {
+        point: "Financial Autonomy",
+        desc: "Empowering women with direct cooperative bank accounts and micro-savings schemes.",
+      },
+      {
+        point: "Equal Governance",
+        desc: "Active representation of women in local network councils and decision-making.",
+      },
+    ],
+  },
+  Kisan: {
+    icon: Sprout,
+    hindi: "किसान (कृषि एवं समृद्धि)",
+    title: "Farmer Prosperity",
+    philosophy:
+      "Empowering farmers with direct market links, fair prices, and modern agricultural support.",
+    tag: "Our Focus",
+    highlights: [
+      {
+        point: "Direct Produce Sourcing",
+        desc: "Connecting farmers directly with Pavitram Mart and Wholesaler networks to eliminate middlemen.",
+      },
+      {
+        point: "Fair Purchase Prices",
+        desc: "Guaranteeing transparent, dignified purchase rates for agricultural crops.",
+      },
+      {
+        point: "Agri-Technology",
+        desc: "Sharing modern farming techniques, organic inputs, and digital crop planning tools.",
+      },
+      {
+        point: "Rural Prosperity",
+        desc: "Building sustainable cooperative storage and delivery infrastructure across rural regions.",
       },
     ],
   },
@@ -1534,6 +1642,88 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
   );
 }
 
+/* ─────────── Our Focus ─────────── */
+
+function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
+  const cards = [
+    {
+      icon: HeartHandshake,
+      title: "Garib",
+      hi: "गरीब",
+      body: "Empowering low-income families and workers through cooperative safety nets, financial support, and cost-reduction initiatives.",
+    },
+    {
+      icon: GraduationCap,
+      title: "Yuva",
+      hi: "युवा",
+      body: "Nurturing the next generation with digital skills, entrepreneurship guidance, and dignified employment opportunities.",
+    },
+    {
+      icon: Sparkles,
+      title: "Mahila",
+      hi: "महिला",
+      body: "Fostering self-reliance for women through self-help groups, micro-enterprises, and skill development programs.",
+    },
+    {
+      icon: Sprout,
+      title: "Kisan",
+      hi: "किसान",
+      body: "Supporting agricultural communities with direct market access, fair crop prices, and cooperative supply chains.",
+    },
+  ];
+
+  return (
+    <section className="bg-haze py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <GoldLabel>OUR FOCUS</GoldLabel>
+          <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
+            Our Primary Focus
+          </h2>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">गरीब, युवा, महिला, किसान</p>
+          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+        </Reveal>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          {cards.map((c) => (
+            <motion.div
+              key={c.title}
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => onOpenModal(OUR_FOCUS_MODALS[c.title])}
+              className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
+            >
+              <div>
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#FDF3E0] text-gold transition group-hover:bg-gold group-hover:text-white">
+                  <c.icon className="h-5 w-5" />
+                </div>
+                <div className="mt-6 text-left">
+                  <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
+                    {c.title}
+                  </h3>
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
+                </div>
+              </div>
+              <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────── Journey Strip & Presence ─────────── */
 
 function IndiaFlagIcon() {
@@ -2021,21 +2211,25 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
     {
       icon: Factory,
       title: "Manufacturer",
+      hi: "उत्पादक / निर्माता",
       text: "Connecting local production units and raw material processors to build strong domestic supply chains.",
     },
     {
       icon: Warehouse,
       title: "Wholesaler",
+      hi: "थोक व्यापारी",
       text: "Facilitating bulk inventory distribution and regional trade connectivity within the ecosystem.",
     },
     {
       icon: Store,
       title: "Retailer",
+      hi: "खुदरा विक्रेता",
       text: "Powering local storefronts and retail markets to deliver products directly to community consumers.",
     },
     {
       icon: Wrench,
       title: "Service Provider",
+      hi: "सेवा प्रदाता",
       text: "Deploying professional skills, digital services, and household maintenance directly to members.",
     },
   ];
@@ -2086,6 +2280,7 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   <f.icon className="h-6 w-6" />
                 </div>
                 <h4 className="mt-6 font-display text-xl font-bold text-ink">{f.title}</h4>
+                <p className="mt-1 font-deva text-base font-semibold text-gold">{f.hi}</p>
                 <p className="mt-3 text-sm leading-[1.7] text-mist">{f.text}</p>
               </div>
               <div className="mt-5 text-center">
@@ -2213,30 +2408,33 @@ function Index() {
 
   return (
     <>
+      {/* 1) Overview */}
       <Hero />
-      {/* 4) Our Vision */}
+      {/* 2) Our Vision */}
       <Pillars onOpenModal={(data) => setModalData(data)} />
-      {/* 5) Our Mission */}
+      {/* 3) Our Mission */}
       <Mission onOpenModal={(data) => setModalData(data)} />
-      {/* 6) Our Philosophy */}
+      {/* 4) Our Philosophy */}
       <Philosophy onOpenModal={(data) => setModalData(data)} />
-      {/* Core Values */}
+      {/* 5) Core Values */}
       <CoreValues onOpenModal={(data) => setModalData(data)} />
-      {/* Our Ethics */}
+      {/* 6) Our Ethics */}
       <OurEthics onOpenModal={(data) => setModalData(data)} />
-      {/* 8) Opportunities */}
-      <Opportunities />
-      {/* 9) Association With */}
-      <AssociationWith onOpenModal={(data) => setModalData(data)} />
-      {/* 9) Business Network */}
-      <Network onOpenModal={(data) => setModalData(data)} />
-      {/* 7) Our Service (12) */}
-      <Services />
-      {/* 10) Our Presence */}
-      <Presence onOpenModal={(data) => setModalData(data)} />
-      {/* 12) Be Organised */}
+      {/* 7) Our Focus */}
+      <OurFocus onOpenModal={(data) => setModalData(data)} />
+      {/* 8) Our Mantras */}
       <FinalCTA />
-      {/* 13) Comment (Testimonials) */}
+      {/* 9) Opportunity */}
+      <Opportunities />
+      {/* 10) Partner */}
+      <AssociationWith onOpenModal={(data) => setModalData(data)} />
+      {/* 11) Business Network */}
+      <Network onOpenModal={(data) => setModalData(data)} />
+      {/* 12) Our Reach */}
+      <Presence onOpenModal={(data) => setModalData(data)} />
+      {/* 13) Our Services */}
+      <Services />
+      {/* 14) Members Say */}
       <Testimonials />
       {/* Global Premium Modal */}
       <PremiumModal data={modalData} onClose={() => setModalData(null)} />
