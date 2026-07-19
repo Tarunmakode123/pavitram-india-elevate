@@ -411,7 +411,7 @@ export function Navbar() {
             {isHindi ? "EN" : "हि"}
           </button>
           <Link
-            to="/contact"
+            to="/join"
             className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-navy transition hover:bg-gold hover:shadow-[0_8px_24px_-6px_rgba(201,149,42,0.6)]"
           >
             Join the Community
@@ -496,7 +496,7 @@ export function Navbar() {
               {isHindi ? "Translate to English (EN)" : "हिंदी में अनुवाद करें (हि)"}
             </button>
             <Link
-              to="/contact"
+              to="/join"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-white px-5 py-3 text-center font-bold text-navy"
             >
@@ -774,7 +774,7 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
             <Link
-              to="/contact"
+              to="/join"
               className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white transition hover:bg-gold hover:text-navy hover:scale-[1.03]"
             >
               Join Pavitram India <ArrowRight className="h-4 w-4" />
