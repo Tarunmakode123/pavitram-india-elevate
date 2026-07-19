@@ -2423,7 +2423,7 @@ function Index() {
       {/* 7) Our Focus */}
       <OurFocus onOpenModal={(data) => setModalData(data)} />
       {/* 8) Our Mantras */}
-      <FinalCTA />
+      <FinalCTA onOpenModal={(data) => setModalData(data)} />
       {/* 9) Opportunity */}
       <Opportunities />
       {/* 10) Partner */}

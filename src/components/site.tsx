@@ -19,6 +19,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
+import { type ModalData } from "@/components/premium-modal";
 
 export { LOGO_URL };
 
@@ -583,27 +584,132 @@ export function PageHero({
 
 /* ─────────── Final CTA ─────────── */
 
-export function FinalCTA() {
+/* ─────────── Final CTA (Our Core Mantras) ─────────── */
+
+const MOTTO_MODALS: Record<string, ModalData> = {
+  Organised: {
+    icon: UsersRound,
+    hindi: "संगठित (संगठित बनो, संगठित करो)",
+    title: "Be Organised, Do Organised",
+    philosophy: "Building an organized, united cooperative network across all sectors of society.",
+    tag: "Our Motto",
+    highlights: [
+      {
+        point: "Collective Power",
+        desc: "Uniting individual members into a cohesive, organized economic force.",
+      },
+      {
+        point: "Structured Operations",
+        desc: "Operating through transparent, well-managed regional cooperatives.",
+      },
+      {
+        point: "Community Discipline",
+        desc: "Living by the 27 Golden Rules for mutual protection and growth.",
+      },
+      {
+        point: "Organizing Others",
+        desc: "Helping local merchants, workers, and families to structure their livelihoods.",
+      },
+    ],
+  },
+  Educated: {
+    icon: GraduationCap,
+    hindi: "शिक्षित (शिक्षित बनो, शिक्षित करो)",
+    title: "Be Educated, Make Educated",
+    philosophy: "Fostering awareness, rational learning, and continuous skill building for all.",
+    tag: "Our Motto",
+    highlights: [
+      {
+        point: "Pavitram Gyan",
+        desc: "Providing accessible education, skill building, and civic awareness.",
+      },
+      {
+        point: "Rights & Guidance",
+        desc: "Educating members on constitutional rights and government schemes.",
+      },
+      {
+        point: "Youth Empowerment",
+        desc: "Training the next generation with modern digital and technical skills.",
+      },
+      {
+        point: "Knowledge Sharing",
+        desc: "Inspiring every educated member to teach and mentor others.",
+      },
+    ],
+  },
+  Striving: {
+    icon: Sparkles,
+    hindi: "संघर्षशील (संघर्षशील बनो, संघर्षशील बनाओ)",
+    title: "Be Striving, Make Striving",
+    philosophy: "Relentless effort, resilience, and determination to build a self-reliant India.",
+    tag: "Our Motto",
+    highlights: [
+      {
+        point: "Active Engagement",
+        desc: "Overcoming challenges through collective action and perseverance.",
+      },
+      {
+        point: "Pivotal Growth",
+        desc: "Striving for higher family income, lower costs, and self-reliance.",
+      },
+      {
+        point: "Community Motivation",
+        desc: "Inspiring fellow members to work hard and overcome economic barriers.",
+      },
+      {
+        point: "Unbreakable Resolve",
+        desc: "Standing strong against corruption, exploitation, and unorganized debt.",
+      },
+    ],
+  },
+  Empowered: {
+    icon: Zap,
+    hindi: "सशक्त (सशक्त बनो, सशक्त करो)",
+    title: "Be Empowered, Make Empowered",
+    philosophy: "Achieving financial independence, dignity, and self-sufficiency for every home.",
+    tag: "Our Motto",
+    highlights: [
+      {
+        point: "Economic Independence",
+        desc: "Freeing families from debt traps and unfair intermediary fees.",
+      },
+      {
+        point: "Women & Youth Autonomy",
+        desc: "Empowering women and youth through micro-enterprises and jobs.",
+      },
+      {
+        point: "Cooperative Safety Nets",
+        desc: "Access to cooperative loans, health insurance, and mutual aid.",
+      },
+      {
+        point: "National Elevation",
+        desc: "Empowering every household to contribute directly to a developed India.",
+      },
+    ],
+  },
+};
+
+export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => void }) {
   const cards = [
     {
       icon: UsersRound,
-      en: "Be Organised, Do Organised",
-      hi: "संगठित बनो, संगठित करो",
+      en: "Organised",
+      hi: "संगठित",
     },
     {
       icon: GraduationCap,
-      en: "Be Educated, Make Educated",
-      hi: "शिक्षित बनो, शिक्षित करो",
-    },
-    {
-      icon: Zap,
-      en: "Be Empowered, Make Empowered",
-      hi: "सशक्त बनो, सशक्त करो",
+      en: "Educated",
+      hi: "शिक्षित",
     },
     {
       icon: Sparkles,
-      en: "Be Striving, Make Striving",
-      hi: "संघर्षशील बनो, संघर्षशील बनाओ",
+      en: "Striving",
+      hi: "संघर्षशील",
+    },
+    {
+      icon: Zap,
+      en: "Empowered",
+      hi: "सशक्त",
     },
   ];
 
@@ -637,7 +743,8 @@ export function FinalCTA() {
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="group relative overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
+              onClick={() => onOpenModal?.(MOTTO_MODALS[c.en])}
+              className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <div>
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-gold/40 transition-colors group-hover:bg-gold" />
@@ -648,11 +755,14 @@ export function FinalCTA() {
                   <h3 className="font-display text-2xl font-bold text-ink leading-snug transition-colors group-hover:text-gold">
                     {c.en}
                   </h3>
-                  <p className="mt-2 font-deva text-base font-semibold text-gold leading-relaxed">
+                  <p className="mt-1 font-deva text-base font-semibold text-gold leading-relaxed">
                     {c.hi}
                   </p>
                 </div>
               </div>
+              <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
+              </span>
             </motion.div>
           ))}
         </motion.div>
