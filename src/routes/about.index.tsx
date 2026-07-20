@@ -185,12 +185,12 @@ function AboutPage() {
       </section>
 
       {/* Five core values */}
-      <section className="bg-haze py-24 md:py-32">
+      <section className="bg-haze py-24 md:py-32" id="values">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="text-center">
             <GoldLabel>Core Values</GoldLabel>
             <h2 className="mt-5 font-display text-4xl font-bold text-ink md:text-[48px]">
-              Five Core Values
+              Five Core Values & Ethics
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
@@ -211,7 +211,7 @@ function AboutPage() {
       </section>
 
       {/* Code of conduct banner */}
-      <section className="relative isolate overflow-hidden bg-navy py-24 md:py-32">
+      <section className="relative isolate overflow-hidden bg-navy py-24 md:py-32" id="ethics">
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -230,8 +230,8 @@ function AboutPage() {
         </Reveal>
       </section>
 
-      {/* Family tree */}
-      <section className="bg-white py-24 md:py-32">
+      {/* Family tree / Our Focus */}
+      <section className="bg-white py-24 md:py-32" id="focus">
         <div className="mx-auto max-w-3xl px-6">
           <Reveal className="text-center">
             <GoldLabel>Our Structure</GoldLabel>
