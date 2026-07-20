@@ -98,6 +98,8 @@ const VISION_MODALS: Record<string, ModalData> = {
     title: "Intellectual Citizen",
     philosophy: "An aware mind is the foundation of a prosperous nation.",
     tag: "Our Vision",
+    pageUrl: "/about/vision",
+    pageLabel: "Explore Vision Page",
     highlights: [
       {
         point: "Awareness & Education",
@@ -123,6 +125,8 @@ const VISION_MODALS: Record<string, ModalData> = {
     title: "Prosperous Family",
     philosophy: "When a family thrives, the nation flourishes.",
     tag: "Our Vision",
+    pageUrl: "/about/vision",
+    pageLabel: "Explore Vision Page",
     highlights: [
       {
         point: "Higher Income",
@@ -148,6 +152,8 @@ const VISION_MODALS: Record<string, ModalData> = {
     title: "Self-Reliant Society",
     philosophy: "A society that fulfills its own needs has no dependency.",
     tag: "Our Vision",
+    pageUrl: "/about/vision",
+    pageLabel: "Explore Vision Page",
     highlights: [
       {
         point: "Community First",
@@ -173,6 +179,8 @@ const VISION_MODALS: Record<string, ModalData> = {
     title: "Developed India",
     philosophy: "Individual growth multiplied across millions becomes national progress.",
     tag: "Our Vision",
+    pageUrl: "/about/vision",
+    pageLabel: "Explore Vision Page",
     highlights: [
       {
         point: "Village to Nation",
@@ -201,6 +209,8 @@ const MISSION_MODALS: Record<string, ModalData> = {
     title: "Sabka Saath",
     philosophy: "No one grows alone — we rise by lifting each other.",
     tag: "Our Mission",
+    pageUrl: "/about/mission",
+    pageLabel: "Explore Mission Page",
     highlights: [
       {
         point: "United Community",
@@ -226,6 +236,8 @@ const MISSION_MODALS: Record<string, ModalData> = {
     title: "Sabka Prayaas",
     philosophy: "Every effort counts when we work toward a common goal.",
     tag: "Our Mission",
+    pageUrl: "/about/mission",
+    pageLabel: "Explore Mission Page",
     highlights: [
       {
         point: "Individual Contribution",
@@ -251,6 +263,8 @@ const MISSION_MODALS: Record<string, ModalData> = {
     title: "Sabka Vikas",
     philosophy: "True development reaches every doorstep, not just the privileged few.",
     tag: "Our Mission",
+    pageUrl: "/about/mission",
+    pageLabel: "Explore Mission Page",
     highlights: [
       {
         point: "Rural Inclusion",
@@ -276,6 +290,8 @@ const MISSION_MODALS: Record<string, ModalData> = {
     title: "Sabka Vishwas",
     philosophy: "Trust is the currency that powers our entire ecosystem.",
     tag: "Our Mission",
+    pageUrl: "/about/mission",
+    pageLabel: "Explore Mission Page",
     highlights: [
       {
         point: "Full Transparency",
@@ -304,6 +320,8 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     title: "Integrity",
     philosophy: "We do what is right, even when no one is watching.",
     tag: "Our Philosophy",
+    pageUrl: "/about/philosophy",
+    pageLabel: "Explore Philosophy Page",
     highlights: [
       {
         point: "Honest Dealings",
@@ -329,6 +347,8 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     title: "Transparency",
     philosophy: "When everything is visible, trust becomes inevitable.",
     tag: "Our Philosophy",
+    pageUrl: "/about/philosophy",
+    pageLabel: "Explore Philosophy Page",
     highlights: [
       {
         point: "Open Financials",
@@ -354,6 +374,8 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     title: "Innovation",
     philosophy: "We solve today's problems with tomorrow's thinking.",
     tag: "Our Philosophy",
+    pageUrl: "/about/philosophy",
+    pageLabel: "Explore Philosophy Page",
     highlights: [
       {
         point: "Tech-Driven Solutions",
@@ -379,6 +401,8 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     title: "Collaboration",
     philosophy: "Alone we are strong — together we are unstoppable.",
     tag: "Our Philosophy",
+    pageUrl: "/about/philosophy",
+    pageLabel: "Explore Philosophy Page",
     highlights: [
       {
         point: "Cross-Sector Partnerships",
@@ -407,6 +431,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Equality",
     philosophy: "Equal opportunities, rights, and treatment for every citizen.",
     tag: "Core Values",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Social Equality",
@@ -432,6 +458,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Liberty",
     philosophy: "Empowering citizens to think, express, and live freely.",
     tag: "Core Values",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Financial Freedom",
@@ -457,6 +485,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Fraternity",
     philosophy: "Promoting brotherhood and mutual support among all sections of society.",
     tag: "Core Values",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Unified Community",
@@ -482,6 +512,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Unity",
     philosophy: "Stronger together — building national unity through community action.",
     tag: "Core Values",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "National Integration",
@@ -510,6 +542,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Rights",
     philosophy: "Securing fundamental rights and entitlements for every individual.",
     tag: "Our Ethics",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Constitutional Awareness",
@@ -535,6 +569,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Responsibility",
     philosophy: "Embracing duty towards our family, community, and nation.",
     tag: "Our Ethics",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Individual Contribution",
@@ -560,6 +596,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Accountability",
     philosophy: "Being answerable for our commitments, actions, and transactions.",
     tag: "Our Ethics",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Transparent Auditing",
@@ -585,6 +623,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Outcome",
     philosophy: "Focused on real, measurable impact and positive results for people.",
     tag: "Our Ethics",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Tangible Development",
@@ -614,6 +654,8 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     philosophy:
       "Uplifting low-income families through direct savings, cooperative safety nets, and self-reliance.",
     tag: "Our Focus",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Cost Reduction",
@@ -640,6 +682,8 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     philosophy:
       "Equipping young minds with modern skills, digital tools, and dignified employment opportunities.",
     tag: "Our Focus",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Pavitram Rozgar",
@@ -665,6 +709,8 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     title: "Women Empowerment",
     philosophy: "Fostering financial independence and leadership for women in every household.",
     tag: "Our Focus",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Self-Help Enterprise",
@@ -691,6 +737,8 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     philosophy:
       "Empowering farmers with direct market links, fair prices, and modern agricultural support.",
     tag: "Our Focus",
+    pageUrl: "/about",
+    pageLabel: "Explore About Page",
     highlights: [
       {
         point: "Direct Produce Sourcing",
@@ -925,6 +973,8 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     title: "Manufacturer",
     philosophy: "Empowering local production and raw material processing.",
     tag: "Business Network",
+    pageUrl: "/about/network",
+    pageLabel: "Explore Business Network Page",
     highlights: [
       {
         point: "Direct Sourcing Links",
@@ -950,6 +1000,8 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     title: "Wholesaler",
     philosophy: "Bulk distribution and supply chain connectivity.",
     tag: "Business Network",
+    pageUrl: "/about/network",
+    pageLabel: "Explore Business Network Page",
     highlights: [
       {
         point: "Bulk Logistics Support",
@@ -975,6 +1027,8 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     title: "Retailer",
     philosophy: "Direct consumer storefronts and local market presence.",
     tag: "Business Network",
+    pageUrl: "/about/network",
+    pageLabel: "Explore Business Network Page",
     highlights: [
       {
         point: "Free Digital Tools",
@@ -1000,6 +1054,8 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     title: "Service Provider",
     philosophy: "Professional maintenance, digital, and household services.",
     tag: "Business Network",
+    pageUrl: "/about/network",
+    pageLabel: "Explore Business Network Page",
     highlights: [
       {
         point: "Verified Lead Generation",

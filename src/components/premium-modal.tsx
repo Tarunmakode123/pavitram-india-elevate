@@ -1,6 +1,7 @@
-import { useEffect, type ReactNode } from "react";
+import { useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, type LucideIcon } from "lucide-react";
+import { X, ArrowRight, type LucideIcon } from "lucide-react";
 
 export type ModalHighlight = {
   point: string;
@@ -14,6 +15,8 @@ export type ModalData = {
   philosophy: string;
   highlights: ModalHighlight[];
   tag: string;
+  pageUrl?: string;
+  pageLabel?: string;
 };
 
 export function PremiumModal({ data, onClose }: { data: ModalData | null; onClose: () => void }) {
@@ -116,10 +119,20 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
 
                   <div>
                     <div className="my-5 sm:my-6 h-px w-full bg-gold/20" />
-                    <div>
+                    <div className="flex flex-wrap items-center justify-between gap-3">
                       <span className="inline-block rounded-full border border-gold/60 bg-gold/5 px-3 sm:px-3.5 py-1 text-[11px] sm:text-xs font-semibold text-gold">
                         {data.tag}
                       </span>
+
+                      {data.pageUrl && (
+                        <Link
+                          to={data.pageUrl}
+                          onClick={onClose}
+                          className="inline-flex items-center gap-1.5 rounded-full bg-navy px-4 py-2 text-xs font-bold text-white transition hover:bg-gold hover:text-navy cursor-pointer"
+                        >
+                          {data.pageLabel || "Explore Page"} <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
