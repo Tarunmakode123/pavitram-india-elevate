@@ -111,9 +111,9 @@ const ABOUT_ITEMS = [
   { label: "Our Vision", to: "/about/vision" },
   { label: "Our Mission", to: "/about/mission" },
   { label: "Our Philosophy", to: "/about/philosophy" },
-  { label: "Core Values", to: "/about#values" },
-  { label: "Our Ethics", to: "/about#ethics" },
-  { label: "Our Focus", to: "/about#focus" },
+  { label: "Core Values", to: "/about/values" },
+  { label: "Our Ethics", to: "/about/ethics" },
+  { label: "Our Focus", to: "/about/focus" },
   { label: "Business Network", to: "/about/network" },
 ];
 

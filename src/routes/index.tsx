@@ -431,8 +431,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Equality",
     philosophy: "Equal opportunities, rights, and treatment for every citizen.",
     tag: "Core Values",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/values",
+    pageLabel: "Explore Values Page",
     highlights: [
       {
         point: "Social Equality",
@@ -458,8 +458,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Liberty",
     philosophy: "Empowering citizens to think, express, and live freely.",
     tag: "Core Values",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/values",
+    pageLabel: "Explore Values Page",
     highlights: [
       {
         point: "Financial Freedom",
@@ -485,8 +485,8 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     title: "Fraternity",
     philosophy: "Promoting brotherhood and mutual support among all sections of society.",
     tag: "Core Values",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/values",
+    pageLabel: "Explore Values Page",
     highlights: [
       {
         point: "Unified Community",
@@ -542,8 +542,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Rights",
     philosophy: "Securing fundamental rights and entitlements for every individual.",
     tag: "Our Ethics",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/ethics",
+    pageLabel: "Explore Ethics Page",
     highlights: [
       {
         point: "Constitutional Awareness",
@@ -569,8 +569,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Responsibility",
     philosophy: "Embracing duty towards our family, community, and nation.",
     tag: "Our Ethics",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/ethics",
+    pageLabel: "Explore Ethics Page",
     highlights: [
       {
         point: "Individual Contribution",
@@ -596,8 +596,8 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     title: "Accountability",
     philosophy: "Being answerable for our commitments, actions, and transactions.",
     tag: "Our Ethics",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/ethics",
+    pageLabel: "Explore Ethics Page",
     highlights: [
       {
         point: "Transparent Auditing",
@@ -654,8 +654,8 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     philosophy:
       "Uplifting low-income families through direct savings, cooperative safety nets, and self-reliance.",
     tag: "Our Focus",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/focus",
+    pageLabel: "Explore Focus Page",
     highlights: [
       {
         point: "Cost Reduction",
@@ -682,8 +682,8 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     philosophy:
       "Equipping young minds with modern skills, digital tools, and dignified employment opportunities.",
     tag: "Our Focus",
-    pageUrl: "/about",
-    pageLabel: "Explore About Page",
+    pageUrl: "/about/focus",
+    pageLabel: "Explore Focus Page",
     highlights: [
       {
         point: "Pavitram Rozgar",
