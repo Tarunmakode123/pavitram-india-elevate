@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as JoinRouteImport } from './routes/join'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
@@ -33,10 +34,18 @@ import { Route as OpportunitiesInvestorRouteImport } from './routes/opportunitie
 import { Route as OpportunitiesConsumerRouteImport } from './routes/opportunities.consumer'
 import { Route as OpportunitiesCareerRouteImport } from './routes/opportunities.career'
 import { Route as AboutVisionRouteImport } from './routes/about.vision'
+import { Route as AboutValuesRouteImport } from './routes/about.values'
 import { Route as AboutPhilosophyRouteImport } from './routes/about.philosophy'
 import { Route as AboutNetworkRouteImport } from './routes/about.network'
 import { Route as AboutMissionRouteImport } from './routes/about.mission'
+import { Route as AboutFocusRouteImport } from './routes/about.focus'
+import { Route as AboutEthicsRouteImport } from './routes/about.ethics'
 
+const JoinRoute = JoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -157,6 +166,11 @@ const AboutVisionRoute = AboutVisionRouteImport.update({
   path: '/about/vision',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutValuesRoute = AboutValuesRouteImport.update({
+  id: '/about/values',
+  path: '/about/values',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutPhilosophyRoute = AboutPhilosophyRouteImport.update({
   id: '/about/philosophy',
   path: '/about/philosophy',
@@ -172,14 +186,28 @@ const AboutMissionRoute = AboutMissionRouteImport.update({
   path: '/about/mission',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutFocusRoute = AboutFocusRouteImport.update({
+  id: '/about/focus',
+  path: '/about/focus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutEthicsRoute = AboutEthicsRouteImport.update({
+  id: '/about/ethics',
+  path: '/about/ethics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/join': typeof JoinRoute
+  '/about/ethics': typeof AboutEthicsRoute
+  '/about/focus': typeof AboutFocusRoute
   '/about/mission': typeof AboutMissionRoute
   '/about/network': typeof AboutNetworkRoute
   '/about/philosophy': typeof AboutPhilosophyRoute
+  '/about/values': typeof AboutValuesRoute
   '/about/vision': typeof AboutVisionRoute
   '/opportunities/career': typeof OpportunitiesCareerRoute
   '/opportunities/consumer': typeof OpportunitiesConsumerRoute
@@ -206,9 +234,13 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/join': typeof JoinRoute
+  '/about/ethics': typeof AboutEthicsRoute
+  '/about/focus': typeof AboutFocusRoute
   '/about/mission': typeof AboutMissionRoute
   '/about/network': typeof AboutNetworkRoute
   '/about/philosophy': typeof AboutPhilosophyRoute
+  '/about/values': typeof AboutValuesRoute
   '/about/vision': typeof AboutVisionRoute
   '/opportunities/career': typeof OpportunitiesCareerRoute
   '/opportunities/consumer': typeof OpportunitiesConsumerRoute
@@ -236,9 +268,13 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
+  '/join': typeof JoinRoute
+  '/about/ethics': typeof AboutEthicsRoute
+  '/about/focus': typeof AboutFocusRoute
   '/about/mission': typeof AboutMissionRoute
   '/about/network': typeof AboutNetworkRoute
   '/about/philosophy': typeof AboutPhilosophyRoute
+  '/about/values': typeof AboutValuesRoute
   '/about/vision': typeof AboutVisionRoute
   '/opportunities/career': typeof OpportunitiesCareerRoute
   '/opportunities/consumer': typeof OpportunitiesConsumerRoute
@@ -267,9 +303,13 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/faq'
+    | '/join'
+    | '/about/ethics'
+    | '/about/focus'
     | '/about/mission'
     | '/about/network'
     | '/about/philosophy'
+    | '/about/values'
     | '/about/vision'
     | '/opportunities/career'
     | '/opportunities/consumer'
@@ -296,9 +336,13 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/faq'
+    | '/join'
+    | '/about/ethics'
+    | '/about/focus'
     | '/about/mission'
     | '/about/network'
     | '/about/philosophy'
+    | '/about/values'
     | '/about/vision'
     | '/opportunities/career'
     | '/opportunities/consumer'
@@ -325,9 +369,13 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/faq'
+    | '/join'
+    | '/about/ethics'
+    | '/about/focus'
     | '/about/mission'
     | '/about/network'
     | '/about/philosophy'
+    | '/about/values'
     | '/about/vision'
     | '/opportunities/career'
     | '/opportunities/consumer'
@@ -355,9 +403,13 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
+  JoinRoute: typeof JoinRoute
+  AboutEthicsRoute: typeof AboutEthicsRoute
+  AboutFocusRoute: typeof AboutFocusRoute
   AboutMissionRoute: typeof AboutMissionRoute
   AboutNetworkRoute: typeof AboutNetworkRoute
   AboutPhilosophyRoute: typeof AboutPhilosophyRoute
+  AboutValuesRoute: typeof AboutValuesRoute
   AboutVisionRoute: typeof AboutVisionRoute
   OpportunitiesCareerRoute: typeof OpportunitiesCareerRoute
   OpportunitiesConsumerRoute: typeof OpportunitiesConsumerRoute
@@ -383,6 +435,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -551,6 +610,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutVisionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/values': {
+      id: '/about/values'
+      path: '/about/values'
+      fullPath: '/about/values'
+      preLoaderRoute: typeof AboutValuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about/philosophy': {
       id: '/about/philosophy'
       path: '/about/philosophy'
@@ -572,6 +638,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutMissionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/focus': {
+      id: '/about/focus'
+      path: '/about/focus'
+      fullPath: '/about/focus'
+      preLoaderRoute: typeof AboutFocusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/ethics': {
+      id: '/about/ethics'
+      path: '/about/ethics'
+      fullPath: '/about/ethics'
+      preLoaderRoute: typeof AboutEthicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -579,9 +659,13 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
+  JoinRoute: JoinRoute,
+  AboutEthicsRoute: AboutEthicsRoute,
+  AboutFocusRoute: AboutFocusRoute,
   AboutMissionRoute: AboutMissionRoute,
   AboutNetworkRoute: AboutNetworkRoute,
   AboutPhilosophyRoute: AboutPhilosophyRoute,
+  AboutValuesRoute: AboutValuesRoute,
   AboutVisionRoute: AboutVisionRoute,
   OpportunitiesCareerRoute: OpportunitiesCareerRoute,
   OpportunitiesConsumerRoute: OpportunitiesConsumerRoute,
