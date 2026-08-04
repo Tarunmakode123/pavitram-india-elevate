@@ -1367,7 +1367,9 @@ function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   <c.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold text-ink">{c.title}</h3>
-                <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                {language === "en" && (
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                )}
                 <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.text}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
@@ -1470,7 +1472,9 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   </div>
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold text-white">{c.title}</h3>
-                <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                {language === "en" && (
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                )}
                 <p className="mt-3 text-[15px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
@@ -1571,7 +1575,9 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  {language === "en" && (
+                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  )}
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
@@ -1658,7 +1664,9 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  {language === "en" && (
+                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  )}
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
@@ -1745,7 +1753,9 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  {language === "en" && (
+                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  )}
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
@@ -1844,7 +1854,9 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  {language === "en" && (
+                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                  )}
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
@@ -2026,7 +2038,9 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   </span>
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold text-white">{c.label}</h3>
-                <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                {language === "en" && (
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
+                )}
                 <p className="mt-3 text-[14.5px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">

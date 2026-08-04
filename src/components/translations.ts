@@ -37,7 +37,7 @@ export const translations = {
   },
   pillars: {
     tag: { en: "OUR VISION", hi: "हमारा दृष्टिकोण" },
-    title: { en: "Intellectual Citizens, Prosperous Families & Self-Reliant Society", hi: "प्रबुद्ध नागरिक, समृद्ध परिवार एवं आत्मनिर्भर समाज" },
+    title: { en: "The Four Pillars of Pavitram", hi: "पवित्रम के चार मुख्य स्तंभ" },
     subtitle: { en: "दृष्टिकोण और मूल्य", hi: "दृष्टिकोण और मूल्य" },
     desc: {
       en: "We believe that true national growth begins at home. By organizing our intellectual capital, empowering families financially, and building cooperative local networks, we lay the foundation for a truly developed India.",
