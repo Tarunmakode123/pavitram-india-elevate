@@ -32,7 +32,7 @@ export const translations = {
     title: { en: "Pavitram India", hi: "पवित्रम इंडिया" },
     desc: {
       en: "The dream of a prosperous, self-reliant India starts not in policy — but in people. Pavitram India brings that dream to life through a cooperative community where every farmer, every woman, every youth, and every family grows together — sharing resources, reducing costs, and building a better life from within.",
-      hi: "एक समृद्ध, आत्मनिर्भर भारत का सपना नीतियों से नहीं — लोगों से शुरू होता है। पवित्रम इंडिया एक सहकारी समुदाय के माध्यम से उस सपने को साकार करता है जहाँ हर किसान, हर महिला, हर युवा और हर परिवार एक साथ आगे बढ़ता है — संसाधनों को साझा करके, लागत को कम करके और आत्मनिर्भरता का निर्माण करके।"
+      hi: "एक समृद्ध और आत्मनिर्भर भारत का सपना केवल सरकारी नीतियों से नहीं, बल्कि देश के लोगों की सक्रिय भागीदारी से पूरा होगा। पवित्रम इंडिया एक सहकारी समुदाय के रूप में इस सपने को सच करने का काम कर रहा है, जहाँ देश के चार सबसे महत्वपूर्ण वर्ग—गरीब, युवा, महिलाएं और किसान एक साथ मिलकर आगे बढ़ रहे हैं। संसाधनों को आपस में साझा करके, दैनिक जीवन के खर्चों को कम करके और आत्मनिर्भरता का निर्माण करके हम न केवल हर परिवार को मजबूत बना रहे हैं, बल्कि देश को समृद्ध बनाने में अपना योगदान दे रहे हैं।"
     }
   },
   pillars: {
