@@ -1299,7 +1299,7 @@ function Hero() {
 /* ─────────── Pillars (Our Vision) ─────────── */
 
 function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: GraduationCap,
@@ -1386,7 +1386,7 @@ function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
 /* ─────────── Mission ─────────── */
 
 function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const cards = [
     {
       num: "01",
@@ -1491,7 +1491,7 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
 /* ─────────── Philosophy ─────────── */
 
 function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: ShieldCheck,
@@ -1595,7 +1595,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
 /* ─────────── Core Values ─────────── */
 
 function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Scale,
@@ -1684,7 +1684,7 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
 /* ─────────── Our Ethics ─────────── */
 
 function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Shield,
@@ -1773,7 +1773,7 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
 /* ─────────── Our Focus ─────────── */
 
 function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: HeartHandshake,
@@ -1960,6 +1960,7 @@ function JourneyStrip() {
 }
 
 function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Home,
