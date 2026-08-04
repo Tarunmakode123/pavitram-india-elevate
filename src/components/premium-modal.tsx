@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, type LucideIcon } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 export type ModalHighlight = {
   point: string;
@@ -20,6 +21,9 @@ export type ModalData = {
 };
 
 export function PremiumModal({ data, onClose }: { data: ModalData | null; onClose: () => void }) {
+  const { language } = useLanguage();
+  const isHindi = language === "hi";
+
   useEffect(() => {
     if (!data) return;
 
@@ -37,6 +41,23 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [data, onClose]);
+
+  const getTranslatedTag = (tag: string) => {
+    if (!isHindi) return tag;
+    switch (tag) {
+      case "Our Vision": return "हमारा दृष्टिकोण";
+      case "Our Mission": return "हमारा मिशन";
+      case "Our Philosophy": return "हमारा सिद्धांत";
+      case "Core Values": return "मुख्य मूल्य";
+      case "Our Ethics": return "हमारी नैतिकता";
+      case "Our Focus": return "हमारा ध्यान";
+      case "Our Presence": return "हमारी उपस्थिति";
+      case "Association With": return "संबद्धता";
+      case "Business Network": return "व्यापार नेटवर्क";
+      case "Our Motto": return "हमारा ध्येय";
+      default: return tag;
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -79,11 +100,11 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                     <div className="grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-2xl bg-white/10 text-gold ring-1 ring-gold/30">
                       <data.icon className="h-7 w-7 sm:h-10 sm:w-10" />
                     </div>
-                    <p className="mt-4 sm:mt-6 font-deva text-lg sm:text-xl font-semibold text-gold">
-                      {data.hindi}
+                    <p className="mt-4 sm:mt-6 text-sm font-semibold text-gold tracking-wide uppercase">
+                      {isHindi ? data.title : data.hindi}
                     </p>
                     <h3 className="mt-1 font-display text-xl sm:text-2xl font-bold text-white leading-tight">
-                      {data.title}
+                      {isHindi ? data.hindi : data.title}
                     </h3>
                   </div>
                   <div className="mt-6 sm:mt-8 border-t border-white/10 pt-4">
@@ -97,7 +118,7 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                 <div className="flex w-full flex-col justify-between bg-white p-5 sm:p-8 text-left md:w-[62%]">
                   <div>
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gold">
-                      KEY HIGHLIGHTS
+                      {isHindi ? "मुख्य बिंदु" : "KEY HIGHLIGHTS"}
                     </span>
 
                     <div className="mt-4 sm:mt-5 space-y-3.5 sm:space-y-4">
@@ -121,7 +142,7 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                     <div className="my-5 sm:my-6 h-px w-full bg-gold/20" />
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <span className="inline-block rounded-full border border-gold/60 bg-gold/5 px-3 sm:px-3.5 py-1 text-[11px] sm:text-xs font-semibold text-gold">
-                        {data.tag}
+                        {getTranslatedTag(data.tag)}
                       </span>
 
                       {data.pageUrl && (
@@ -130,7 +151,7 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                           onClick={onClose}
                           className="inline-flex items-center gap-1.5 rounded-full bg-navy px-4 py-2 text-xs font-bold text-white transition hover:bg-gold hover:text-navy cursor-pointer"
                         >
-                          {data.pageLabel || "Explore Page"} <ArrowRight className="h-3.5 w-3.5" />
+                          {isHindi ? "पेज देखें" : (data.pageLabel || "Explore Page")} <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       )}
                     </div>

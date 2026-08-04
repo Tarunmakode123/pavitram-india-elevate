@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
 import { type ModalData } from "@/components/premium-modal";
+import { useLanguage } from "@/components/language-provider";
+import { translations } from "@/components/translations";
 
 export { LOGO_URL };
 
@@ -152,19 +154,27 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
-  const [isHindi, setIsHindi] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+  const isHindi = language === "hi";
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
-  // Cookie helper to check current translation
-  const getCookie = (name: string) => {
-    if (typeof document === "undefined") return null;
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length > 1) {
-      return parts[1].split(";").shift() || null;
-    }
-    return null;
-  };
+  const aboutItems = [
+    { label: t(translations.nav.aboutItems.overview), to: "/about" },
+    { label: t(translations.nav.aboutItems.vision), to: "/about/vision" },
+    { label: t(translations.nav.aboutItems.mission), to: "/about/mission" },
+    { label: t(translations.nav.aboutItems.philosophy), to: "/about/philosophy" },
+    { label: t(translations.nav.aboutItems.values), to: "/about/values" },
+    { label: t(translations.nav.aboutItems.ethics), to: "/about/ethics" },
+    { label: t(translations.nav.aboutItems.focus), to: "/about/focus" },
+    { label: t(translations.nav.aboutItems.network), to: "/about/network" },
+  ];
+
+  const oppItems = [
+    { label: t(translations.nav.oppItems.consumer), to: "/opportunities/consumer" },
+    { label: t(translations.nav.oppItems.merchant), to: "/opportunities/merchant" },
+    { label: t(translations.nav.oppItems.investor), to: "/opportunities/investor" },
+    { label: t(translations.nav.oppItems.career), to: "/opportunities/career" },
+  ];
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 30);
@@ -178,104 +188,8 @@ export function Navbar() {
     setActive(null);
   }, [pathname]);
 
-  useEffect(() => {
-    const checkLang = () => {
-      const transCookie = getCookie("googtrans");
-      setIsHindi(transCookie === "/en/hi" || transCookie?.includes("/hi") || false);
-    };
-    checkLang();
-    const interval = setInterval(checkLang, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const updateTransCookie = (value: string | null) => {
-    if (typeof document === "undefined") return;
-
-    // 1. Get all path prefixes of the current URL to override path-specific cookies
-    const paths = ["/"];
-    const pathParts = window.location.pathname.split("/").filter(Boolean);
-    let currentPath = "";
-    for (const part of pathParts) {
-      currentPath += "/" + part;
-      paths.push(currentPath);
-      paths.push(currentPath + "/");
-    }
-
-    // 2. Get all domain variations
-    const host = window.location.hostname;
-    const domains = [undefined, host, `.${host}`];
-    const hostParts = host.split(".");
-    for (let i = 0; i < hostParts.length; i++) {
-      const domain = hostParts.slice(i).join(".");
-      if (domain) {
-        domains.push(domain);
-        domains.push(`.${domain}`);
-      }
-    }
-
-    const uniqueDomains = Array.from(new Set(domains));
-    const uniquePaths = Array.from(new Set(paths));
-
-    // 3. Clear/expire existing cookies on all combinations of paths and domains
-    for (const path of uniquePaths) {
-      for (const domain of uniqueDomains) {
-        const domainString = domain ? `; Domain=${domain}` : "";
-        const pathString = `; Path=${path}`;
-        const expireString = "; Expires=Thu, 01 Jan 1970 00:00:01 GMT";
-
-        document.cookie = `googtrans=;${domainString}${pathString}${expireString};`;
-      }
-    }
-
-    // 4. Set the new cookie value on all paths and domains
-    if (value) {
-      for (const path of uniquePaths) {
-        for (const domain of uniqueDomains) {
-          const domainString = domain ? `; Domain=${domain}` : "";
-          const pathString = `; Path=${path}`;
-          document.cookie = `googtrans=${value}${domainString}${pathString};`;
-        }
-      }
-    }
-  };
-
   const toggleLanguage = () => {
-    const select = document.querySelector(".goog-te-combo") as HTMLSelectElement;
-    if (isHindi) {
-      // Revert to English: clear cookies and reload to restore original state
-      updateTransCookie("/en/en");
-
-      if (select) {
-        // Try setting select value to "" first (original page language)
-        select.value = "";
-        // If that didn't work (some browsers), try index 0
-        if (!select.value && select.options.length > 0) {
-          select.selectedIndex = 0;
-        }
-        // If "en" option exists specifically, use it
-        const hasEn = Array.from(select.options).some((opt) => opt.value === "en");
-        if (hasEn) {
-          select.value = "en";
-        }
-        select.dispatchEvent(new Event("change"));
-      }
-      setIsHindi(false);
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
-    } else {
-      // Translate to Hindi
-      updateTransCookie("/en/hi");
-
-      if (select) {
-        select.value = "hi";
-        select.dispatchEvent(new Event("change"));
-      }
-      setIsHindi(true);
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
-    }
+    setLanguage(isHindi ? "en" : "hi");
   };
 
   const isActive = (to: string) => (to === "/" ? pathname === "/" : pathname.startsWith(to));
@@ -316,7 +230,7 @@ export function Navbar() {
             to="/"
             className={`relative px-4 py-2 text-sm font-medium transition-colors ${isActive("/") ? "text-gold" : "text-white/85 hover:text-white"}`}
           >
-            Home
+            {t(translations.nav.home)}
           </Link>
 
           {/* About */}
@@ -329,12 +243,12 @@ export function Navbar() {
               to="/about"
               className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors ${pathname.startsWith("/about") ? "text-gold" : "text-white/85 hover:text-white"}`}
             >
-              About Us <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              {t(translations.nav.aboutUs)} <ChevronDown className="h-3.5 w-3.5 opacity-70" />
             </Link>
             {dropdownPanel(
               "about",
               <div className="min-w-[200px]">
-                {ABOUT_ITEMS.map((i) => (
+                {aboutItems.map((i) => (
                   <Link key={i.to} to={i.to} className={linkCls}>
                     {i.label}
                   </Link>
@@ -353,7 +267,7 @@ export function Navbar() {
               to="/services"
               className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors ${pathname.startsWith("/services") ? "text-gold" : "text-white/85 hover:text-white"}`}
             >
-              Services <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              {t(translations.nav.services)} <ChevronDown className="h-3.5 w-3.5 opacity-70" />
             </Link>
             {dropdownPanel(
               "services",
@@ -379,12 +293,12 @@ export function Navbar() {
               to="/opportunities"
               className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors ${pathname.startsWith("/opportunities") ? "text-gold" : "text-white/85 hover:text-white"}`}
             >
-              Opportunities <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              {t(translations.nav.opportunities)} <ChevronDown className="h-3.5 w-3.5 opacity-70" />
             </Link>
             {dropdownPanel(
               "opp",
               <div className="min-w-[200px]">
-                {OPP_ITEMS.map((i) => (
+                {oppItems.map((i) => (
                   <Link key={i.to} to={i.to} className={linkCls}>
                     {i.label}
                   </Link>
@@ -397,13 +311,13 @@ export function Navbar() {
             to="/faq"
             className={`px-4 py-2 text-sm font-medium transition-colors ${isActive("/faq") ? "text-gold" : "text-white/85 hover:text-white"}`}
           >
-            FAQ
+            {t(translations.nav.faq)}
           </Link>
           <Link
             to="/contact"
             className={`px-4 py-2 text-sm font-medium transition-colors ${isActive("/contact") ? "text-gold" : "text-white/85 hover:text-white"}`}
           >
-            Contact
+            {t(translations.nav.contact)}
           </Link>
         </nav>
 
@@ -411,15 +325,15 @@ export function Navbar() {
           <button
             onClick={toggleLanguage}
             className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-sm font-bold text-white/90 transition hover:border-gold hover:text-gold font-deva cursor-pointer"
-            title={isHindi ? "Translate to English" : "हिन्दी में अनुवाद करें"}
+            title={t(translations.nav.translateTitle)}
           >
-            {isHindi ? "EN" : "हि"}
+            {t(translations.nav.translateBtn)}
           </button>
           <Link
             to="/join"
             className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-navy transition hover:bg-gold hover:shadow-[0_8px_24px_-6px_rgba(201,149,42,0.6)]"
           >
-            Join the Community
+            {t(translations.nav.joinCommunity)}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -428,9 +342,9 @@ export function Navbar() {
           <button
             onClick={toggleLanguage}
             className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-sm font-bold text-white/90 transition hover:border-gold hover:text-gold font-deva cursor-pointer"
-            title={isHindi ? "Translate to English" : "हिन्दी में अनुवाद करें"}
+            title={t(translations.nav.translateTitle)}
           >
-            {isHindi ? "EN" : "हि"}
+            {t(translations.nav.translateBtn)}
           </button>
           <button
             onClick={() => setOpen(!open)}
@@ -446,14 +360,14 @@ export function Navbar() {
         <div className="lg:hidden border-t border-white/10 bg-navy/95 backdrop-blur-xl">
           <div className="flex flex-col px-6 py-4">
             <Link to="/" onClick={() => setOpen(false)} className="py-3 text-white/85">
-              Home
+              {t(translations.nav.home)}
             </Link>
             <details className="group">
               <summary className="flex cursor-pointer items-center justify-between py-3 text-white/85">
-                About Us <ChevronDown className="h-4 w-4" />
+                {t(translations.nav.aboutUs)} <ChevronDown className="h-4 w-4" />
               </summary>
               <div className="pl-4">
-                {ABOUT_ITEMS.map((i) => (
+                {aboutItems.map((i) => (
                   <Link
                     key={i.to}
                     to={i.to}
@@ -466,14 +380,14 @@ export function Navbar() {
               </div>
             </details>
             <Link to="/services" onClick={() => setOpen(false)} className="py-3 text-white/85">
-              Services
+              {t(translations.nav.services)}
             </Link>
             <details className="group">
               <summary className="flex cursor-pointer items-center justify-between py-3 text-white/85">
-                Opportunities <ChevronDown className="h-4 w-4" />
+                {t(translations.nav.opportunities)} <ChevronDown className="h-4 w-4" />
               </summary>
               <div className="pl-4">
-                {OPP_ITEMS.map((i) => (
+                {oppItems.map((i) => (
                   <Link
                     key={i.to}
                     to={i.to}
@@ -486,10 +400,10 @@ export function Navbar() {
               </div>
             </details>
             <Link to="/faq" onClick={() => setOpen(false)} className="py-3 text-white/85">
-              FAQ
+              {t(translations.nav.faq)}
             </Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="py-3 text-white/85">
-              Contact
+              {t(translations.nav.contact)}
             </Link>
             <button
               onClick={() => {
@@ -498,14 +412,14 @@ export function Navbar() {
               }}
               className="py-3 text-left font-bold text-gold cursor-pointer"
             >
-              {isHindi ? "Translate to English (EN)" : "हिंदी में अनुवाद करें (हि)"}
+              {t({ en: "Translate to English (EN)", hi: "हिंदी में अनुवाद करें (हि)" })}
             </button>
             <Link
               to="/join"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-white px-5 py-3 text-center font-bold text-navy"
             >
-              Join the Community
+              {t(translations.nav.joinCommunity)}
             </Link>
           </div>
         </div>
@@ -800,13 +714,14 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
 /* ─────────── Footer ─────────── */
 
 export function Footer() {
-  const explore: { label: string; to: string }[] = [
-    { label: "Home", to: "/" },
-    { label: "About Us", to: "/about" },
-    { label: "Services", to: "/services" },
-    { label: "Opportunities", to: "/opportunities" },
-    { label: "FAQ", to: "/faq" },
-    { label: "Contact", to: "/contact" },
+  const { t } = useLanguage();
+  const explore = [
+    { label: t(translations.nav.home), to: "/" },
+    { label: t(translations.nav.aboutUs), to: "/about" },
+    { label: t(translations.nav.services), to: "/services" },
+    { label: t(translations.nav.opportunities), to: "/opportunities" },
+    { label: t(translations.nav.faq), to: "/faq" },
+    { label: t(translations.nav.contact), to: "/contact" },
   ];
   const services = SERVICES_GRID.flat().filter(Boolean);
   const socials = [MessageCircle, Facebook, Instagram, Youtube, Twitter];
@@ -818,10 +733,10 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-6 font-deva text-sm font-semibold text-gold">
-              प्रबुद्ध नागरिक | समृद्ध परिवार | आत्मनिर्भर समाज
+              {t(translations.footer.tagline)}
             </p>
             <p className="mt-4 max-w-sm text-sm leading-[1.8] text-white/60">
-              Building Intellectual Citizens, Prosperous Families & Self-Reliant Society
+              {t(translations.footer.taglineEn)}
             </p>
             <div className="mt-6 flex items-center gap-3">
               {socials.map((Icon, i) => (
@@ -836,7 +751,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="font-display text-lg font-bold text-gold">Explore</h4>
+            <h4 className="font-display text-lg font-bold text-gold">{t(translations.footer.explore)}</h4>
             <ul className="mt-5 space-y-3">
               {explore.map((l) => (
                 <li key={l.to}>
@@ -848,7 +763,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-display text-lg font-bold text-gold">Our Services</h4>
+            <h4 className="font-display text-lg font-bold text-gold">{t(translations.footer.services)}</h4>
             <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
               {services.map((s) => (
                 <li key={s}>
@@ -866,9 +781,12 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-6 text-center text-xs text-white/50 md:flex-row md:justify-between md:text-left">
-          <span>© 2026 Pavitram India. All rights reserved.</span>
+          <span>© 2026 Pavitram India. {t(translations.footer.copyright)}</span>
           <span className="text-gold font-semibold">
-            Sabka Saath · Sabka Vikas · Sabka Vishwas · Sabka Prayaas
+            {t({
+              en: "Sabka Saath · Sabka Vikas · Sabka Vishwas · Sabka Prayaas",
+              hi: "सबका साथ · सबका विकास · सबका विश्वास · सबका प्रयास"
+            })}
           </span>
           <span className="flex gap-4">
             <a href="#" className="hover:text-gold">

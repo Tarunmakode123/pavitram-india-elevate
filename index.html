@@ -25,24 +25,6 @@
       rel="stylesheet"
     />
 
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            includedLanguages: "hi",
-            autoDisplay: false,
-          },
-          "google_translate_element",
-        );
-      }
-    </script>
-    <script
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-      async
-      defer
-    ></script>
-
     <style>
       /* Hide editor badge overlay if present */
       #lovable-badge,
@@ -50,21 +32,9 @@
       a[href*="lovable.dev"][class*="badge"] {
         display: none !important;
       }
-
-      /* Hide Google Translate top bar and elements */
-      .skiptranslate,
-      .goog-te-banner-frame,
-      #goog-gt-tt,
-      .goog-te-balloon-frame {
-        display: none !important;
-      }
-      body {
-        top: 0 !important;
-      }
     </style>
   </head>
   <body>
-    <div id="google_translate_element" style="display: none"></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
