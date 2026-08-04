@@ -68,8 +68,6 @@ import {
 import LOGO_URL from "@/assets/pavitram-logo.jpg";
 import { PremiumModal, type ModalData } from "@/components/premium-modal";
 import { FinalCTA } from "@/components/site";
-import { useLanguage } from "@/components/language-provider";
-import { translations } from "@/components/translations";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -1176,12 +1174,11 @@ function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 function HeroDiagram() {
-  const { t } = useLanguage();
   const labels = [
-    { text: t(translations.pillars.family.title), pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
-    { text: t(translations.pillars.society.title), pos: "right-0 top-1/2 translate-x-1/2 -translate-y-1/2" },
-    { text: t(translations.pillars.india.title), pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" },
-    { text: t(translations.pillars.citizen.title), pos: "left-0 top-1/2 -translate-x-1/2 -translate-y-1/2" },
+    { text: "Prosperous Family", pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
+    { text: "Self-Reliant Society", pos: "right-0 top-1/2 translate-x-1/2 -translate-y-1/2" },
+    { text: "Developed India", pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" },
+    { text: "Intellectual Citizen", pos: "left-0 top-1/2 -translate-x-1/2 -translate-y-1/2" },
   ];
 
   return (
@@ -1246,7 +1243,6 @@ function HeroDiagram() {
 }
 
 function Hero() {
-  const { t } = useLanguage();
   return (
     <section id="home" className="relative isolate overflow-hidden bg-navy">
       {/* particles */}
@@ -1274,16 +1270,19 @@ function Hero() {
       <div className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 pb-24 pt-36 lg:grid-cols-[1.2fr_1fr]">
         <div>
           <Reveal>
-            <GoldLabel>{t(translations.hero.tag)}</GoldLabel>
+            <GoldLabel>Pavitram India</GoldLabel>
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl lg:text-[80px]">
-              {t(translations.hero.title)}
+              Pavitram India
             </h1>
           </Reveal>
           <Reveal delay={0.3}>
             <p className="mt-6 max-w-[520px] text-[17px] leading-[1.8] text-white/65">
-              {t(translations.hero.desc)}
+              The dream of a prosperous, self-reliant India starts not in policy — but in people.
+              Pavitram India brings that dream to life through a cooperative community where every
+              farmer, every woman, every youth, and every family grows together — sharing resources,
+              reducing costs, and building a better life from within.
             </p>
           </Reveal>
         </div>
@@ -1299,53 +1298,36 @@ function Hero() {
 /* ─────────── Pillars (Our Vision) ─────────── */
 
 function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       icon: GraduationCap,
-      key: "Intellectual Citizen",
-      title: t(translations.pillars.citizen.title),
+      title: "Intellectual Citizen",
       hi: "प्रबुद्ध नागरिक",
-      text: t({ en: "Aware, educated, and rational citizen", hi: "जागरूक, शिक्षित और तार्किक नागरिक" }),
+      text: "Aware, educated, and rational citizen",
     },
     {
       icon: Home,
-      key: "Prosperous Family",
-      title: t(translations.pillars.family.title),
+      title: "Prosperous Family",
       hi: "समृद्ध परिवार",
-      text: t({
-        en: "Ensuring availability of all basic needs, higher income, and lower expenses",
-        hi: "सभी बुनियादी आवश्यकताओं की उपलब्धता, उच्च आय और कम खर्च सुनिश्चित करना"
-      }),
+      text: "Ensuring availability of all basic needs, higher income, and lower expenses",
     },
     {
       icon: Users,
-      key: "Self-Reliant Society",
-      title: t(translations.pillars.society.title),
+      title: "Self-Reliant Society",
       hi: "आत्मनिर्भर समाज",
-      text: t({
-        en: "Fulfilling all needs of the society by the society itself",
-        hi: "समाज की सभी आवश्यकताओं को समाज द्वारा स्वयं पूरा करना"
-      }),
+      text: "Fulfilling all needs of the society by the society itself",
     },
     {
       icon: Flag,
-      key: "Developed India",
-      title: t(translations.pillars.india.title),
+      title: "Developed India",
       hi: "विकसित भारत",
-      text: t({
-        en: "Enlightened, prosperous, self-reliant, and developed India",
-        hi: "प्रबुद्ध, समृद्ध, आत्मनिर्भर और विकसित भारत"
-      }),
+      text: "Enlightened, prosperous, self-reliant, and developed India",
     },
   ];
   return (
     <section id="pillars" className="bg-haze py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeader
-          label={t(translations.pillars.tag)}
-          title={t(translations.pillars.title)}
-        />
+        <SectionHeader label="Our Vision" title="The Four Pillars of Pavitram" />
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -1355,10 +1337,10 @@ function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         >
           {cards.map((c) => (
             <motion.div
-              key={c.key}
+              key={c.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
-              onClick={() => onOpenModal(VISION_MODALS[c.key])}
+              onClick={() => onOpenModal(VISION_MODALS[c.title])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all hover:card-shadow-lg flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <span className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-gradient-to-r from-gold to-gold-light transition-transform duration-500 group-hover:scale-x-100" />
@@ -1367,13 +1349,11 @@ function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   <c.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold text-ink">{c.title}</h3>
-                {language === "en" && (
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                )}
+                <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                 <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.text}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1386,51 +1366,34 @@ function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
 /* ─────────── Mission ─────────── */
 
 function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       num: "01",
       icon: Handshake,
-      key: "Sabka Saath",
       title: "Sabka Saath",
       hi: "सबका साथ",
-      body: t({
-        en: "Building a united community where every member stands together, supports each other, and grows as one cooperative family across India.",
-        hi: "एकजुट समुदाय का निर्माण करना जहाँ प्रत्येक सदस्य एक साथ खड़ा होता है, एक-दूसरे का समर्थन करता है, और पूरे भारत में एक सहकारी परिवार के रूप में विकसित होता है।"
-      }),
+      body: "Building a united community where every member stands together, supports each other, and grows as one cooperative family across India.",
     },
     {
       num: "02",
       icon: Zap,
-      key: "Sabka Prayaas",
       title: "Sabka Prayaas",
       hi: "सबका प्रयास",
-      body: t({
-        en: "Encouraging every individual to contribute their skills, time, and efforts toward building a stronger, self-reliant, and prosperous society.",
-        hi: "एक मजबूत, आत्मनिर्भर और समृद्ध समाज के निर्माण की दिशा में अपने कौशल, समय और प्रयासों का योगदान देने के लिए प्रत्येक व्यक्ति को प्रोत्साहित करना।"
-      }),
+      body: "Encouraging every individual to contribute their skills, time, and efforts toward building a stronger, self-reliant, and prosperous society.",
     },
     {
       num: "03",
       icon: TrendingUp,
-      key: "Sabka Vikas",
       title: "Sabka Vikas",
       hi: "सबका विकास",
-      body: t({
-        en: "Ensuring inclusive development where growth reaches every village, every family, and every citizen — leaving no one behind in our nation's progress.",
-        hi: "समावेशी विकास सुनिश्चित करना जहाँ विकास हर गाँव, हर परिवार और हर नागरिक तक पहुँचे — हमारे राष्ट्र की प्रगति में कोई भी पीछे न छूटे।"
-      }),
+      body: "Ensuring inclusive development where growth reaches every village, every family, and every citizen — leaving no one behind in our nation's progress.",
     },
     {
       num: "04",
       icon: Shield,
-      key: "Sabka Vishwas",
       title: "Sabka Vishwas",
       hi: "सबका विश्वास",
-      body: t({
-        en: "Earning and maintaining the complete trust of every member through absolute transparency, integrity, and ethical governance at every level.",
-        hi: "हर स्तर पर पूर्ण पारदर्शिता, अखंडता और नैतिक शासन के माध्यम से प्रत्येक सदस्य का पूर्ण विश्वास अर्जित करना और उसे बनाए रखना।"
-      }),
+      body: "Earning and maintaining the complete trust of every member through absolute transparency, integrity, and ethical governance at every level.",
     },
   ];
 
@@ -1438,11 +1401,11 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
     <section className="relative isolate overflow-hidden bg-navy py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>{t(translations.mission.tag)}</GoldLabel>
+          <GoldLabel>OUR MISSION</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
-            {t(translations.mission.title)}
+            Our Mission
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.mission.subtitle)}</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा मिशन</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1455,11 +1418,11 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         >
           {cards.map((c) => (
             <motion.div
-              key={c.key}
+              key={c.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02, boxShadow: "0 0 25px rgba(201, 149, 42, 0.25)" }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(MISSION_MODALS[c.key])}
+              onClick={() => onOpenModal(MISSION_MODALS[c.title])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] border border-gold/30 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
@@ -1472,13 +1435,11 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   </div>
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold text-white">{c.title}</h3>
-                {language === "en" && (
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                )}
+                <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                 <p className="mt-3 text-[15px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1491,47 +1452,30 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
 /* ─────────── Philosophy ─────────── */
 
 function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       icon: ShieldCheck,
-      key: "Integrity",
       title: "Integrity",
       hi: "अखंडता",
-      body: t({
-        en: "We conduct ourselves with complete honesty, fairness, and ethical principles in every interaction, decision, and partnership within our cooperative network.",
-        hi: "हम अपने सहकारी नेटवर्क के भीतर प्रत्येक बातचीत, निर्णय और साझेदारी में पूर्ण ईमानदारी, निष्पक्षता और नैतिक सिद्धांतों के साथ काम करते हैं।"
-      }),
+      body: "We conduct ourselves with complete honesty, fairness, and ethical principles in every interaction, decision, and partnership within our cooperative network.",
     },
     {
       icon: Eye,
-      key: "Transparency",
       title: "Transparency",
       hi: "पारदर्शिता",
-      body: t({
-        en: "Every process, transaction, and decision in our network is open and visible to all members. We believe transparency builds the trust that holds our community together.",
-        hi: "हमारे नेटवर्क में हर प्रक्रिया, लेनदेन और निर्णय सभी सदस्यों के लिए खुला और स्पष्ट है। हमारा मानना है कि पारदर्शिता उस विश्वास का निर्माण करती है जो हमारे समुदाय को एक साथ रखता है।"
-      }),
+      body: "Every process, transaction, and decision in our network is open and visible to all members. We believe transparency builds the trust that holds our community together.",
     },
     {
       icon: Lightbulb,
-      key: "Innovation",
       title: "Innovation",
       hi: "नवाचार",
-      body: t({
-        en: "We continuously embrace new ideas, technologies, and approaches to solve real problems and create better opportunities for our members and society.",
-        hi: "हम वास्तविक समस्याओं को हल करने और अपने सदस्यों और समाज के लिए बेहतर अवसर पैदा करने के लिए नए विचारों, तकनीकों और दृष्टिकोणों को लगातार अपनाते हैं।"
-      }),
+      body: "We continuously embrace new ideas, technologies, and approaches to solve real problems and create better opportunities for our members and society.",
     },
     {
       icon: Link2,
-      key: "Collaboration",
       title: "Collaboration",
       hi: "गठबंधन",
-      body: t({
-        en: "Our strength lies in unity. By forging meaningful partnerships between individuals, businesses, and organizations, we create an ecosystem far stronger than the sum of its parts.",
-        hi: "हमारी ताकत एकता में है। व्यक्तियों, व्यवसायों और संगठनों के बीच सार्थक साझेदारी बनाकर, हम एक ऐसा पारिस्थितिकी तंत्र बनाते हैं जो इसके हिस्सों के योग से कहीं अधिक मजबूत है।"
-      }),
+      body: "Our strength lies in unity. By forging meaningful partnerships between individuals, businesses, and organizations, we create an ecosystem far stronger than the sum of its parts.",
     },
   ];
 
@@ -1539,11 +1483,11 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>{t(translations.philosophy.tag)}</GoldLabel>
+          <GoldLabel>OUR PHILOSOPHY</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t(translations.philosophy.title)}
+            Our Philosophy
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.philosophy.subtitle)}</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारे सिद्धांत</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1556,11 +1500,11 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
         >
           {cards.map((c) => (
             <motion.div
-              key={c.key}
+              key={c.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(PHILOSOPHY_MODALS[c.key])}
+              onClick={() => onOpenModal(PHILOSOPHY_MODALS[c.title])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <div>
@@ -1575,14 +1519,12 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  {language === "en" && (
-                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                  )}
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1595,35 +1537,30 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
 /* ─────────── Core Values ─────────── */
 
 function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Scale,
-      key: "Equality",
-      title: t(translations.coreValues.equality.title),
+      title: "Equality",
       hi: "समानता",
-      body: t(translations.coreValues.equality.desc),
+      body: "We believe in equal rights, equal status, and equal opportunities for every member of our community, breaking all traditional barriers.",
     },
     {
       icon: Unlock,
-      key: "Liberty",
-      title: t(translations.coreValues.liberty.title),
+      title: "Liberty",
       hi: "स्वतंत्रता",
-      body: t(translations.coreValues.liberty.desc),
+      body: "We empower individuals with financial freedom, independent choices, and the power to build their own prosperous livelihoods.",
     },
     {
       icon: Users,
-      key: "Fraternity",
-      title: t(translations.coreValues.fraternity.title),
+      title: "Fraternity",
       hi: "बंधुत्व",
-      body: t(translations.coreValues.fraternity.desc),
+      body: "We foster a deep sense of brotherhood, mutual trust, and cooperative solidarity across all states and sectors of our network.",
     },
     {
       icon: Link2,
-      key: "Unity",
-      title: t(translations.coreValues.unity.title),
+      title: "Unity",
       hi: "एकता",
-      body: t(translations.coreValues.unity.desc),
+      body: "Stronger together. By combining our strengths and organizing collectively, we build an unbreakable path to regional and national growth.",
     },
   ];
 
@@ -1631,11 +1568,11 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
     <section className="bg-haze py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>{t(translations.coreValues.tag)}</GoldLabel>
+          <GoldLabel>CORE VALUES</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t(translations.coreValues.title)}
+            Core Values
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.coreValues.subtitle)}</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">मुख्य मूल्य</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1648,11 +1585,11 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
         >
           {cards.map((c) => (
             <motion.div
-              key={c.key}
+              key={c.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(CORE_VALUES_MODALS[c.key])}
+              onClick={() => onOpenModal(CORE_VALUES_MODALS[c.title])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <div>
@@ -1664,14 +1601,12 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  {language === "en" && (
-                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                  )}
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1684,35 +1619,30 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
 /* ─────────── Our Ethics ─────────── */
 
 function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Shield,
-      key: "Rights",
-      title: t(translations.ethics.rights.title),
+      title: "Rights",
       hi: "अधिकार",
-      body: t(translations.ethics.rights.desc),
+      body: "We protect and advocate for the rights of all farmers, workers, women, and service providers, ensuring they receive their fair due.",
     },
     {
       icon: UserCheck,
-      key: "Responsibility",
-      title: t(translations.ethics.responsibility.title),
+      title: "Responsibility",
       hi: "उत्तरदायित्व",
-      body: t(translations.ethics.responsibility.desc),
+      body: "We share a collective duty to elevate each other, support local community merchants, and contribute directly to society's upliftment.",
     },
     {
       icon: ClipboardCheck,
-      key: "Accountability",
-      title: t(translations.ethics.accountability.title),
+      title: "Accountability",
       hi: "जवाबदेही",
-      body: t(translations.ethics.accountability.desc),
+      body: "We practice transparent audits, ethical financial reporting, and clean governance rules to remain fully answerable to our members.",
     },
     {
       icon: Target,
-      key: "Outcome",
-      title: t(translations.ethics.outcome.title),
+      title: "Outcome",
       hi: "परिणाम",
-      body: t(translations.ethics.outcome.desc),
+      body: "We focus on real, tangible, and measurable progress — bringing direct savings, income boosts, and educational growth to every home.",
     },
   ];
 
@@ -1720,11 +1650,11 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>{t(translations.ethics.tag)}</GoldLabel>
+          <GoldLabel>OUR ETHICS</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t(translations.ethics.title)}
+            Our Ethics
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.ethics.subtitle)}</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारी नैतिकता</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1737,11 +1667,11 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
         >
           {cards.map((c) => (
             <motion.div
-              key={c.key}
+              key={c.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(OUR_ETHICS_MODALS[c.key])}
+              onClick={() => onOpenModal(OUR_ETHICS_MODALS[c.title])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <div>
@@ -1753,14 +1683,12 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  {language === "en" && (
-                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                  )}
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1773,47 +1701,30 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
 /* ─────────── Our Focus ─────────── */
 
 function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       icon: HeartHandshake,
-      key: "Garib",
-      title: t({ en: "Garib", hi: "गरीब" }),
-      hi: "कल्याण एवं सुरक्षा",
-      body: t({
-        en: "Empowering low-income families and workers through cooperative safety nets, financial support, and cost-reduction initiatives.",
-        hi: "सहकारी सुरक्षा तंत्र, वित्तीय सहायता और लागत कम करने की पहलों के माध्यम से कम आय वाले परिवारों और श्रमिकों को सशक्त बनाना।"
-      }),
+      title: "Garib",
+      hi: "गरीब",
+      body: "Empowering low-income families and workers through cooperative safety nets, financial support, and cost-reduction initiatives.",
     },
     {
       icon: GraduationCap,
-      key: "Yuva",
-      title: t({ en: "Yuva", hi: "युवा" }),
-      hi: "कौशल एवं रोजगार",
-      body: t({
-        en: "Nurturing the next generation with digital skills, entrepreneurship guidance, and dignified employment opportunities.",
-        hi: "डिजिटल कौशल, उद्यमिता मार्गदर्शन और सम्मानजनक रोजगार के अवसरों के साथ अगली पीढ़ी का पोषण करना।"
-      }),
+      title: "Yuva",
+      hi: "युवा",
+      body: "Nurturing the next generation with digital skills, entrepreneurship guidance, and dignified employment opportunities.",
     },
     {
       icon: Sparkles,
-      key: "Mahila",
-      title: t({ en: "Mahila", hi: "महिला" }),
-      hi: "महिला सशक्तिकरण",
-      body: t({
-        en: "Fostering self-reliance for women through self-help groups, micro-enterprises, and skill development programs.",
-        hi: "स्वयं सहायता समूहों, सूक्ष्म उद्यमों और कौशल विकास कार्यक्रमों के माध्यम से महिलाओं के लिए आत्मनिर्भरता को बढ़ावा देना।"
-      }),
+      title: "Mahila",
+      hi: "महिला",
+      body: "Fostering self-reliance for women through self-help groups, micro-enterprises, and skill development programs.",
     },
     {
       icon: Sprout,
-      key: "Kisan",
-      title: t({ en: "Kisan", hi: "किसान" }),
-      hi: "कृषि एवं समृद्धि",
-      body: t({
-        en: "Supporting agricultural communities with direct market access, fair crop prices, and cooperative supply chains.",
-        hi: "सीधे बाजार पहुंच, फसलों की उचित कीमतों और सहकारी आपूर्ति श्रृंखलाओं के साथ कृषि समुदायों का समर्थन करना।"
-      }),
+      title: "Kisan",
+      hi: "किसान",
+      body: "Supporting agricultural communities with direct market access, fair crop prices, and cooperative supply chains.",
     },
   ];
 
@@ -1821,11 +1732,11 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
     <section className="bg-haze py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>{t({ en: "OUR FOCUS", hi: "हमारा ध्यान" })}</GoldLabel>
+          <GoldLabel>OUR FOCUS</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t({ en: "Our Primary Focus", hi: "हमारा मुख्य ध्यान क्षेत्र" })}
+            Our Primary Focus
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Garib, Yuva, Mahila, Kisan", hi: "गरीब, युवा, महिला, किसान" })}</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">गरीब, युवा, महिला, किसान</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1838,11 +1749,11 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         >
           {cards.map((c) => (
             <motion.div
-              key={c.key}
+              key={c.title}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(OUR_FOCUS_MODALS[c.key])}
+              onClick={() => onOpenModal(OUR_FOCUS_MODALS[c.title])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-white p-7 card-shadow transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-gold/50"
             >
               <div>
@@ -1854,14 +1765,12 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-gold">
                     {c.title}
                   </h3>
-                  {language === "en" && (
-                    <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                  )}
+                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                   <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.body}</p>
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                Click to explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1960,7 +1869,6 @@ function JourneyStrip() {
 }
 
 function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
-  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Home,
@@ -2039,9 +1947,7 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   </span>
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold text-white">{c.label}</h3>
-                {language === "en" && (
-                  <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
-                )}
+                <p className="mt-1 font-deva text-base font-semibold text-gold">{c.hi}</p>
                 <p className="mt-3 text-[14.5px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
