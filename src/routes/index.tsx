@@ -2716,10 +2716,10 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
   ];
 
   const stats = [
-    { icon: UsersRound, value: 10000, suffix: "+", label: t({ en: "Community Members", hi: "सामुदायिक सदस्य" }) },
-    { icon: Cpu, value: 12, suffix: "", label: t({ en: "Service Sectors", hi: "सेवा क्षेत्र" }) },
-    { icon: BookOpen, value: 27, suffix: "", label: t({ en: "Golden Rules", hi: "स्वर्ण नियम" }) },
-    { icon: Globe, value: 15, suffix: "+", label: t({ en: "States Covered", hi: "कवर किए गए राज्य" }) },
+    { icon: UsersRound, value: 10000, suffix: "+", label: t({ en: "Community Members", hi: "सक्रिय सदस्य" }) },
+    { icon: Cpu, value: 12, suffix: "", label: t({ en: "Service Sectors", hi: "सेवा श्रेणियां" }) },
+    { icon: BookOpen, value: 27, suffix: "", label: t({ en: "Golden Rules", hi: "स्वर्णिम नियम" }) },
+    { icon: Globe, value: 15, suffix: "+", label: t({ en: "States Covered", hi: "राज्यों में उपस्थिति" }) },
   ];
 
   return (
