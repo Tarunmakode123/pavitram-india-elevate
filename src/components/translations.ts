@@ -111,7 +111,7 @@ export const translations = {
       desc: { en: "We empower individuals with financial freedom, independent choices, and the power to build their own prosperous livelihoods.", hi: "हम व्यक्तियों को वित्तीय स्वतंत्रता, स्वतंत्र निर्णय और अपनी समृद्ध आजीविका बनाने की शक्ति प्रदान करते हैं।" }
     },
     fraternity: {
-      title: { en: "Fraternity", hi: "बंधुत्व" },
+      title: { en: "Fraternity", hi: "बंधुता" },
       desc: { en: "We foster a deep sense of brotherhood, mutual trust, and cooperative solidarity across all states and sectors of our network.", hi: "हम अपने नेटवर्क के सभी राज्यों और क्षेत्रों में भाईचारे, आपसी विश्वास और सहकारी एकजुटता की गहरी भावना को बढ़ावा देते हैं।" }
     },
     unity: {
