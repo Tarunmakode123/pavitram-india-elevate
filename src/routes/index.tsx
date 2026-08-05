@@ -623,7 +623,7 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
   },
   Fraternity: {
     icon: Users,
-    hindi: "बंधुत्व",
+    hindi: "बंधुता",
     title: "Fraternity",
     philosophy: "Promoting brotherhood and mutual support among all sections of society.",
     philosophyHi: "आपसी भाईचारा और सहकारिता की भावना ही समाज की सबसे बड़ी सुरक्षा और एकता की शक्ति है।",
@@ -1770,7 +1770,7 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
       icon: Users,
       key: "Fraternity",
       title: t(translations.coreValues.fraternity.title),
-      hi: "बंधुत्व",
+      hi: "बंधुता",
       body: t(translations.coreValues.fraternity.desc),
     },
     {
