@@ -2522,7 +2522,7 @@ function Services() {
 /* ─────────── Opportunities, Network, Testimonials, CTA ─────────── */
 
 function Opportunities() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const items = [
     {
       icon: User,
