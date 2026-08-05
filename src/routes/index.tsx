@@ -2665,22 +2665,11 @@ function Opportunities() {
 }
 
 function NetworkRings() {
-  const { t } = useLanguage();
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[420px]">
       <div className="absolute inset-0 animate-spin-slower rounded-full border border-gold/30" />
       <div className="absolute inset-[14%] animate-spin-reverse rounded-full border border-gold/40" />
       <div className="absolute inset-[28%] animate-spin-slow rounded-full border border-gold/50" />
-
-      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-haze px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-mist">
-        {t({ en: "Country", hi: "देश / राष्ट्र" })}
-      </span>
-      <span className="absolute top-[14%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-mist shadow">
-        {t({ en: "Society", hi: "समाज" })}
-      </span>
-      <span className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-haze px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-ink shadow">
-        {t({ en: "Family", hi: "परिवार" })}
-      </span>
     </div>
   );
 }
