@@ -703,25 +703,35 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     hindi: "अधिकार",
     title: "Rights",
     philosophy: "Securing fundamental rights and entitlements for every individual.",
+    philosophyHi: "नागरिकों के संवैधानिक अधिकारों और हितों की रक्षा करना ही एक न्यायसंगत समाज की पहचान है।",
     tag: "Our Ethics",
     pageUrl: "/about/ethics",
     pageLabel: "Explore Ethics Page",
+    pageLabelHi: "नैतिकता पेज देखें",
     highlights: [
       {
         point: "Constitutional Awareness",
         desc: "Educating members about their rights as citizens.",
+        pointHi: "संवैधानिक जागरूकता",
+        descHi: "समुदाय के सदस्यों को उनके नागरिक अधिकारों और कर्तव्यों के बारे में शिक्षित करना।"
       },
       {
         point: "Fair Trade Rights",
         desc: "Guaranteeing fair purchase prices for producers and fair pricing for consumers.",
+        pointHi: "निष्पक्ष व्यापार अधिकार",
+        descHi: "उत्पादकों के लिए उचित मूल्य और उपभोक्ताओं के लिए सही दरों की गारंटी देना।"
       },
       {
         point: "Voice & Representation",
         desc: "Ensuring every member has a voice in cooperative decisions.",
+        pointHi: "समान प्रतिनिधित्व",
+        descHi: "सहकारी निर्णयों में समाज के हर व्यक्ति की बात सुने जाने का समान अधिकार सुनिश्चित करना।"
       },
       {
         point: "Social Security",
         desc: "Building cooperative safety nets for health, education, and security.",
+        pointHi: "सामाजिक सुरक्षा",
+        descHi: "स्वास्थ्य, शिक्षा और सुरक्षा के लिए मिलकर सामूहिक सुरक्षा चक्र तैयार करना।"
       },
     ],
   },
@@ -730,25 +740,35 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     hindi: "उत्तरदायित्व",
     title: "Responsibility",
     philosophy: "Embracing duty towards our family, community, and nation.",
+    philosophyHi: "परिवार, समाज और राष्ट्र के प्रति अपनी जिम्मेदारियों को समझना ही एक प्रबुद्ध नागरिक का कर्तव्य है।",
     tag: "Our Ethics",
     pageUrl: "/about/ethics",
     pageLabel: "Explore Ethics Page",
+    pageLabelHi: "नैतिकता पेज देखें",
     highlights: [
       {
         point: "Individual Contribution",
         desc: "Actively sharing skills, resources, and mentoring others.",
+        pointHi: "व्यक्तिगत कर्तव्य",
+        descHi: "अपने कौशल, ज्ञान और अनुभवों को साझा कर दूसरों को आगे बढ़ने में मदद करना।"
       },
       {
         point: "Community Support",
         desc: "Supporting fellow local merchants and purchasing locally.",
+        pointHi: "स्थानीय सहयोग",
+        descHi: "स्थानीय उत्पादकों, किसानों और छोटे दुकानदारों से खरीद कर आत्मनिर्भरता बढ़ाना।"
       },
       {
         point: "Civic Responsibility",
         desc: "Maintaining high ethical standards in all public and business dealings.",
+        pointHi: "नागरिक जिम्मेदारी",
+        descHi: "सार्वजनिक और व्यावसायिक लेन-देन में उच्च नैतिक और कानूनी मानकों को बनाए रखना।"
       },
       {
         point: "Nation Building",
         desc: "Aligning our daily efforts with the long-term goal of a developed India.",
+        pointHi: "राष्ट्र निर्माण",
+        descHi: "अपने दैनिक श्रम और कार्यों को भारत के 2047 तक विकसित राष्ट्र बनने के लक्ष्य से जोड़ना।"
       },
     ],
   },
@@ -757,25 +777,35 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     hindi: "जवाबदेही",
     title: "Accountability",
     philosophy: "Being answerable for our commitments, actions, and transactions.",
+    philosophyHi: "हमारे संकल्पों, कार्यों और लेन-देन के प्रति पूरी पारदर्शिता और जवाबदेही ही हमारी ताकत है।",
     tag: "Our Ethics",
     pageUrl: "/about/ethics",
     pageLabel: "Explore Ethics Page",
+    pageLabelHi: "नैतिकता पेज देखें",
     highlights: [
       {
         point: "Transparent Auditing",
         desc: "Open accounting logs for all business transactions.",
+        pointHi: "पारदर्शी ऑडिट",
+        descHi: "सभी व्यावसायिक लेन-देन और लेखा-जोखा को पूरी तरह पारदर्शी और खुला रखना।"
       },
       {
         point: "Clean Governance",
         desc: "Strict rules for management to prevent any personal gain.",
+        pointHi: "स्वच्छ शासन",
+        descHi: "प्रबंधन में किसी भी व्यक्तिगत लाभ को रोकने के लिए कड़े नियमों का पालन करना।"
       },
       {
         point: "Quality Assured",
         desc: "Accountable delivery systems ensuring top service standards.",
+        pointHi: "गुणवत्ता का आश्वासन",
+        descHi: "सेवाओं और उत्पादों में उच्च गुणवत्ता और उत्कृष्ट मानकों को सुनिश्चित करना।"
       },
       {
         point: "Clear Metrics",
         desc: "Regular reports on community returns and wealth distribution.",
+        pointHi: "नियमित रिपोर्ट",
+        descHi: "सामुदायिक लाभांश और विकास की रिपोर्ट नियमित रूप से सदस्यों के साथ साझा करना।"
       },
     ],
   },
@@ -784,25 +814,35 @@ const OUR_ETHICS_MODALS: Record<string, ModalData> = {
     hindi: "परिणाम",
     title: "Outcome",
     philosophy: "Focused on real, measurable impact and positive results for people.",
+    philosophyHi: "सच्ची प्रगति केवल नीतियों में नहीं, बल्कि जमीन पर दिखने वाले वास्तविक सकारात्मक परिणामों से आंकी जाती है।",
     tag: "Our Ethics",
     pageUrl: "/about",
     pageLabel: "Explore About Page",
+    pageLabelHi: "हमारे बारे में देखें",
     highlights: [
       {
         point: "Tangible Development",
         desc: "Measurable increase in member incomes and savings.",
+        pointHi: "वास्तविक विकास",
+        descHi: "सदस्यों की आय में वास्तविक वृद्धि और दैनिक जीवन के खर्चों में स्पष्ट कमी लाना।"
       },
       {
         point: "Skill Acquisition",
         desc: "Clear educational outcomes and employment match rates.",
+        pointHi: "कौशल और रोजगार",
+        descHi: "युवाओं के कौशल विकास और रोजगार के दरों में सकारात्मक वृद्धि सुनिश्चित करना।"
       },
       {
-        point: "Ground-level Progress",
+        point: "Grassroots Growth",
         desc: "Direct benefits reaching the intended final beneficiaries.",
+        pointHi: "जमीनी स्तर पर लाभ",
+        descHi: "सहकारी योजनाओं का प्रत्यक्ष लाभ अंतिम हितग्राही तक पारदर्शी रूप से पहुंचाना।"
       },
       {
         point: "Long-Term Growth",
         desc: "Reinvesting yields into sustainable community infrastructures.",
+        pointHi: "दीर्घकालिक विकास",
+        descHi: "प्राप्त लाभों को पुनः सामुदायिक बुनियादी ढांचे में निवेश कर भविष्य को सुरक्षित करना।"
       },
     ],
   },
@@ -1878,10 +1918,14 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>{t(translations.ethics.tag)}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t(translations.ethics.title)}
+            {language === "en" ? t(translations.ethics.title) : "हमारे कर्तव्य"}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.ethics.subtitle)}</p>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+          {language === "en" && (
+            <>
+              <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.ethics.subtitle)}</p>
+              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+            </>
+          )}
         </Reveal>
 
         <motion.div
