@@ -511,23 +511,35 @@ const MOTTO_MODALS: Record<string, ModalData> = {
     hindi: "संगठित (संगठित बनो, संगठित करो)",
     title: "Be Organised, Do Organised",
     philosophy: "Building an organized, united cooperative network across all sectors of society.",
+    philosophyHi: "संगठित जनशक्ति ही आत्मनिर्भरता और राष्ट्र निर्माण का सबसे बड़ा आधार है।",
     tag: "Our Motto",
+    pageUrl: "/about/motto",
+    pageLabel: "Explore Motto Page",
+    pageLabelHi: "ध्येय पेज देखें",
     highlights: [
       {
         point: "Collective Power",
         desc: "Uniting individual members into a cohesive, organized economic force.",
+        pointHi: "सामूहिक शक्ति",
+        descHi: "व्यक्तिगत सदस्यों को एक ठोस, संगठित और आर्थिक रूप से सशक्त इकाई में जोड़ना।"
       },
       {
         point: "Structured Operations",
         desc: "Operating through transparent, well-managed regional cooperatives.",
+        pointHi: "व्यवस्थित संचालन",
+        descHi: "पारदर्शी, अनुशासित और सुव्यवस्थित क्षेत्रीय सहकारी समितियों के माध्यम से काम करना।"
       },
       {
         point: "Community Discipline",
         desc: "Living by the 27 Golden Rules for mutual protection and growth.",
+        pointHi: "सामुदायिक अनुशासन",
+        descHi: "आपसी सुरक्षा और विकास के लिए पवित्रम के 27 स्वर्ण नियमों का अनुशासन से पालन करना।"
       },
       {
         point: "Organizing Others",
         desc: "Helping local merchants, workers, and families to structure their livelihoods.",
+        pointHi: "दूसरों को संगठित करना",
+        descHi: "स्थानीय व्यापारियों, श्रमिकों और परिवारों को उनके व्यवसाय को व्यवस्थित करने में सहयोग देना।"
       },
     ],
   },
@@ -536,23 +548,35 @@ const MOTTO_MODALS: Record<string, ModalData> = {
     hindi: "शिक्षित (शिक्षित बनो, शिक्षित करो)",
     title: "Be Educated, Make Educated",
     philosophy: "Fostering awareness, rational learning, and continuous skill building for all.",
+    philosophyHi: "ज्ञान और कौशल का प्रसार ही समाज को जागरूक, विचारशील और आर्थिक रूप से स्वतंत्र बनाता है।",
     tag: "Our Motto",
+    pageUrl: "/about/motto",
+    pageLabel: "Explore Motto Page",
+    pageLabelHi: "ध्येय पेज देखें",
     highlights: [
       {
         point: "Pavitram Gyan",
         desc: "Providing accessible education, skill building, and civic awareness.",
+        pointHi: "पवित्रम ज्ञान",
+        descHi: "सदस्यों के लिए व्यावहारिक शिक्षा, डिजिटल कौशल और नागरिक जागरूकता सुनिश्चित करना।"
       },
       {
         point: "Rights & Guidance",
         desc: "Educating members on constitutional rights and government schemes.",
+        pointHi: "अधिकार एवं मार्गदर्शन",
+        descHi: "सदस्यों को उनके संवैधानिक अधिकारों और सरकारी योजनाओं के लाभ के प्रति जागरूक करना।"
       },
       {
         point: "Youth Empowerment",
         desc: "Training the next generation with modern digital and technical skills.",
+        pointHi: "युवा सशक्तिकरण",
+        descHi: "आने वाली पीढ़ी को आधुनिक तकनीकों, डिजिटल साक्षरता और सॉफ्टवेयर कौशल में निपुण बनाना।"
       },
       {
         point: "Knowledge Sharing",
         desc: "Inspiring every educated member to teach and mentor others.",
+        pointHi: "ज्ञान का दान",
+        descHi: "हर शिक्षित सदस्य को अपने आसपास के लोगों को शिक्षित और प्रेरित करने के लिए प्रोत्साहित करना।"
       },
     ],
   },
@@ -561,23 +585,35 @@ const MOTTO_MODALS: Record<string, ModalData> = {
     hindi: "संघर्षशील (संघर्षशील बनो, संघर्षशील बनाओ)",
     title: "Be Striving, Make Striving",
     philosophy: "Relentless effort, resilience, and determination to build a self-reliant India.",
+    philosophyHi: "चुनौतियों का सामना करने का अटूट हौसला ही राष्ट्र को आत्मनिर्भर और विकसित बनाता है।",
     tag: "Our Motto",
+    pageUrl: "/about/motto",
+    pageLabel: "Explore Motto Page",
+    pageLabelHi: "ध्येय पेज देखें",
     highlights: [
       {
         point: "Active Engagement",
         desc: "Overcoming challenges through collective action and perseverance.",
+        pointHi: "सक्रिय सहभागिता",
+        descHi: "सामूहिक संकल्प और निरंतर प्रयासों के माध्यम से सभी बाधाओं को पार करना।"
       },
       {
         point: "Pivotal Growth",
         desc: "Striving for higher family income, lower costs, and self-reliance.",
+        pointHi: "सकारात्मक उन्नति",
+        descHi: "पारिवारिक आय बढ़ाने, खर्चों को घटाने और पूर्ण आत्मनिर्भरता के लिए सतत प्रयास करना।"
       },
       {
         point: "Community Motivation",
         desc: "Inspiring fellow members to work hard and overcome economic barriers.",
+        pointHi: "सामुदायिक प्रेरणा",
+        descHi: "अन्य सदस्यों को कठिन परिश्रम करने और आर्थिक चुनौतियों से उबरने के लिए प्रेरित करना।"
       },
       {
         point: "Unbreakable Resolve",
         desc: "Standing strong against corruption, exploitation, and unorganized debt.",
+        pointHi: "अटूट संकल्प",
+        descHi: "भ्रष्टाचार, शोषण और असंगठित कर्ज के चक्र के खिलाफ मजबूती से खड़े रहना।"
       },
     ],
   },
@@ -586,23 +622,35 @@ const MOTTO_MODALS: Record<string, ModalData> = {
     hindi: "सशक्त (सशक्त बनो, सशक्त करो)",
     title: "Be Empowered, Make Empowered",
     philosophy: "Achieving financial independence, dignity, and self-sufficiency for every home.",
+    philosophyHi: "जब देश का हर परिवार आर्थिक रूप से सशक्त और स्वावलंबी होगा, तभी विकसित भारत 2047 का संकल्प पूरा होगा।",
     tag: "Our Motto",
+    pageUrl: "/about/motto",
+    pageLabel: "Explore Motto Page",
+    pageLabelHi: "ध्येय पेज देखें",
     highlights: [
       {
         point: "Economic Independence",
         desc: "Freeing families from debt traps and unfair intermediary fees.",
+        pointHi: "आर्थिक स्वतंत्रता",
+        descHi: "परिवारों को भारी ब्याज वाले कर्जों के जाल और बिचौलियों के चंगुल से मुक्त कराना।"
       },
       {
         point: "Women & Youth Autonomy",
         desc: "Empowering women and youth through micro-enterprises and jobs.",
+        pointHi: "महिला एवं युवा स्वायत्तता",
+        descHi: "महिलाओं और युवाओं को सूक्ष्म उद्योगों तथा आजीविका के अवसरों से जोड़कर आत्मनिर्भर बनाना।"
       },
       {
         point: "Cooperative Safety Nets",
         desc: "Access to cooperative loans, health insurance, and mutual aid.",
+        pointHi: "सहकारी सुरक्षा कवच",
+        descHi: "सदस्यों को आपातकालीन ऋण, चिकित्सा सहायता और सहकारी वित्तीय लाभ प्रदान करना।"
       },
       {
         point: "National Elevation",
         desc: "Empowering every household to contribute directly to a developed India.",
+        pointHi: "राष्ट्र का गौरव",
+        descHi: "प्रत्येक भारतीय परिवार को सक्षम बनाकर उन्हें देश की जीडीपी और विकास में भागीदार बनाना।"
       },
     ],
   },
@@ -643,7 +691,7 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {t({ en: "Our Core Mantras", hi: "हमारे मूल मंत्र" })}
           </h2>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+          {language === "en" && <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />}
         </Reveal>
 
         <motion.div
