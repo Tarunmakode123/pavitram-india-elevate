@@ -2554,7 +2554,7 @@ function Opportunities() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           label={t({ en: "Opportunities", hi: "अवसर" })}
-          title={t({ en: "Explore Opportunities", hi: "अवसरों की खोज करें" })}
+          title={t({ en: "Explore Opportunities", hi: "हमसे जुड़ें" })}
           subtitle={language === "en" ? "Join the Pavitram India community in a role that suits your goals." : undefined}
         />
         <motion.div
