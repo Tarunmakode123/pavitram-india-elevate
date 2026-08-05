@@ -1111,23 +1111,32 @@ const ASSOCIATION_MODALS: Record<string, ModalData> = {
     hindi: "सरकार के साथ",
     title: "With Government",
     philosophy: "Where government policy meets community action, real change happens.",
+    philosophyHi: "जब सरकारी नीतियां और जनभागीदारी का मिलन होता है, तभी वास्तविक राष्ट्र निर्माण संभव होता है।",
     tag: "Association With",
     highlights: [
       {
         point: "Policy Alignment",
         desc: "All Pavitram activities align with national government policy frameworks",
+        pointHi: "नीतिगत संरेखण",
+        descHi: "पवित्रम की सभी गतिविधियों को राष्ट्रीय विकास और सरकारी नीतियों के ढांचों के साथ जोड़ना।"
       },
       {
         point: "Scheme Implementation",
         desc: "Helping deliver central government welfare schemes to eligible members",
+        pointHi: "योजनाओं का क्रियान्वयन",
+        descHi: "केंद्र सरकार की कल्याणकारी योजनाओं को पात्र लाभार्थियों तक सुगमता से पहुंचाना।"
       },
       {
         point: "Regulatory Compliance",
         desc: "Fully compliant cooperative structure registered under government norms",
+        pointHi: "नियमों का अनुपालन",
+        descHi: "सरकारी मानदंडों और सहकारी अधिनियमों के तहत पूरी तरह से अनुपालन आधारित संगठन का संचालन।"
       },
       {
         point: "Public Welfare Focus",
         desc: "Bridging the gap between government intent and grassroots reality",
+        pointHi: "जनकल्याण पर ध्यान",
+        descHi: "सरकार के जनकल्याणकारी संकल्पों और जमीनी हकीकत के बीच एक मजबूत सेतु का निर्माण करना।"
       },
     ],
   },
@@ -1136,23 +1145,32 @@ const ASSOCIATION_MODALS: Record<string, ModalData> = {
     hindi: "सरकारी विभागों के साथ",
     title: "With Govt Departments",
     philosophy: "Department partnerships turn policy into real impact for real people.",
+    philosophyHi: "विभिन्न विभागों के साथ मिलकर काम करने से नीतियां जमीन पर वास्तविक प्रभाव डालती हैं।",
     tag: "Association With",
     highlights: [
       {
         point: "Direct Department Links",
         desc: "Active relationships with education, health, and agriculture departments",
+        pointHi: "प्रत्यक्ष विभागीय संपर्क",
+        descHi: "शिक्षा, स्वास्थ्य और कृषि जैसे मुख्य सरकारी विभागों के साथ सक्रिय समन्वय स्थापित करना।"
       },
       {
         point: "Scheme Delivery",
         desc: "Last-mile delivery of government benefits to deserving beneficiaries",
+        pointHi: "योजनाओं की पहुंच",
+        descHi: "सरकारी लाभों को जरूरतमंद और हकदार लाभार्थियों तक अंतिम छोर (Last-mile) तक पहुंचाना।"
       },
       {
         point: "Digital Integration",
         desc: "Technology solutions connecting department services with members",
+        pointHi: "डिजिटल एकीकरण",
+        descHi: "तकनीकी समाधानों के जरिए विभागीय योजनाओं को सीधे सदस्यों की पहुंच में लाना।"
       },
       {
         point: "Employment Linkage",
         desc: "Collaborating on skill development and employment generation programs",
+        pointHi: "रोजगार से जुड़ाव",
+        descHi: "कौशल विकास कार्यक्रमों और सरकारी रोजगार योजनाओं के साथ मिलकर युवाओं को काम दिलाना।"
       },
     ],
   },
@@ -1161,23 +1179,32 @@ const ASSOCIATION_MODALS: Record<string, ModalData> = {
     hindi: "लाभार्थियों के साथ",
     title: "With Beneficiaries",
     philosophy: "The real measure of our success is the life we improve.",
+    philosophyHi: "हमारी सफलता का एकमात्र पैमाना उन लोगों का जीवन है जिन्हें हम प्रगति के मार्ग पर आगे बढ़ाते हैं।",
     tag: "Association With",
     highlights: [
       {
         point: "Direct Beneficiary Connect",
         desc: "No intermediaries between Pavitram and the people who need support most",
+        pointHi: "सीधा जन संपर्क",
+        descHi: "पवित्रम और जरूरतमंद लोगों के बीच बिचौलियों को समाप्त कर सीधा संवाद स्थापित करना।"
       },
       {
         point: "Farmers & Workers",
         desc: "Agriculture, labor, and self-employed individuals are priority beneficiaries",
+        pointHi: "किसान और श्रमिक",
+        descHi: "कृषि, श्रम और स्वरोजगार से जुड़े लोगों को अपनी प्राथमिक कल्याण सूची में रखना।"
       },
       {
         point: "Women Empowerment",
         desc: "Special focus on enabling financial independence for women members",
+        pointHi: "महिला सशक्तिकरण",
+        descHi: "परिवारों की महिला सदस्यों को वित्तीय रूप से स्वतंत्र बनाने के लिए विशेष प्रयास करना।"
       },
       {
         point: "Youth Inclusion",
         desc: "Young Indians gain skills, employment, and entrepreneurship opportunities",
+        pointHi: "युवाओं की भागीदारी",
+        descHi: "युवाओं को कौशल विकास, रोजगार और नए उद्यम शुरू करने के समान अवसर प्रदान करना।"
       },
     ],
   },
@@ -1186,23 +1213,32 @@ const ASSOCIATION_MODALS: Record<string, ModalData> = {
     hindi: "संगठनों के साथ",
     title: "With Organizations",
     philosophy: "Every organization that joins us multiplies our collective strength.",
+    philosophyHi: "हमारे साथ जुड़ने वाला प्रत्येक संगठन हमारी सामूहिक शक्ति को कई गुना बढ़ा देता है।",
     tag: "Association With",
     highlights: [
       {
         point: "NGO Partnerships",
         desc: "Collaborating with trusted NGOs for community welfare and outreach",
+        pointHi: "गैर-सरकारी संगठनों (NGO) से साझेदारी",
+        descHi: "समुदाय के कल्याण के लिए विश्वसनीय और अनुभवी संस्थाओं के साथ मिलकर काम करना।"
       },
       {
         point: "Professional Bodies",
         desc: "Tie-ups with trade associations and professional networks across sectors",
+        pointHi: "पेशेवर संगठनों से गठजोड़",
+        descHi: "विभिन्न क्षेत्रों के व्यापारिक संघों और पेशेवर नेटवर्कों के साथ संबंध स्थापित करना।"
       },
       {
         point: "Cooperative Alliances",
         desc: "Partnering with other cooperatives to build a stronger national network",
+        pointHi: "सहकारी गठबंधन",
+        descHi: "एक मजबूत राष्ट्रीय नेटवर्क बनाने के लिए अन्य सहकारी समितियों के साथ साझेदारी करना।"
       },
       {
         point: "Academic Institutions",
         desc: "Working with universities and training institutes for skill development",
+        pointHi: "शैक्षणिक संस्थानों से सहयोग",
+        descHi: "कौशल विकास और उद्यमिता प्रशिक्षण के लिए विश्वविद्यालयों और संस्थानों के साथ काम करना।"
       },
     ],
   },
@@ -2345,7 +2381,7 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {t({ en: "Our Strategic Partners", hi: "हमारे रणनीतिक भागीदार" })}
           </h2>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+          {language === "en" && <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />}
         </Reveal>
 
         <motion.div
