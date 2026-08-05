@@ -62,8 +62,8 @@ export const translations = {
   },
   mission: {
     tag: { en: "OUR MISSION", hi: "हमारा मिशन" },
-    title: { en: "Reducing Expenses, Elevating Family Incomes", hi: "खर्चों में कमी, पारिवारिक आय में वृद्धि" },
-    subtitle: { en: "Mission & Goals", hi: "मिशन और लक्ष्य" },
+    title: { en: "Our Mission", hi: "हमारा मिशन" },
+    subtitle: { en: "Reducing Expenses, Elevating Family Incomes", hi: "खर्चों में कमी, पारिवारिक आय में वृद्धि" },
     desc: {
       en: "Our primary objective is practical and measurable: to lower the daily operational and living costs of our members while opening new avenues for micro-income, direct trade, and financial security.",
       hi: "हमारा मुख्य उद्देश्य व्यावहारिक और मापने योग्य है: हमारे सदस्यों के दैनिक परिचालन और जीवन स्तर की लागत को कम करना, साथ ही सूक्ष्म-आय, प्रत्यक्ष व्यापार और वित्तीय सुरक्षा के नए मार्ग खोलना।"
@@ -87,8 +87,8 @@ export const translations = {
   },
   philosophy: {
     tag: { en: "OUR PHILOSOPHY", hi: "हमारा दर्शन" },
-    title: { en: "Sabka Saath, Sabka Vikas, Sabka Vishwas, Sabka Prayaas", hi: "सबका साथ, सबका विकास, सबका विश्वास, सबका प्रयास" },
-    subtitle: { en: "Core Philosophy", hi: "मूल दर्शन" },
+    title: { en: "Our Philosophy", hi: "हमारा दर्शन" },
+    subtitle: { en: "Sabka Saath, Sabka Vikas, Sabka Vishwas, Sabka Prayaas", hi: "सबका साथ, सबका विकास, सबका विश्वास, सबका प्रयास" },
     p1: {
       en: "Pavitram India operates on the foundational cooperative belief that individual growth is multiplier-linked to community strength. When independent families and local merchants combine their consumption and production power, they eliminate the middleman fees that keep them dependent.",
       hi: "पवित्रम इंडिया इस बुनियादी सहकारी विश्वास पर काम करता है कि व्यक्तिगत विकास सीधे तौर पर सामुदायिक ताकत से जुड़ा है। जब स्वतंत्र परिवार और स्थानीय व्यापारी अपनी उपभोग और उत्पादन शक्ति को मिलाते हैं, तो वे उन बिचौलियों के शुल्कों को समाप्त कर देते हैं जो उन्हें दूसरों पर निर्भर बनाए रखते हैं।"
