@@ -730,29 +730,6 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
             </motion.div>
           ))}
         </motion.div>
-
-        <Reveal delay={0.2} className="mt-16 text-center">
-          <p className="mx-auto max-w-2xl text-mist">
-            {t({
-              en: "Join thousands of network partners working together for a self-reliant, prosperous India. Your contribution matters.",
-              hi: "एक आत्मनिर्भर, समृद्ध भारत के लिए मिलकर काम करने वाले हजारों नेटवर्क भागीदारों में शामिल हों। आपका योगदान महत्वपूर्ण है।"
-            })}
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-            <Link
-              to="/join"
-              className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white transition hover:bg-gold hover:text-navy hover:scale-[1.03]"
-            >
-              {t({ en: "Join Pavitram India", hi: "पवित्रम इंडिया से जुड़ें" })} <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-navy transition hover:text-gold"
-            >
-              {t({ en: "Contact Us", hi: "हमसे संपर्क करें" })} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
