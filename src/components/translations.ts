@@ -37,7 +37,7 @@ export const translations = {
   },
   pillars: {
     tag: { en: "OUR VISION", hi: "हमारा दृष्टिकोण" },
-    title: { en: "The Four Pillars of Pavitram", hi: "चार मुख्य स्तंभ" },
+    title: { en: "The Four Pillars of Pavitram", hi: "हमारे संकल्प" },
     subtitle: { en: "Vision & Values", hi: "दृष्टिकोण और मूल्य" },
     desc: {
       en: "We believe that true national growth begins at home. By organizing our intellectual capital, empowering families financially, and building cooperative local networks, we lay the foundation for a truly developed India.",
