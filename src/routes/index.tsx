@@ -552,25 +552,35 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     hindi: "समानता",
     title: "Equality",
     philosophy: "Equal opportunities, rights, and treatment for every citizen.",
+    philosophyHi: "समान अवसर और अधिकार ही हर नागरिक के समग्र विकास की कुंजी हैं।",
     tag: "Core Values",
     pageUrl: "/about/values",
     pageLabel: "Explore Values Page",
+    pageLabelHi: "मूल्य पेज देखें",
     highlights: [
       {
         point: "Social Equality",
         desc: "Eliminating any discrimination based on caste, class, gender, or belief.",
+        pointHi: "सामाजिक समानता",
+        descHi: "जाति, वर्ग, लिंग या मत के आधार पर किसी भी प्रकार के भेदभाव को समाप्त करना।"
       },
       {
         point: "Economic Opportunity",
         desc: "Giving all members equal access to cooperative wealth generation.",
+        pointHi: "आर्थिक अवसर",
+        descHi: "सहकारी माध्यम से समाज के हर सदस्य को समान रूप से धन और आजीविका अर्जित करने के अवसर देना।"
       },
       {
         point: "Equal Voice",
         desc: "One member, one vote structure for transparent governance.",
+        pointHi: "समान अधिकार",
+        descHi: "पारदर्शी और निष्पक्ष निर्णय प्रक्रिया में प्रत्येक सदस्य की समान आवाज सुनिश्चित करना।"
       },
       {
         point: "Human Dignity",
         desc: "Respecting and protecting the dignity of every individual in our network.",
+        pointHi: "मानवीय गरिमा",
+        descHi: "समुदाय के भीतर हर व्यक्ति के आत्मसम्मान और गरिमा का आदर और संरक्षण करना।"
       },
     ],
   },
@@ -579,25 +589,35 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     hindi: "स्वतंत्रता",
     title: "Liberty",
     philosophy: "Empowering citizens to think, express, and live freely.",
+    philosophyHi: "नागरिकों की विचार, अभिव्यक्ति और आजीविका की स्वतंत्रता ही देश की प्रगति का इंजन है।",
     tag: "Core Values",
     pageUrl: "/about/values",
     pageLabel: "Explore Values Page",
+    pageLabelHi: "मूल्य पेज देखें",
     highlights: [
       {
         point: "Financial Freedom",
         desc: "Freeing families from high-interest debt cycles and intermediaries.",
+        pointHi: "आर्थिक स्वतंत्रता",
+        descHi: "मध्यस्थों के शोषण और अत्यधिक ब्याज वाले ऋणों के चक्र से परिवारों को मुक्त करना।"
       },
       {
         point: "Choice of Livelihood",
         desc: "Empowering members to pursue and grow in their chosen careers.",
+        pointHi: "आजीविका का चयन",
+        descHi: "प्रत्येक सदस्य को अपनी रुचि के अनुसार करियर या व्यवसाय चुनने और उसमें आगे बढ़ने की आजादी।"
       },
       {
         point: "Independent Thought",
         desc: "Fostering rational learning and intellectual freedom.",
+        pointHi: "स्वतंत्र और तार्किक सोच",
+        descHi: "जागरूकता कार्यक्रमों और शिक्षा के जरिए स्वतंत्र सोच और वैज्ञानिक दृष्टिकोण को बढ़ावा देना।"
       },
       {
         point: "Local Autonomy",
         desc: "Supporting local merchants and farmers to operate independently.",
+        pointHi: "स्थानीय स्वायत्तता",
+        descHi: "स्थानीय दुकानदार, किसान और कारीगर को स्वतंत्र रूप से कार्य करने के लिए सशक्त बनाना।"
       },
     ],
   },
@@ -606,25 +626,35 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     hindi: "बंधुत्व",
     title: "Fraternity",
     philosophy: "Promoting brotherhood and mutual support among all sections of society.",
+    philosophyHi: "आपसी भाईचारा और सहकारिता की भावना ही समाज की सबसे बड़ी सुरक्षा और एकता की शक्ति है।",
     tag: "Core Values",
     pageUrl: "/about/values",
     pageLabel: "Explore Values Page",
+    pageLabelHi: "मूल्य पेज देखें",
     highlights: [
       {
         point: "Unified Community",
         desc: "Building a nationwide family of 10,000+ cooperative members.",
+        pointHi: "एकजुट समुदाय",
+        descHi: "देश भर के 10,000+ सदस्यों का एक मजबूत और प्रेमपूर्ण सहकारी परिवार विकसित करना।"
       },
       {
         point: "Mutual Support",
         desc: "Fostering a community culture where members stand by members in times of need.",
+        pointHi: "परस्पर सहयोग",
+        descHi: "एक ऐसी संस्कृति बनाना जहाँ आवश्यकता पड़ने पर सदस्य हमेशा अन्य सदस्यों की मदद के लिए खड़े रहें।"
       },
       {
         point: "Shared Progress",
         desc: "Collective action ensuring that local prosperity is distributed evenly.",
+        pointHi: "साझा प्रगति",
+        descHi: "सामूहिक आर्थिक प्रयासों द्वारा यह सुनिश्चित करना कि समृद्धि सभी में समान रूप से वितरित हो।"
       },
       {
         point: "Social Harmony",
         desc: "Celebrating diversity while maintaining absolute unity.",
+        pointHi: "सामाजिक समरसता",
+        descHi: "सांस्कृतिक विविधताओं का सम्मान करते हुए पूर्ण एकता और भाईचारे को बनाए रखना।"
       },
     ],
   },
@@ -633,25 +663,35 @@ const CORE_VALUES_MODALS: Record<string, ModalData> = {
     hindi: "एकता",
     title: "Unity",
     philosophy: "Stronger together — building national unity through community action.",
+    philosophyHi: "जब पूरा देश एकता के सूत्र में बंधकर एक दिशा में चलेगा, तभी विकसित भारत 2047 का लक्ष्य प्राप्त होगा।",
     tag: "Core Values",
     pageUrl: "/about",
     pageLabel: "Explore About Page",
+    pageLabelHi: "हमारे बारे में देखें",
     highlights: [
       {
         point: "National Integration",
         desc: "Aligning regional cooperative networks across 15+ states.",
+        pointHi: "राष्ट्रीय एकीकरण",
+        descHi: "विभिन्न राज्यों में फैले सहकारी नेटवर्क को देशहित में एक ही लक्ष्य से जोड़ना।"
       },
       {
         point: "Slogan Alignment",
         desc: "Living the mantra of 'Be Organised, Do Organised' collectively.",
+        pointHi: "संगठन का मंत्र",
+        descHi: "‘संगठित बनो, संगठित करो’ के पवित्रम मूलमंत्र को सामूहिक रूप से अपने जीवन में उतारना।"
       },
       {
         point: "Common Purpose",
         desc: "Working toward the singular goal of a prosperous, developed India.",
+        pointHi: "साझा संकल्प",
+        descHi: "एक समृद्ध, स्वावलंबी और पूर्णतः विकसित भारत के निर्माण के साझा लक्ष्य के लिए मिलकर काम करना।"
       },
       {
         point: "Strong Institution",
         desc: "A unified structure that remains stable and resilient over the long term.",
+        pointHi: "मजबूत संस्थान",
+        descHi: "एक ऐसा टिकाऊ और अटूट संगठनात्मक ढांचा तैयार करना जो भविष्य की पीढ़ियों के लिए मार्गदर्शक बने।"
       },
     ],
   },
@@ -1748,10 +1788,14 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>{t(translations.coreValues.tag)}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t(translations.coreValues.title)}
+            {language === "en" ? t(translations.coreValues.title) : "हमारे आदर्श"}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.coreValues.subtitle)}</p>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+          {language === "en" && (
+            <>
+              <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.coreValues.subtitle)}</p>
+              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+            </>
+          )}
         </Reveal>
 
         <motion.div
