@@ -2252,6 +2252,7 @@ function IndiaFlagIcon() {
 function JourneyStrip() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { language } = useLanguage();
 
   const nodes = [
     { emoji: "🏡", en: "Villages", hi: "गांव" },
@@ -2298,10 +2299,9 @@ function JourneyStrip() {
             >
               {n.customIcon ? n.customIcon : n.emoji}
             </motion.div>
-            <span className="mt-4 text-sm font-bold uppercase tracking-wider text-white">
-              {n.en}
+            <span className={`mt-4 text-sm font-bold uppercase tracking-wider ${language === "en" ? "text-white" : "text-gold"}`}>
+              {language === "en" ? n.en : n.hi}
             </span>
-            <span className="mt-1 font-deva text-xs font-semibold text-gold">{n.hi}</span>
           </div>
         ))}
       </div>
