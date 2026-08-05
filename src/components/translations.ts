@@ -63,7 +63,7 @@ export const translations = {
   mission: {
     tag: { en: "OUR MISSION", hi: "हमारा मिशन" },
     title: { en: "Our Mission", hi: "हमारा मिशन" },
-    subtitle: { en: "Reducing Expenses, Elevating Family Incomes", hi: "खर्चों में कमी, पारिवारिक आय में वृद्धि" },
+    subtitle: { en: "Our Goals", hi: "हमारे लक्ष्य" },
     desc: {
       en: "Our primary objective is practical and measurable: to lower the daily operational and living costs of our members while opening new avenues for micro-income, direct trade, and financial security.",
       hi: "हमारा मुख्य उद्देश्य व्यावहारिक और मापने योग्य है: हमारे सदस्यों के दैनिक परिचालन और जीवन स्तर की लागत को कम करना, साथ ही सूक्ष्म-आय, प्रत्यक्ष व्यापार और वित्तीय सुरक्षा के नए मार्ग खोलना।"

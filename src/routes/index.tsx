@@ -1519,7 +1519,6 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
             {t(translations.mission.subtitle)}
           </h2>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
         <motion.div
