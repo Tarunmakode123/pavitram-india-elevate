@@ -2895,7 +2895,7 @@ function Testimonials() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           label={t({ en: "Community Voices", hi: "सामुदायिक स्वर" })}
-          title={t({ en: "What Our Members Say", hi: "हमारे सदस्य क्या कहते हैं" })}
+          title={t({ en: "What Our Members Say", hi: "सदस्यों के विचार" })}
         />
         <motion.div
           variants={stagger}
