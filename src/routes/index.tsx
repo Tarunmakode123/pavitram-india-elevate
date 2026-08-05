@@ -2419,7 +2419,7 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>{t({ en: "STRATEGIC PARTNERSHIPS", hi: "रणनीतिक सहभागिता" })}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t({ en: "Our Strategic Partners", hi: "सहयोगी नेटवर्क" })}
+            {t({ en: "Our Strategic Partners", hi: "हमारे भागीदार" })}
           </h2>
           {language === "en" && <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />}
         </Reveal>
