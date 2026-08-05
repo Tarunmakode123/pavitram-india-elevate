@@ -691,7 +691,6 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {t({ en: "Our Core Mantras", hi: "हमारे मूल मंत्र" })}
           </h2>
-          {language === "en" && <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />}
         </Reveal>
 
         <motion.div

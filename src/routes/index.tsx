@@ -1888,12 +1888,9 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
             {language === "en" ? t(translations.philosophy.title) : "हमारे सिद्धांत"}
           </h2>
           {language === "en" && (
-            <>
-              <p className="mt-3 font-deva text-lg font-semibold text-gold">
-                {t(translations.philosophy.subtitle)}
-              </p>
-              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
-            </>
+            <p className="mt-3 font-deva text-lg font-semibold text-gold">
+              {t(translations.philosophy.subtitle)}
+            </p>
           )}
         </Reveal>
 
@@ -1983,10 +1980,7 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
             {language === "en" ? t(translations.coreValues.title) : "हमारे आदर्श"}
           </h2>
           {language === "en" && (
-            <>
-              <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.coreValues.subtitle)}</p>
-              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
-            </>
+            <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.coreValues.subtitle)}</p>
           )}
         </Reveal>
 
@@ -2073,10 +2067,7 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
             {language === "en" ? t(translations.ethics.title) : "हमारे कर्तव्य"}
           </h2>
           {language === "en" && (
-            <>
-              <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.ethics.subtitle)}</p>
-              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
-            </>
+            <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.ethics.subtitle)}</p>
           )}
         </Reveal>
 
@@ -2175,10 +2166,7 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
             {language === "en" ? t({ en: "Our Primary Focus", hi: "हमारा मुख्य ध्यान क्षेत्र" }) : "हमारी प्राथमिकताएं"}
           </h2>
           {language === "en" && (
-            <>
-              <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Garib, Yuva, Mahila, Kisan", hi: "गरीब, युवा, महिला, किसान" })}</p>
-              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
-            </>
+            <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Garib, Yuva, Mahila, Kisan", hi: "गरीब, युवा, महिला, किसान" })}</p>
           )}
         </Reveal>
 
@@ -2361,7 +2349,6 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
               hi: "दूर-दराज के गाँवों से लेकर बड़े महानगरों तक, पवित्रम इंडिया सक्रिय रूप से व्यक्तियों और व्यवसायों को एक मजबूत आर्थिक समुदाय में संगठित कर रहा है।"
             })}
           </p>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
         <motion.div
@@ -2457,7 +2444,6 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {t({ en: "Our Strategic Partners", hi: "हमारे भागीदार" })}
           </h2>
-          {language === "en" && <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />}
         </Reveal>
 
         <motion.div
@@ -2775,7 +2761,6 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
               hi: "पवित्रम इंडिया एक पेशेवर रूप से प्रबंधित सहकारी व्यवसाय नेटवर्क और एक आत्मनिर्भर समुदाय है जहाँ सदस्यों की आवश्यकताओं को स्वयं सदस्यों द्वारा पूरा किया जाता है।"
             })}
           </p>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
         <motion.div
