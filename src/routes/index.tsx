@@ -99,25 +99,35 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "प्रबुद्ध नागरिक",
     title: "Intellectual Citizen",
     philosophy: "An aware mind is the foundation of a prosperous nation.",
+    philosophyHi: "एक जागरूक दिमाग समृद्ध राष्ट्र की नींव है।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
+    pageLabelHi: "दृष्टिकोण पेज देखें",
     highlights: [
       {
         point: "Awareness & Education",
         desc: "Every member gains access to knowledge that empowers informed decision-making",
+        pointHi: "जागरूकता और शिक्षा",
+        descHi: "प्रत्येक सदस्य को ज्ञान तक पहुंच प्राप्त होती है जो सूचित निर्णय लेने को सशक्त बनाता है।"
       },
       {
         point: "Rational Thinking",
         desc: "We promote scientific temperament and critical thinking in daily life",
+        pointHi: "तार्किक सोच",
+        descHi: "हम दैनिक जीवन में वैज्ञानिक दृष्टिकोण और आलोचनात्मक सोच को बढ़ावा देते हैं।"
       },
       {
         point: "Constitutional Rights",
         desc: "Members understand their rights, duties, and responsibilities as Indian citizens",
+        pointHi: "संवैधानिक अधिकार",
+        descHi: "सदस्य भारतीय नागरिकों के रूप में अपने अधिकारों, कर्तव्यों और जिम्मेदारियों को समझते हैं।"
       },
       {
         point: "Skill Development",
         desc: "Continuous learning opportunities through Pavitram Gyan for all age groups",
+        pointHi: "कौशल विकास",
+        descHi: "सभी आयु समूहों के लिए पवित्रम ज्ञान के माध्यम से निरंतर सीखने के अवसर।"
       },
     ],
   },
@@ -126,25 +136,35 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "समृद्ध परिवार",
     title: "Prosperous Family",
     philosophy: "When a family thrives, the nation flourishes.",
+    philosophyHi: "जब एक परिवार समृद्ध होता है, तो राष्ट्र फलता-फूलता है।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
+    pageLabelHi: "दृष्टिकोण पेज देखें",
     highlights: [
       {
         point: "Higher Income",
         desc: "Multiple earning opportunities through the cooperative business network",
+        pointHi: "उच्च आय",
+        descHi: "सहकारी व्यवसाय नेटवर्क के माध्यम से कमाई के कई अवसर।"
       },
       {
         point: "Lower Expenses",
         desc: "Access to quality goods and services at fair cooperative prices",
+        pointHi: "कम खर्चे",
+        descHi: "उचित सहकारी दरों पर गुणवत्तापूर्ण वस्तुओं और सेवाओं तक पहुंच।	"
       },
       {
         point: "Financial Security",
         desc: "Investment and insurance solutions through Pavitram Finance",
+        pointHi: "वित्तीय सुरक्षा",
+        descHi: "पवित्रम फाइनेंस के माध्यम से निवेश और बीमा समाधान।"
       },
       {
         point: "Essential Services",
         desc: "Health, education, and daily needs fulfilled within the community",
+        pointHi: "आवश्यक सेवाएं",
+        descHi: "स्वास्थ्य, शिक्षा और दैनिक आवश्यकताएं समुदाय के भीतर पूरी की जाती हैं।"
       },
     ],
   },
@@ -153,25 +173,35 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "आत्मनिर्भर समाज",
     title: "Self-Reliant Society",
     philosophy: "A society that fulfills its own needs has no dependency.",
+    philosophyHi: "जो समाज अपनी आवश्यकताओं को स्वयं पूरा करता है, उसकी कोई निर्भरता नहीं होती।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
+    pageLabelHi: "दृष्टिकोण पेज देखें",
     highlights: [
       {
         point: "Community First",
         desc: "Every need of the community is met by members within the community itself",
+        pointHi: "समुदाय पहले",
+        descHi: "समुदाय की हर आवश्यकता स्वयं समुदाय के भीतर सदस्यों द्वारा पूरी की जाती है।"
       },
       {
         point: "No Middlemen",
         desc: "Direct producer-to-consumer connections eliminate unnecessary costs",
+        pointHi: "कोई बिचौलिया नहीं",
+        descHi: "प्रत्यक्ष उत्पादक-से-उपभोक्ता संबंध अनावश्यक लागतों को समाप्त करते हैं।"
       },
       {
         point: "Cooperative Strength",
         desc: "10,000+ members working together create an unstoppable economic force",
+        pointHi: "सहकारी शक्ति",
+        descHi: "एक साथ काम करने वाले 10,000+ सदस्य एक अजेय आर्थिक शक्ति का निर्माण करते हैं।"
       },
       {
         point: "Local Empowerment",
         desc: "Businesses, farmers, and workers all benefit equally from the network",
+        pointHi: "स्थानीय सशक्तिकरण",
+        descHi: "व्यवसायों, किसानों और श्रमिकों को इस नेटवर्क से समान रूप से लाभ होता है।"
       },
     ],
   },
@@ -180,25 +210,35 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "विकसित भारत",
     title: "Developed India",
     philosophy: "Individual growth multiplied across millions becomes national progress.",
+    philosophyHi: "लाखों लोगों के बीच व्यक्तिगत विकास जब कई गुना बढ़ जाता है तो वह राष्ट्रीय प्रगति बन जाता है।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
+    pageLabelHi: "दृष्टिकोण पेज देखें",
     highlights: [
       {
         point: "Village to Nation",
         desc: "Growth that starts at the grassroots and scales to the entire country",
+        pointHi: "गांव से राष्ट्र",
+        descHi: "विकास जो जमीनी स्तर से शुरू होता है और पूरे देश में फैलता है।"
       },
       {
         point: "Inclusive Development",
         desc: "Every citizen — urban or rural — has an equal opportunity to prosper",
+        pointHi: "समावेशी विकास",
+        descHi: "हर नागरिक — शहरी या ग्रामीण — को समृद्ध होने का समान अवसर मिलता है।"
       },
       {
         point: "Ethical Economy",
         desc: "A transparent, corruption-free business ecosystem that uplifts everyone",
+        pointHi: "नैतिक अर्थव्यवस्था",
+        descHi: "एक पारदर्शी, भ्रष्टाचार मुक्त व्यावसायिक पारिस्थितिकी तंत्र जो सभी का उत्थान करता है।"
       },
       {
         point: "Sabka Vikas",
         desc: "Contributing to India's vision of becoming a developed nation by 2047",
+        pointHi: "सबका विकास",
+        descHi: "2047 तक भारत को एक विकसित राष्ट्र बनाने के दृष्टिकोण में योगदान देना।"
       },
     ],
   },

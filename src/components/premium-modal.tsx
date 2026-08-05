@@ -7,6 +7,8 @@ import { useLanguage } from "@/components/language-provider";
 export type ModalHighlight = {
   point: string;
   desc: string;
+  pointHi?: string;
+  descHi?: string;
 };
 
 export type ModalData = {
@@ -14,10 +16,12 @@ export type ModalData = {
   hindi: string;
   title: string;
   philosophy: string;
+  philosophyHi?: string;
   highlights: ModalHighlight[];
   tag: string;
   pageUrl?: string;
   pageLabel?: string;
+  pageLabelHi?: string;
 };
 
 export function PremiumModal({ data, onClose }: { data: ModalData | null; onClose: () => void }) {
@@ -100,16 +104,24 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                     <div className="grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-2xl bg-white/10 text-gold ring-1 ring-gold/30">
                       <data.icon className="h-7 w-7 sm:h-10 sm:w-10" />
                     </div>
-                    <p className="mt-4 sm:mt-6 text-sm font-semibold text-gold tracking-wide uppercase">
-                      {isHindi ? data.title : data.hindi}
-                    </p>
-                    <h3 className="mt-1 font-display text-xl sm:text-2xl font-bold text-white leading-tight">
-                      {isHindi ? data.hindi : data.title}
-                    </h3>
+                    {isHindi ? (
+                      <h3 className="mt-6 font-display text-xl sm:text-2xl font-bold text-white leading-tight">
+                        {data.hindi}
+                      </h3>
+                    ) : (
+                      <>
+                        <p className="mt-4 sm:mt-6 font-deva text-lg sm:text-xl font-semibold text-gold">
+                          {data.hindi}
+                        </p>
+                        <h3 className="mt-1 font-display text-xl sm:text-2xl font-bold text-white leading-tight">
+                          {data.title}
+                        </h3>
+                      </>
+                    )}
                   </div>
                   <div className="mt-6 sm:mt-8 border-t border-white/10 pt-4">
                     <p className="font-serif text-xs sm:text-sm italic leading-relaxed text-white/70">
-                      "{data.philosophy}"
+                      "{isHindi && data.philosophyHi ? data.philosophyHi : data.philosophy}"
                     </p>
                   </div>
                 </div>
@@ -127,10 +139,10 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                           <span className="mt-1 text-gold text-xs shrink-0">◆</span>
                           <div>
                             <h4 className="text-sm sm:text-[15px] font-bold text-ink leading-snug">
-                              {h.point}
+                              {isHindi && h.pointHi ? h.pointHi : h.point}
                             </h4>
                             <p className="mt-0.5 text-xs sm:text-[13px] leading-relaxed text-mist">
-                              {h.desc}
+                              {isHindi && h.descHi ? h.descHi : h.desc}
                             </p>
                           </div>
                         </div>
@@ -151,7 +163,7 @@ export function PremiumModal({ data, onClose }: { data: ModalData | null; onClos
                           onClick={onClose}
                           className="inline-flex items-center gap-1.5 rounded-full bg-navy px-4 py-2 text-xs font-bold text-white transition hover:bg-gold hover:text-navy cursor-pointer"
                         >
-                          {isHindi ? "पेज देखें" : (data.pageLabel || "Explore Page")} <ArrowRight className="h-3.5 w-3.5" />
+                          {isHindi ? (data.pageLabelHi || "पेज देखें") : (data.pageLabel || "Explore Page")} <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       )}
                     </div>
