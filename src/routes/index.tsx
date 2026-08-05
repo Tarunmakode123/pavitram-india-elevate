@@ -2555,10 +2555,7 @@ function Opportunities() {
         <SectionHeader
           label={t({ en: "Opportunities", hi: "अवसर" })}
           title={t({ en: "Explore Opportunities", hi: "अवसरों की खोज करें" })}
-          subtitle={t({
-            en: "Join the Pavitram India community in a role that suits your goals.",
-            hi: "पवित्रम इंडिया समुदाय में अपनी रुचि और लक्ष्यों के अनुरूप भूमिका में शामिल हों।"
-          })}
+          subtitle={language === "en" ? "Join the Pavitram India community in a role that suits your goals." : undefined}
         />
         <motion.div
           variants={stagger}
