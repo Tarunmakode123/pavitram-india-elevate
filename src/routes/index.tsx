@@ -99,7 +99,7 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "प्रबुद्ध नागरिक",
     title: "Intellectual Citizen",
     philosophy: "An aware mind is the foundation of a prosperous nation.",
-    philosophyHi: "एक जागरूक दिमाग समृद्ध राष्ट्र की नींव है।",
+    philosophyHi: "जागरूक और शिक्षित नागरिक ही सशक्त और विकसित राष्ट्र की सबसे मजबूत नींव है।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
@@ -109,25 +109,25 @@ const VISION_MODALS: Record<string, ModalData> = {
         point: "Awareness & Education",
         desc: "Every member gains access to knowledge that empowers informed decision-making",
         pointHi: "जागरूकता और शिक्षा",
-        descHi: "प्रत्येक सदस्य को ज्ञान तक पहुंच प्राप्त होती है जो सूचित निर्णय लेने को सशक्त बनाता है।"
+        descHi: "संवैधानिक अधिकारों, कर्तव्यों और सरकारी नीतियों के प्रति नागरिकों को जागरूक करना।"
       },
       {
         point: "Rational Thinking",
         desc: "We promote scientific temperament and critical thinking in daily life",
-        pointHi: "तार्किक सोच",
-        descHi: "हम दैनिक जीवन में वैज्ञानिक दृष्टिकोण और आलोचनात्मक सोच को बढ़ावा देते हैं।"
+        pointHi: "बौद्धिक विकास",
+        descHi: "नागरिकों में वैज्ञानिक दृष्टिकोण, तार्किक सोच और कर्तव्य-भावना को बढ़ावा देना।"
       },
       {
         point: "Constitutional Rights",
         desc: "Members understand their rights, duties, and responsibilities as Indian citizens",
-        pointHi: "संवैधानिक अधिकार",
-        descHi: "सदस्य भारतीय नागरिकों के रूप में अपने अधिकारों, कर्तव्यों और जिम्मेदारियों को समझते हैं।"
+        pointHi: "कौशल संवर्धन",
+        descHi: "युवाओं को आधुनिक कौशल और व्यावसायिक प्रशिक्षण प्रदान करना ताकि वे आत्मनिर्भर बन सकें।"
       },
       {
         point: "Skill Development",
         desc: "Continuous learning opportunities through Pavitram Gyan for all age groups",
-        pointHi: "कौशल विकास",
-        descHi: "सभी आयु समूहों के लिए पवित्रम ज्ञान के माध्यम से निरंतर सीखने के अवसर।"
+        pointHi: "सक्रिय भागीदारी",
+        descHi: "राष्ट्र निर्माण और विकास कार्यों में प्रत्येक नागरिक की व्यक्तिगत भागीदारी सुनिश्चित करना।"
       },
     ],
   },
@@ -136,7 +136,7 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "समृद्ध परिवार",
     title: "Prosperous Family",
     philosophy: "When a family thrives, the nation flourishes.",
-    philosophyHi: "जब एक परिवार समृद्ध होता है, तो राष्ट्र फलता-फूलता है।",
+    philosophyHi: "जब देश का हर परिवार आर्थिक रूप से समृद्ध होगा, तभी भारत पूर्णतः विकसित राष्ट्र बनेगा।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
@@ -145,26 +145,26 @@ const VISION_MODALS: Record<string, ModalData> = {
       {
         point: "Higher Income",
         desc: "Multiple earning opportunities through the cooperative business network",
-        pointHi: "उच्च आय",
-        descHi: "सहकारी व्यवसाय नेटवर्क के माध्यम से कमाई के कई अवसर।"
+        pointHi: "लागत में कमी",
+        descHi: "सहकारी व्यवस्था के जरिए दैनिक आवश्यकताओं और जीवन स्तर के खर्चों को कम करना।"
       },
       {
         point: "Lower Expenses",
         desc: "Access to quality goods and services at fair cooperative prices",
-        pointHi: "कम खर्चे",
-        descHi: "उचित सहकारी दरों पर गुणवत्तापूर्ण वस्तुओं और सेवाओं तक पहुंच।	"
+        pointHi: "आय में वृद्धि",
+        descHi: "कृषि, लघु उद्योगों और महिला गृह-व्यवसायों को प्रत्यक्ष बाजार देकर पारिवारिक आय बढ़ाना।"
       },
       {
         point: "Financial Security",
         desc: "Investment and insurance solutions through Pavitram Finance",
         pointHi: "वित्तीय सुरक्षा",
-        descHi: "पवित्रम फाइनेंस के माध्यम से निवेश और बीमा समाधान।"
+        descHi: "बचत योजनाओं और आसान वित्तीय सहयोग से परिवारों को ऋण-मुक्त और सुरक्षित बनाना।"
       },
       {
         point: "Essential Services",
         desc: "Health, education, and daily needs fulfilled within the community",
-        pointHi: "आवश्यक सेवाएं",
-        descHi: "स्वास्थ्य, शिक्षा और दैनिक आवश्यकताएं समुदाय के भीतर पूरी की जाती हैं।"
+        pointHi: "मूलभूत सुविधाएं",
+        descHi: "गुणवत्तापूर्ण स्वास्थ्य, शिक्षा and जीवन स्तर को हर परिवार तक सुलभ बनाना।"
       },
     ],
   },
@@ -173,7 +173,7 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "आत्मनिर्भर समाज",
     title: "Self-Reliant Society",
     philosophy: "A society that fulfills its own needs has no dependency.",
-    philosophyHi: "जो समाज अपनी आवश्यकताओं को स्वयं पूरा करता है, उसकी कोई निर्भरता नहीं होती।",
+    philosophyHi: "एक आत्मनिर्भर समाज ही बाहरी निर्भरता को समाप्त कर राष्ट्र को स्वावलंबी बनाता है।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
@@ -182,26 +182,26 @@ const VISION_MODALS: Record<string, ModalData> = {
       {
         point: "Community First",
         desc: "Every need of the community is met by members within the community itself",
-        pointHi: "समुदाय पहले",
-        descHi: "समुदाय की हर आवश्यकता स्वयं समुदाय के भीतर सदस्यों द्वारा पूरी की जाती है।"
+        pointHi: "संसाधनाें का साझाकरण",
+        descHi: "सामुदायिक संसाधनों, उपकरणों और ज्ञान को आपस में साझा कर आत्मनिर्भरता बढ़ाना।"
       },
       {
         point: "No Middlemen",
         desc: "Direct producer-to-consumer connections eliminate unnecessary costs",
-        pointHi: "कोई बिचौलिया नहीं",
-        descHi: "प्रत्यक्ष उत्पादक-से-उपभोक्ता संबंध अनावश्यक लागतों को समाप्त करते हैं।"
+        pointHi: "बिचौलियों की समाप्ति",
+        descHi: "उत्पादक और उपभोक्ता को सीधे जोड़कर स्थानीय आर्थिक तंत्र को मजबूत बनाना।"
       },
       {
         point: "Cooperative Strength",
         desc: "10,000+ members working together create an unstoppable economic force",
-        pointHi: "सहकारी शक्ति",
-        descHi: "एक साथ काम करने वाले 10,000+ सदस्य एक अजेय आर्थिक शक्ति का निर्माण करते हैं।"
+        pointHi: "सहकारिता की शक्ति",
+        descHi: "परिवारों और स्थानीय व्यापारियों को संगठित कर एक मजबूत स्थानीय बाजार बनाना।"
       },
       {
         point: "Local Empowerment",
         desc: "Businesses, farmers, and workers all benefit equally from the network",
-        pointHi: "स्थानीय सशक्तिकरण",
-        descHi: "व्यवसायों, किसानों और श्रमिकों को इस नेटवर्क से समान रूप से लाभ होता है।"
+        pointHi: "स्थानीय रोजगार",
+        descHi: "स्थानीय स्तर पर आजीविका के साधन विकसित कर युवाओं को रोजगार के अवसर प्रदान करना।"
       },
     ],
   },
@@ -210,7 +210,7 @@ const VISION_MODALS: Record<string, ModalData> = {
     hindi: "विकसित भारत",
     title: "Developed India",
     philosophy: "Individual growth multiplied across millions becomes national progress.",
-    philosophyHi: "लाखों लोगों के बीच व्यक्तिगत विकास जब कई गुना बढ़ जाता है तो वह राष्ट्रीय प्रगति बन जाता है।",
+    philosophyHi: "नागरिक, परिवार और समाज की आत्मनिर्भरता से ही विकसित भारत 2047 का संकल्प सिद्ध होगा।",
     tag: "Our Vision",
     pageUrl: "/about/vision",
     pageLabel: "Explore Vision Page",
@@ -219,26 +219,26 @@ const VISION_MODALS: Record<string, ModalData> = {
       {
         point: "Village to Nation",
         desc: "Growth that starts at the grassroots and scales to the entire country",
-        pointHi: "गांव से राष्ट्र",
-        descHi: "विकास जो जमीनी स्तर से शुरू होता है और पूरे देश में फैलता है।"
+        pointHi: "जमीनी स्तर से विकास",
+        descHi: "विकास की शुरुआत ग्रामीण और जमीनी स्तर से कर संपूर्ण राष्ट्र को समृद्ध बनाना।"
       },
       {
         point: "Inclusive Development",
         desc: "Every citizen — urban or rural — has an equal opportunity to prosper",
-        pointHi: "समावेशी विकास",
-        descHi: "हर नागरिक — शहरी या ग्रामीण — को समृद्ध होने का समान अवसर मिलता है।"
+        pointHi: "समावेशी प्रगति",
+        descHi: "गरीब, युवा, महिला और किसान — सभी को देश की प्रगति में समान अवसर और सम्मान दिलाना।"
       },
       {
         point: "Ethical Economy",
         desc: "A transparent, corruption-free business ecosystem that uplifts everyone",
-        pointHi: "नैतिक अर्थव्यवस्था",
-        descHi: "एक पारदर्शी, भ्रष्टाचार मुक्त व्यावसायिक पारिस्थितिकी तंत्र जो सभी का उत्थान करता है।"
+        pointHi: "पारदर्शी व्यवस्था",
+        descHi: "नैतिक और पारदर्शी व्यावसायिक नेटवर्क बनाकर भ्रष्टाचार मुक्त समाज का निर्माण करना।"
       },
       {
         point: "Sabka Vikas",
         desc: "Contributing to India's vision of becoming a developed nation by 2047",
-        pointHi: "सबका विकास",
-        descHi: "2047 तक भारत को एक विकसित राष्ट्र बनाने के दृष्टिकोण में योगदान देना।"
+        pointHi: "राष्ट्र निर्माण 2047",
+        descHi: "भारत सरकार के 'विकसित भारत @ 2047' के महत्वाकांक्षी लक्ष्य में अपना सक्रिय योगदान देना।"
       },
     ],
   },
