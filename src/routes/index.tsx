@@ -250,25 +250,35 @@ const MISSION_MODALS: Record<string, ModalData> = {
     hindi: "सबका साथ",
     title: "Sabka Saath",
     philosophy: "No one grows alone — we rise by lifting each other.",
+    philosophyHi: "जब देश का हर नागरिक और समाज मिलकर एक साथ काम करेंगे, तभी विकसित भारत 2047 का लक्ष्य प्राप्त होगा।",
     tag: "Our Mission",
     pageUrl: "/about/mission",
     pageLabel: "Explore Mission Page",
+    pageLabelHi: "मिशन पेज देखें",
     highlights: [
       {
         point: "United Community",
         desc: "Members support each other across every sector and every region",
+        pointHi: "एकजुट समुदाय",
+        descHi: "देश के विभिन्न क्षेत्रों के लोगों को सहकारिता के माध्यम से एक सूत्र में पिरोना।"
       },
       {
         point: "Cooperative Partnerships",
         desc: "Businesses, consumers, and investors work as one cooperative family",
+        pointHi: "सहकारी भागीदारी",
+        descHi: "व्यापारियों, किसानों और उपभोक्ताओं को आपस में जोड़कर आत्मनिर्भर तंत्र विकसित करना।"
       },
       {
         point: "Mutual Support Network",
         desc: "In times of need, the community stands together for every member",
+        pointHi: "परस्पर सहयोग",
+        descHi: "समुदाय के हर सदस्य की प्रगति और सुख-दुख में सामूहिक रूप से खड़े रहना।"
       },
       {
         point: "Inclusive by Design",
         desc: "Everyone — regardless of background — has a place and a role in our network",
+        pointHi: "समान अवसर",
+        descHi: "बिना किसी भेदभाव के समाज के हर वर्ग को विकास की मुख्यधारा से जोड़ना।"
       },
     ],
   },
@@ -277,25 +287,35 @@ const MISSION_MODALS: Record<string, ModalData> = {
     hindi: "सबका प्रयास",
     title: "Sabka Prayaas",
     philosophy: "Every effort counts when we work toward a common goal.",
+    philosophyHi: "देश के 140 करोड़ नागरिकों का सामूहिक प्रयास ही भारत को एक समृद्ध और विकसित राष्ट्र बनाएगा।",
     tag: "Our Mission",
     pageUrl: "/about/mission",
     pageLabel: "Explore Mission Page",
+    pageLabelHi: "मिशन पेज देखें",
     highlights: [
       {
         point: "Individual Contribution",
         desc: "Each member's skills and efforts strengthen the entire community",
+        pointHi: "व्यक्तिगत योगदान",
+        descHi: "प्रत्येक नागरिक को अपने कौशल और क्षमताओं से राष्ट्र निर्माण में योगदान देने के लिए प्रेरित करना।"
       },
       {
         point: "Collective Action",
         desc: "Small contributions from thousands create massive collective impact",
+        pointHi: "सामूहिक श्रम",
+        descHi: "हजारों लोगों के छोटे-छोटे प्रयासों को जोड़कर समाज में बड़ा बदलाव लाना।"
       },
       {
         point: "Volunteer Spirit",
         desc: "Members actively mentor, guide, and support others in the network",
+        pointHi: "मार्गदर्शन और मेंटरशिप",
+        descHi: "अनुभवी सदस्यों द्वारा युवाओं को कौशल विकास और रोजगार के लिए मार्गदर्शन देना।"
       },
       {
         point: "Shared Responsibility",
         desc: "Every member takes ownership of the community's growth and success",
+        pointHi: "दायित्व की भावना",
+        descHi: "हर सदस्य को समुदाय और राष्ट्र के विकास के प्रति जिम्मेदार बनाना।"
       },
     ],
   },
@@ -304,25 +324,35 @@ const MISSION_MODALS: Record<string, ModalData> = {
     hindi: "सबका विकास",
     title: "Sabka Vikas",
     philosophy: "True development reaches every doorstep, not just the privileged few.",
+    philosophyHi: "सच्चा विकास वही है जो अंतिम छोर पर खड़े व्यक्ति और हर गांव तक समान रूप से पहुंचे।",
     tag: "Our Mission",
     pageUrl: "/about/mission",
     pageLabel: "Explore Mission Page",
+    pageLabelHi: "मिशन पेज देखें",
     highlights: [
       {
         point: "Rural Inclusion",
         desc: "5,000+ villages connected to the cooperative growth network",
+        pointHi: "ग्रामीण विकास",
+        descHi: "देश के गांवों को डिजिटल और आर्थिक रूप से जोड़कर समृद्ध बनाना।"
       },
       {
         point: "Equal Opportunity",
         desc: "Every member gets fair access to business, income, and education",
+        pointHi: "समान आजीविका",
+        descHi: "हर सदस्य को व्यापार, आय और आधुनिक शिक्षा के समान अवसर सुनिश्चित करना।"
       },
       {
         point: "Economic Upliftment",
         desc: "Families see measurable increase in income and reduction in expenses",
+        pointHi: "आर्थिक उत्थान",
+        descHi: "प्रत्येक परिवार के खर्चों में कमी और उनकी मासिक आय में निरंतर वृद्धि करना।"
       },
       {
         point: "Grassroots Growth",
         desc: "Development that flows from the village level upward to the nation",
+        pointHi: "जमीनी प्रगति",
+        descHi: "ग्रामीण स्तर पर छोटे उद्योगों को बढ़ावा देकर देश की जीडीपी में योगदान देना।"
       },
     ],
   },
@@ -331,25 +361,35 @@ const MISSION_MODALS: Record<string, ModalData> = {
     hindi: "सबका विश्वास",
     title: "Sabka Vishwas",
     philosophy: "Trust is the currency that powers our entire ecosystem.",
+    philosophyHi: "पारदर्शिता और सत्यनिष्ठा ही वह मजबूत विश्वास है जो पूरे आत्मनिर्भर तंत्र की ताकत है।",
     tag: "Our Mission",
     pageUrl: "/about/mission",
     pageLabel: "Explore Mission Page",
+    pageLabelHi: "मिशन पेज देखें",
     highlights: [
       {
         point: "Full Transparency",
         desc: "Every transaction and decision is open and visible to all members",
+        pointHi: "पूर्ण पारदर्शिता",
+        descHi: "लेन-देन और निर्णयों को पूरी तरह से पारदर्शी और स्पष्ट रखना।"
       },
       {
         point: "Ethical Governance",
         desc: "27 Golden Rules guide every interaction within our network",
+        pointHi: "नैतिक शासन",
+        descHi: "पवित्रम के 27 स्वर्ण नियमों के आधार पर नैतिक और मूल्य-आधारित समाज का संचालन करना।"
       },
       {
         point: "Member Protection",
         desc: "Your data, money, and interests are always protected and secure",
+        pointHi: "सदस्य सुरक्षा",
+        descHi: "सभी सदस्यों के डेटा, हितों और धन की पूर्ण सुरक्षा सुनिश्चित करना।"
       },
       {
         point: "Proven Track Record",
         desc: "10,000+ members trust Pavitram India with their families' futures",
+        pointHi: "विश्वसनीय इतिहास",
+        descHi: "हजारों सदस्यों का पवित्रम इंडिया पर अटूट विश्वास और उनके सुखद भविष्य की गारंटी।"
       },
     ],
   },
@@ -1477,9 +1517,8 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>{t(translations.mission.tag)}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
-            {t(translations.mission.title)}
+            {t(translations.mission.subtitle)}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.mission.subtitle)}</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -1508,7 +1547,7 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                     <c.icon className="h-6 w-6" />
                   </div>
                 </div>
-                <h3 className="mt-6 font-display text-2xl font-bold text-white">{c.title}</h3>
+                <h3 className="mt-6 font-display text-2xl font-bold text-white">{language === "en" ? c.title : c.hi}</h3>
                 <p className="mt-3 text-[15px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
