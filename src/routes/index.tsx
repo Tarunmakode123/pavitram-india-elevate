@@ -1250,25 +1250,35 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     hindi: "उत्पादक / निर्माता",
     title: "Manufacturer",
     philosophy: "Empowering local production and raw material processing.",
+    philosophyHi: "स्थानीय उत्पादन और स्वदेशी विनिर्माण को बढ़ावा देकर ही देश आत्मनिर्भर और विकसित बनेगा।",
     tag: "Business Network",
     pageUrl: "/about/network",
     pageLabel: "Explore Business Network Page",
+    pageLabelHi: "बिजनेस नेटवर्क देखें",
     highlights: [
       {
         point: "Direct Sourcing Links",
         desc: "Manufacturers connect directly to wholesalers and retailers, eliminating unnecessary agent markups.",
+        pointHi: "प्रत्यक्ष आपूर्ति श्रृंखला",
+        descHi: "उत्पादकों को थोक और खुदरा विक्रेताओं से सीधे जोड़ना, जिससे एजेंटों के अतिरिक्त कमीशन समाप्त हो सकें।"
       },
       {
         point: "Assured Demand",
         desc: "Access a guaranteed internal buyer base consisting of 10,000+ community members.",
+        pointHi: "निश्चित मांग",
+        descHi: "पवित्रम समुदाय के 10,000+ सदस्यों के आंतरिक खरीद आधार तक सीधी पहुंच प्राप्त करना।"
       },
       {
         point: "Quality Standards",
         desc: "All manufacturing partners follow strict compliance rules to deliver high-grade products.",
+        pointHi: "उत्कृष्ट गुणवत्ता मानक",
+        descHi: "उच्च गुणवत्ता वाले उत्पाद सुनिश्चित करने के लिए सभी विनिर्माण सहयोगियों द्वारा सख्त मानकों का पालन।"
       },
       {
         point: "Value Creation",
         desc: "Focus on domestic local production to build a self-reliant economy.",
+        pointHi: "स्वदेशी मूल्य सृजन",
+        descHi: "स्थानीय और घरेलू उत्पादन को प्राथमिकता देकर एक स्वावलंबी और मजबूत अर्थव्यवस्था का निर्माण करना।"
       },
     ],
   },
@@ -1277,25 +1287,35 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     hindi: "थोक व्यापारी",
     title: "Wholesaler",
     philosophy: "Bulk distribution and supply chain connectivity.",
+    philosophyHi: "कुशल थोक वितरण और सुदृढ़ आपूर्ति श्रृंखला ही व्यापार को गति और स्थिरता प्रदान करती हैं।",
     tag: "Business Network",
     pageUrl: "/about/network",
     pageLabel: "Explore Business Network Page",
+    pageLabelHi: "बिजनेस नेटवर्क देखें",
     highlights: [
       {
         point: "Bulk Logistics Support",
         desc: "Integrated transport and courier logistics through Pavitram Delivery.",
+        pointHi: "लॉजिस्टिक्स सहायता",
+        descHi: "पवित्रम डिलीवरी के माध्यम से परिवहन और कूरियर सेवाओं का एकीकृत समन्वय व लॉजिस्टिक्स सहयोग।"
       },
       {
         point: "Transparent Inventory",
         desc: "Shared digital inventory systems for instant demand-matching across regions.",
+        pointHi: "पारदर्शी इन्वेंटरी",
+        descHi: "डिजिटल इन्वेंटरी सिस्टम के जरिए विभिन्न क्षेत्रों में मांग और आपूर्ति का तत्काल मिलान।"
       },
       {
         point: "Stable Trade Volumes",
         desc: "Assured volume requirements driven by our network-wide consumption networks.",
+        pointHi: "स्थिर व्यापार मात्रा",
+        descHi: "पूरे नेटवर्क में उपभोग की निरंतर मांग द्वारा थोक व्यापारियों के लिए व्यापार की स्थिरता सुनिश्चित करना।"
       },
       {
         point: "Fair Pricing Schemes",
         desc: "Maintained price control to guarantee fair returns for merchants and wholesalers.",
+        pointHi: "न्यायसंगत मूल्य निर्धारण",
+        descHi: "थोक व्यापारियों और व्यापारियों दोनों के लिए उचित लाभ मार्जिन की गारंटी देने हेतु मूल्य नियंत्रण नीति।"
       },
     ],
   },
@@ -1304,25 +1324,35 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     hindi: "खुदरा विक्रेता",
     title: "Retailer",
     philosophy: "Direct consumer storefronts and local market presence.",
+    philosophyHi: "स्थानीय खुदरा दुकानों का सशक्तिकरण ही जमीनी स्तर पर आर्थिक समृद्धि लाने का सबसे सीधा मार्ग है।",
     tag: "Business Network",
     pageUrl: "/about/network",
     pageLabel: "Explore Business Network Page",
+    pageLabelHi: "बिजनेस नेटवर्क देखें",
     highlights: [
       {
         point: "Free Digital Tools",
         desc: "Vite and cloud-powered e-commerce store setups with direct consumer order routing.",
+        pointHi: "निःशुल्क डिजिटल उपकरण",
+        descHi: "क्लाउड-आधारित ई-कॉमर्स स्टोर सेटअप के जरिए सीधे ग्राहकों से ऑर्डर प्राप्त करने की निःशुल्क सुविधा।"
       },
       {
         point: "Dedicated Buyer Flow",
         desc: "Community members are incentivized to buy locally from Pavitram Retailers.",
+        pointHi: "समर्पित ग्राहक प्रवाह",
+        descHi: "पवित्रम के स्थानीय सदस्यों को खुदरा विक्रेताओं से ही सामान खरीदने के लिए प्रोत्साहित करना।"
       },
       {
         point: "Direct Sourcing",
         desc: "Source inventory directly from verified community manufacturers and wholesalers.",
+        pointHi: "सीधी खरीद",
+        descHi: "बिना किसी बिचौलिए के सीधे नेटवर्क के सत्यापित निर्माताओं और थोक विक्रेताओं से माल मंगाना।"
       },
       {
         point: "Merchant Empowerment",
         desc: "Grow sales figures while retaining business autonomy and independence.",
+        pointHi: "व्यापारिक स्वायत्तता",
+        descHi: "अपने व्यवसाय की स्वतंत्रता और नियंत्रण को बनाए रखते हुए बिक्री और मुनाफे में वृद्धि करना।"
       },
     ],
   },
@@ -1331,25 +1361,35 @@ const NETWORK_MODALS: Record<string, ModalData> = {
     hindi: "सेवा प्रदाता",
     title: "Service Provider",
     philosophy: "Professional maintenance, digital, and household services.",
+    philosophyHi: "कुशल कार्यबल और उत्कृष्ट सेवाएं ही आधुनिक आत्मनिर्भर भारत के निर्माण की असली चालक हैं।",
     tag: "Business Network",
     pageUrl: "/about/network",
     pageLabel: "Explore Business Network Page",
+    pageLabelHi: "बिजनेस नेटवर्क देखें",
     highlights: [
       {
         point: "Verified Lead Generation",
         desc: "Receive customer service booking requests directly from community families.",
+        pointHi: "सत्यापित बुकिंग संपर्क",
+        descHi: "पवित्रम समुदाय के परिवारों से सीधे ग्राहकों की सेवा बुकिंग अनुरोध प्राप्त करना।"
       },
       {
         point: "Standardized Fair Pricing",
         desc: "Ethical service pricing cards that protect both the provider's livelihood and the user's budget.",
+        pointHi: "मानकीकृत और उचित दरें",
+        descHi: "उचित और पारदर्शी सेवा दरें जो प्रदाताओं की आजीविका और ग्राहकों के बजट दोनों की रक्षा करती हैं।"
       },
       {
         point: "Professional Skill Building",
         desc: "Free capacity-building workshops and certifications through Pavitram Gyan.",
+        pointHi: "व्यावसायिक कौशल विकास",
+        descHi: "पवित्रम ज्ञान के माध्यम से सदस्यों के लिए निःशुल्क क्षमता निर्माण कार्यशालाएं और प्रमाणन।"
       },
       {
         point: "Zero Listing Commission",
         desc: "Keep 100% of your earnings; the platform charges zero commissions from service providers.",
+        pointHi: "शून्य कमीशन नीति",
+        descHi: "अपनी कमाई का 100% हिस्सा अपने पास रखना; मंच सेवा प्रदाताओं से कोई कमीशन नहीं लेता।"
       },
     ],
   },
