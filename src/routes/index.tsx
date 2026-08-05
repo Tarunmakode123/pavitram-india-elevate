@@ -401,25 +401,35 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     hindi: "अखंडता",
     title: "Integrity",
     philosophy: "We do what is right, even when no one is watching.",
+    philosophyHi: "सत्यनिष्ठा और नैतिकता ही आत्मनिर्भर राष्ट्र निर्माण का आधार स्तंभ हैं।",
     tag: "Our Philosophy",
     pageUrl: "/about/philosophy",
     pageLabel: "Explore Philosophy Page",
+    pageLabelHi: "दर्शनशास्त्र पेज देखें",
     highlights: [
       {
         point: "Honest Dealings",
         desc: "Every transaction, partnership, and communication is fully honest",
+        pointHi: "ईमानदार व्यवहार",
+        descHi: "सहकारी नेटवर्क के भीतर हर बातचीत, लेनदेन और साझेदारी में पूर्ण ईमानदारी बरतना।"
       },
       {
         point: "Ethical Business",
         desc: "No shortcuts, no exploitation — only fair and principled conduct",
+        pointHi: "नैतिक व्यापार",
+        descHi: "बिना किसी शोषण के, केवल न्यायसंगत और नैतिक व्यावसायिक नीतियों का पालन करना।"
       },
       {
         point: "Member Accountability",
         desc: "All 27 Golden Rules are built on the foundation of integrity",
+        pointHi: "व्यक्तिगत जवाबदेही",
+        descHi: "पवित्रम के सभी 27 स्वर्ण नियमों का पूर्ण सत्यनिष्ठा के साथ पालन सुनिश्चित करना।"
       },
       {
         point: "Zero Tolerance",
         desc: "Corrupt or unethical behavior is never accepted within our network",
+        pointHi: "भ्रष्टाचार मुक्त आचरण",
+        descHi: "नेटवर्क के भीतर किसी भी प्रकार के अनैतिक या भ्रष्ट आचरण के लिए शून्य सहनशीलता (Zero Tolerance) रखना।"
       },
     ],
   },
@@ -428,25 +438,35 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     hindi: "पारदर्शिता",
     title: "Transparency",
     philosophy: "When everything is visible, trust becomes inevitable.",
+    philosophyHi: "जब नीतियां और लेनदेन पूरी तरह पारदर्शी होते हैं, तभी विकास का वास्तविक लाभ अंतिम नागरिक तक पहुंचता है।",
     tag: "Our Philosophy",
     pageUrl: "/about/philosophy",
     pageLabel: "Explore Philosophy Page",
+    pageLabelHi: "दर्शनशास्त्र पेज देखें",
     highlights: [
       {
         point: "Open Financials",
         desc: "All cooperative returns, investments, and fund usage are fully disclosed",
+        pointHi: "खुला वित्तीय विवरण",
+        descHi: "सहकारी लाभ, निवेश और फंड के उपयोग की पूरी जानकारी सभी सदस्यों के लिए खुली रखना।"
       },
       {
         point: "Clear Processes",
         desc: "Every step — from registration to returns — is explained and visible",
+        pointHi: "स्पष्ट नीतियां",
+        descHi: "पंजीकरण से लेकर लाभ वितरण तक की हर प्रक्रिया को सरल और स्पष्ट बनाना।"
       },
       {
         point: "No Hidden Charges",
         desc: "Members always know exactly what they pay for and what they receive",
+        pointHi: "कोई गुप्त शुल्क नहीं",
+        descHi: "सदस्यों को उनके द्वारा किए गए योगदान और प्राप्त सेवाओं की पूरी और सटीक जानकारी देना।"
       },
       {
         point: "Public Accountability",
         desc: "Leadership decisions are shared openly with the entire community",
+        pointHi: "सार्वजनिक जवाबदेही",
+        descHi: "नेतृत्व के निर्णयों को पूरे समुदाय के साथ साझा कर लोकतांत्रिक मूल्यों को बढ़ावा देना।"
       },
     ],
   },
@@ -455,25 +475,35 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     hindi: "नवाचार",
     title: "Innovation",
     philosophy: "We solve today's problems with tomorrow's thinking.",
+    philosophyHi: "आधुनिक तकनीकों और डिजिटल नवाचारों का उपयोग करके ही हम विकसित भारत 2047 के स्वप्न को साकार कर सकते हैं।",
     tag: "Our Philosophy",
     pageUrl: "/about/philosophy",
     pageLabel: "Explore Philosophy Page",
+    pageLabelHi: "दर्शनशास्त्र पेज देखें",
     highlights: [
       {
         point: "Tech-Driven Solutions",
         desc: "Pavitram Technology powers digital innovation across all 12 service areas",
+        pointHi: "तकनीकी समाधान",
+        descHi: "पवित्रम टेक्नोलॉजी के माध्यम से सभी 12 सेवा क्षेत्रों में डिजिटल और सॉफ्टवेयर सेवाएं देना।"
       },
       {
         point: "Continuous Improvement",
         desc: "We constantly evolve our platform based on member feedback and needs",
+        pointHi: "निरंतर सुधार",
+        descHi: "सदस्यों की प्रतिक्रियाओं और आवश्यकताओं के आधार पर अपनी तकनीकी प्रणालियों में सुधार करना।"
       },
       {
         point: "Modern Cooperative Model",
         desc: "Reinventing the traditional cooperative with cutting-edge digital infrastructure",
+        pointHi: "आधुनिक सहकारी मॉडल",
+        descHi: "पारंपरिक सहकारिता को आधुनिक डिजिटल बुनियादी ढांचे से जोड़कर नया रूप देना।"
       },
       {
         point: "Future Ready",
         desc: "Building systems today that will serve millions of Indians tomorrow",
+        pointHi: "भविष्य के लिए तैयारी",
+        descHi: "आज ऐसी मजबूत प्रणालियों का निर्माण करना जो कल करोड़ों भारतीयों की सेवा कर सकें।"
       },
     ],
   },
@@ -482,25 +512,35 @@ const PHILOSOPHY_MODALS: Record<string, ModalData> = {
     hindi: "गठबंधन",
     title: "Collaboration",
     philosophy: "Alone we are strong — together we are unstoppable.",
+    philosophyHi: "व्यक्ति, समाज और सरकार के सामूहिक गठबंधन से ही आत्मनिर्भर भारत का निर्माण संभव है।",
     tag: "Our Philosophy",
     pageUrl: "/about/philosophy",
     pageLabel: "Explore Philosophy Page",
+    pageLabelHi: "दर्शनशास्त्र पेज देखें",
     highlights: [
       {
         point: "Cross-Sector Partnerships",
         desc: "Connecting businesses, individuals, and organizations across all sectors",
+        pointHi: "बहु-क्षेत्रीय साझेदारी",
+        descHi: "विभिन्न क्षेत्रों के व्यवसायों, व्यक्तियों और संगठनों को एक मंच पर जोड़ना।"
       },
       {
         point: "Government Alignment",
         desc: "Working with government schemes to maximize member benefits",
+        pointHi: "सरकारी नीतियों से जुड़ाव",
+        descHi: "सरकारी योजनाओं और नीतियों के साथ मिलकर सदस्यों को अधिकतम लाभ पहुंचाना।"
       },
       {
         point: "Community Synergy",
         desc: "Members' capabilities complement each other creating a full ecosystem",
+        pointHi: "सामूहिक सामंजस्य",
+        descHi: "सदस्यों की क्षमताओं का आपस में तालमेल बनाकर एक मजबूत आत्मनिर्भर पारिस्थितिकी तंत्र बनाना।"
       },
       {
         point: "Network Effect",
         desc: "Every new member makes the entire network more valuable for everyone",
+        pointHi: "नेटवर्क का प्रभाव",
+        descHi: "जैसे-जैसे नेटवर्क बढ़ता है, यह हर नए और पुराने सदस्य के लिए अधिक मूल्यवान और उपयोगी बनता जाता।"
       },
     ],
   },
@@ -1613,10 +1653,16 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>{t(translations.philosophy.tag)}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t(translations.philosophy.title)}
+            {language === "en" ? t(translations.philosophy.title) : "हमारे सिद्धांत"}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.philosophy.subtitle)}</p>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+          {language === "en" && (
+            <>
+              <p className="mt-3 font-deva text-lg font-semibold text-gold">
+                {t(translations.philosophy.subtitle)}
+              </p>
+              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+            </>
+          )}
         </Reveal>
 
         <motion.div
