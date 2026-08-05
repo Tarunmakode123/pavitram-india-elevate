@@ -855,25 +855,35 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     title: "Economically Weaker & Underprivileged",
     philosophy:
       "Uplifting low-income families through direct savings, cooperative safety nets, and self-reliance.",
+    philosophyHi: "कम आय वाले परिवारों को आत्मनिर्भर बनाकर ही विकसित भारत की ठोस नींव रखी जा सकती है।",
     tag: "Our Focus",
     pageUrl: "/about/focus",
     pageLabel: "Explore Focus Page",
+    pageLabelHi: "प्राथमिकता पेज देखें",
     highlights: [
       {
         point: "Cost Reduction",
         desc: "Lowering daily household expenses through cooperative buying networks.",
+        pointHi: "लागत में कमी",
+        descHi: "सहकारी खरीद नेटवर्क के जरिए दैनिक घरेलू खर्चों को न्यूनतम स्तर पर लाना।"
       },
       {
         point: "Cooperative Safety Net",
         desc: "Emergency financial, medical, and social support for vulnerable families.",
+        pointHi: "सहकारी सुरक्षा कवच",
+        descHi: "वंचित परिवारों के लिए आपातकालीन वित्तीय, चिकित्सा और सामाजिक सहायता तंत्र बनाना।"
       },
       {
         point: "Dignified Livelihoods",
         desc: "Creating accessible earning opportunities through local micro-tasks and services.",
+        pointHi: "सम्मानजनक आजीविका",
+        descHi: "स्थानीय सूक्ष्म-कार्यों और सेवाओं के माध्यम से सभी के लिए नियमित रोजगार पैदा करना।"
       },
       {
         point: "Equal Access",
         desc: "Ensuring zero discrimination in accessing all 12 Pavitram services.",
+        pointHi: "समान पहुंच",
+        descHi: "पवित्रम की सभी 12 सेवाओं तक बिना किसी भेदभाव के हर नागरिक की पहुंच सुनिश्चित करना।"
       },
     ],
   },
@@ -883,25 +893,35 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     title: "Youth Empowerment",
     philosophy:
       "Equipping young minds with modern skills, digital tools, and dignified employment opportunities.",
+    philosophyHi: "युवाओं के कौशल, ऊर्जा और डिजिटल सशक्तिकरण से ही 2047 का आत्मनिर्भर भारत संभव होगा।",
     tag: "Our Focus",
     pageUrl: "/about/focus",
     pageLabel: "Explore Focus Page",
+    pageLabelHi: "प्राथमिकता पेज देखें",
     highlights: [
       {
         point: "Pavitram Rozgar",
         desc: "Matching youth qualifications with verified local and national job opportunities.",
+        pointHi: "पवित्रम रोजगार",
+        descHi: "युवाओं की शैक्षणिक योग्यता के आधार पर उन्हें स्थानीय और राष्ट्रीय रोजगार के अवसरों से जोड़ना।"
       },
       {
         point: "Skill Development",
         desc: "Practical training in technology, digital commerce, and modern business management.",
+        pointHi: "कौशल विकास",
+        descHi: "तकनीकी, डिजिटल वाणिज्य और आधुनिक व्यापार प्रबंधन में व्यावहारिक प्रशिक्षण देना।"
       },
       {
         point: "Entrepreneurship Support",
         desc: "Guiding young entrepreneurs to launch their own micro-businesses within the cooperative network.",
+        pointHi: "उद्यमिता को बढ़ावा",
+        descHi: "युवा उद्यमियों को सहकारी नेटवर्क के भीतर अपने खुद के सूक्ष्म उद्योग शुरू करने में मदद करना।"
       },
       {
         point: "Rational Learning",
         desc: "Fostering leadership, constitutional awareness, and civic responsibility.",
+        pointHi: "तार्किक शिक्षा",
+        descHi: "युवाओं में नेतृत्व क्षमता, संवैधानिक जागरूकता और नागरिक जिम्मेदारी की भावना विकसित करना।"
       },
     ],
   },
@@ -910,25 +930,35 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     hindi: "महिला (महिला सशक्तिकरण)",
     title: "Women Empowerment",
     philosophy: "Fostering financial independence and leadership for women in every household.",
+    philosophyHi: "जब नारी सशक्त और आर्थिक रूप से स्वतंत्र होगी, तभी एक समृद्ध और विकसित राष्ट्र का निर्माण होगा।",
     tag: "Our Focus",
     pageUrl: "/about",
     pageLabel: "Explore About Page",
+    pageLabelHi: "हमारे बारे में देखें",
     highlights: [
       {
         point: "Self-Help Enterprise",
         desc: "Supporting women-led micro-enterprises and home-based production units.",
+        pointHi: "स्वयं सहायता उद्यम",
+        descHi: "महिला-नेतृत्व वाले सूक्ष्म उद्यमों और गृह-उद्योगों को बढ़ावा व आर्थिक सहायता देना।"
       },
       {
         point: "Pavitram Rishta & Health",
         desc: "Dedicated healthcare, preventive wellness, and trusted family network support.",
+        pointHi: "स्वास्थ्य और कल्याण",
+        descHi: "महिलाओं के लिए समर्पित स्वास्थ्य देखभाल, निवारक कल्याण और पारिवारिक सहायता तंत्र बनाना।"
       },
       {
         point: "Financial Autonomy",
         desc: "Empowering women with direct cooperative bank accounts and micro-savings schemes.",
+        pointHi: "वित्तीय स्वायत्तता",
+        descHi: "सीधे सहकारी बैंक खातों और सूक्ष्म-बचत योजनाओं के जरिए महिलाओं को वित्तीय रूप से स्वतंत्र बनाना।"
       },
       {
         point: "Equal Governance",
         desc: "Active representation of women in local network councils and decision-making.",
+        pointHi: "समान सहभागिता",
+        descHi: "स्थानीय निर्णय समितियों और शासन में महिलाओं की सक्रिय भागीदारी सुनिश्चित करना।"
       },
     ],
   },
@@ -938,25 +968,35 @@ const OUR_FOCUS_MODALS: Record<string, ModalData> = {
     title: "Farmer Prosperity",
     philosophy:
       "Empowering farmers with direct market links, fair prices, and modern agricultural support.",
+    philosophyHi: "अन्नदाता की समृद्धि ही राष्ट्र की खुशहाली और खाद्य सुरक्षा की सबसे बड़ी गारंटी है।",
     tag: "Our Focus",
     pageUrl: "/about",
     pageLabel: "Explore About Page",
+    pageLabelHi: "हमारे बारे में देखें",
     highlights: [
       {
         point: "Direct Produce Sourcing",
         desc: "Connecting farmers directly with Pavitram Mart and Wholesaler networks to eliminate middlemen.",
+        pointHi: "प्रत्यक्ष बाजार संपर्क",
+        descHi: "किसानों को पवित्रम मार्ट और थोक खरीदारों से सीधे जोड़कर बिचौलियों के शोषण से बचाना।"
       },
       {
         point: "Fair Purchase Prices",
         desc: "Guaranteeing transparent, dignified purchase rates for agricultural crops.",
+        pointHi: "फसलों का सही मूल्य",
+        descHi: "पारदर्शी और सम्मानजनक दरों पर कृषि उपज की खरीद सुनिश्चित करना।"
       },
       {
         point: "Agri-Technology",
         desc: "Sharing modern farming techniques, organic inputs, and digital crop planning tools.",
+        pointHi: "कृषि-तकनीक साझाकरण",
+        descHi: "आधुनिक खेती, जैविक खाद और डिजिटल फसल योजना के उपकरणों को किसानों तक पहुंचाना।"
       },
       {
         point: "Rural Prosperity",
         desc: "Building sustainable cooperative storage and delivery infrastructure across rural regions.",
+        pointHi: "ग्रामीण समृद्धि",
+        descHi: "ग्रामीण क्षेत्रों में सहकारी कोल्ड-स्टोरेज और आपूर्ति प्रणालियों का विकास करना।"
       },
     ],
   },
@@ -2020,10 +2060,14 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         <Reveal className="mx-auto max-w-3xl text-center">
           <GoldLabel>{t({ en: "OUR FOCUS", hi: "हमारा ध्यान" })}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            {t({ en: "Our Primary Focus", hi: "हमारा मुख्य ध्यान क्षेत्र" })}
+            {language === "en" ? t({ en: "Our Primary Focus", hi: "हमारा मुख्य ध्यान क्षेत्र" }) : "हमारी प्राथमिकताएं"}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Garib, Yuva, Mahila, Kisan", hi: "गरीब, युवा, महिला, किसान" })}</p>
-          <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+          {language === "en" && (
+            <>
+              <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Garib, Yuva, Mahila, Kisan", hi: "गरीब, युवा, महिला, किसान" })}</p>
+              <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
+            </>
+          )}
         </Reveal>
 
         <motion.div
