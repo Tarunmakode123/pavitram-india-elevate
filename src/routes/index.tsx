@@ -1490,7 +1490,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
     {
       icon: ShieldCheck,
       key: "Integrity",
-      title: "Integrity",
+      title: t({ en: "Integrity", hi: "अखंडता" }),
       hi: "अखंडता",
       body: t({
         en: "We conduct ourselves with complete honesty, fairness, and ethical principles in every interaction, decision, and partnership within our cooperative network.",
@@ -1500,7 +1500,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
     {
       icon: Eye,
       key: "Transparency",
-      title: "Transparency",
+      title: t({ en: "Transparency", hi: "पारदर्शिता" }),
       hi: "पारदर्शिता",
       body: t({
         en: "Every process, transaction, and decision in our network is open and visible to all members. We believe transparency builds the trust that holds our community together.",
@@ -1510,7 +1510,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
     {
       icon: Lightbulb,
       key: "Innovation",
-      title: "Innovation",
+      title: t({ en: "Innovation", hi: "नवाचार" }),
       hi: "नवाचार",
       body: t({
         en: "We continuously embrace new ideas, technologies, and approaches to solve real problems and create better opportunities for our members and society.",
@@ -1520,7 +1520,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
     {
       icon: Link2,
       key: "Collaboration",
-      title: "Collaboration",
+      title: t({ en: "Collaboration", hi: "गठबंधन" }),
       hi: "गठबंधन",
       body: t({
         en: "Our strength lies in unity. By forging meaningful partnerships between individuals, businesses, and organizations, we create an ecosystem far stronger than the sum of its parts.",
@@ -1948,33 +1948,33 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
       icon: Home,
       num: 5000,
       suffix: "+",
-      label: "Villages",
-      hi: "गांव",
-      body: "Active community members in rural villages across India",
+      key: "Villages",
+      label: t({ en: "Villages", hi: "गांव" }),
+      body: t({ en: "Active community members in rural villages across India", hi: "पूरे भारत के ग्रामीण गाँवों में सक्रिय समुदाय के सदस्य" }),
     },
     {
       icon: Building2,
       num: 200,
       suffix: "+",
-      label: "Cities",
-      hi: "शहर",
-      body: "Urban business associates and cooperative networks",
+      key: "Cities",
+      label: t({ en: "Cities", hi: "शहर" }),
+      body: t({ en: "Urban business associates and cooperative networks", hi: "शहरी व्यावसायिक सहयोगी और सहकारी नेटवर्क" }),
     },
     {
       icon: Map,
       num: 15,
       suffix: "+",
-      label: "States",
-      hi: "प्रदेश",
-      body: "States covered with active Pavitram India operations",
+      key: "States",
+      label: t({ en: "States", hi: "प्रदेश" }),
+      body: t({ en: "States covered with active Pavitram India operations", hi: "सक्रिय पवित्रम इंडिया परिचालन वाले राज्य" }),
     },
     {
       icon: Flag,
       num: 1,
       suffix: "",
-      label: "Nation",
-      hi: "देश",
-      body: "One united cooperative movement building a developed India",
+      key: "Nation",
+      label: t({ en: "Nation", hi: "देश" }),
+      body: t({ en: "One united cooperative movement building a developed India", hi: "एकजुट सहकारी आंदोलन जो विकसित भारत का निर्माण कर रहा है" }),
     },
   ];
 
@@ -1982,14 +1982,16 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
     <section className="relative isolate overflow-hidden bg-navy py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>OUR PRESENCE</GoldLabel>
+          <GoldLabel>{t({ en: "OUR PRESENCE", hi: "हमारी उपस्थिति" })}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-[48px]">
-            Our Reach & Impact
+            {t({ en: "Our Reach & Impact", hi: "हमारा विस्तार और प्रभाव" })}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा विस्तार</p>
+          <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Our Extension", hi: "हमारा विस्तार" })}</p>
           <p className="mx-auto mt-6 max-w-xl text-white/70">
-            From remote villages to major metropolitan cities, Pavitram India is actively organizing
-            individuals and businesses into a cohesive economic community.
+            {t({
+              en: "From remote villages to major metropolitan cities, Pavitram India is actively organizing individuals and businesses into a cohesive economic community.",
+              hi: "दूर-दराज के गाँवों से लेकर बड़े महानगरों तक, पवित्रम इंडिया सक्रिय रूप से व्यक्तियों और व्यवसायों को एक मजबूत आर्थिक समुदाय में संगठित कर रहा है।"
+            })}
           </p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
@@ -2003,11 +2005,11 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         >
           {cards.map((c) => (
             <motion.div
-              key={c.label}
+              key={c.key}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02, boxShadow: "0 0 25px rgba(201, 149, 42, 0.25)" }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(PRESENCE_MODALS[c.label])}
+              onClick={() => onOpenModal(PRESENCE_MODALS[c.key])}
               className="group relative cursor-pointer overflow-hidden rounded-[20px] border border-gold/30 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 flex flex-col justify-between text-left"
             >
               <div>
@@ -2024,7 +2026,7 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                 <p className="mt-3 text-[14.5px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                Click to explore <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -2039,30 +2041,43 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
 /* ─────────── Association With ─────────── */
 
 function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: Landmark,
-      title: "With Government",
-      hi: "सरकार के साथ",
-      body: "Aligning with government policies, schemes, and initiatives to bring their benefits directly to our community members across India.",
+      key: "With Government",
+      title: t({ en: "With Government", hi: "सरकार के साथ" }),
+      body: t({
+        en: "Aligning with government policies, schemes, and initiatives to bring their benefits directly to our community members across India.",
+        hi: "सरकारी नीतियों, योजनाओं और पहलों के साथ संरेखित होकर उनके लाभों को सीधे भारत भर में हमारे समुदाय के सदस्यों तक पहुँचाना।"
+      }),
     },
     {
       icon: Briefcase,
-      title: "With Govt Departments",
-      hi: "सरकारी विभागों के साथ",
-      body: "Partnering with government departments for effective on-ground implementation of welfare schemes and development programs.",
+      key: "With Govt Departments",
+      title: t({ en: "With Govt Departments", hi: "सरकारी विभागों के साथ" }),
+      body: t({
+        en: "Partnering with government departments for effective on-ground implementation of welfare schemes and development programs.",
+        hi: "कल्याणकारी योजनाओं और विकास कार्यक्रमों के प्रभावी जमीनी क्रियान्वयन के लिए सरकारी विभागों के साथ साझेदारी करना।"
+      }),
     },
     {
       icon: Users,
-      title: "With Beneficiaries",
-      hi: "लाभार्थियों के साथ",
-      body: "Directly connecting with and empowering the real beneficiaries — families, farmers, workers, and entrepreneurs — who need support.",
+      key: "With Beneficiaries",
+      title: t({ en: "With Beneficiaries", hi: "लाभार्थियों के साथ" }),
+      body: t({
+        en: "Directly connecting with and empowering the real beneficiaries — families, farmers, workers, and entrepreneurs — who need support.",
+        hi: "वास्तविक लाभार्थियों—परिवारों, किसानों, श्रमिकों और उद्यमियों—जिन्हें सहायता की आवश्यकता है, से सीधे जुड़ना और उन्हें सशक्त बनाना।"
+      }),
     },
     {
       icon: NetworkIcon,
-      title: "With Organizations",
-      hi: "संगठनों के साथ",
-      body: "Collaborating with NGOs, cooperatives, professional bodies, and community organizations to strengthen our nationwide network.",
+      key: "With Organizations",
+      title: t({ en: "With Organizations", hi: "संगठनों के साथ" }),
+      body: t({
+        en: "Collaborating with NGOs, cooperatives, professional bodies, and community organizations to strengthen our nationwide network.",
+        hi: "हमारे राष्ट्रव्यापी नेटवर्क को मजबूत करने के लिए गैर सरकारी संगठनों (NGOs), सहकारी समितियों, पेशेवर निकायों और सामुदायिक संगठनों के साथ सहयोग करना।"
+      }),
     },
   ];
 
@@ -2070,11 +2085,10 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>STRATEGIC PARTNERSHIPS</GoldLabel>
+          <GoldLabel>{t({ en: "STRATEGIC PARTNERSHIPS", hi: "रणनीतिक सहभागिता" })}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            Our Strategic Partners
+            {t({ en: "Our Strategic Partners", hi: "हमारे रणनीतिक भागीदार" })}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">रणनीतिक सहभागिता</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -2087,11 +2101,11 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
         >
           {cards.map((c) => (
             <motion.div
-              key={c.title}
+              key={c.key}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02, borderColor: "#C9952A" }}
               transition={{ duration: 0.3 }}
-              onClick={() => onOpenModal(ASSOCIATION_MODALS[c.title])}
+              onClick={() => onOpenModal(ASSOCIATION_MODALS[c.key])}
               className="group cursor-pointer flex flex-col justify-between rounded-[20px] border border-transparent bg-white p-7 card-shadow transition-all duration-300"
             >
               <div className="text-left">
@@ -2101,12 +2115,11 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
                 <h3 className="mt-6 font-display text-xl font-bold text-ink transition-colors group-hover:text-gold">
                   {c.title}
                 </h3>
-                <p className="mt-1 font-deva text-sm font-semibold text-gold">{c.hi}</p>
                 <p className="mt-3 text-sm leading-[1.7] text-mist">{c.body}</p>
               </div>
               <div>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                  Click to explore <ArrowRight className="h-3.5 w-3.5" />
+                  {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
             </motion.div>
@@ -2120,77 +2133,78 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
 /* ─────────── Services (Core Services) ─────────── */
 
 function Services() {
+  const { t } = useLanguage();
   const items = [
     {
       icon: ShoppingBag,
-      title: "Pavitram Mart",
-      text: "Multi-vendor B2B, B2C e-commerce platform",
+      title: t({ en: "Pavitram Mart", hi: "पवित्रम मार्ट" }),
+      text: t({ en: "Multi-vendor B2B, B2C e-commerce platform", hi: "मल्टी-वेन्डर B2B, B2C ई-कॉमर्स प्लेटफॉर्म" }),
       to: "/services/mart",
     },
     {
       icon: Building2,
-      title: "Pavitram Properties",
-      text: "Complete solution for property needs",
+      title: t({ en: "Pavitram Properties", hi: "पवित्रम प्रॉपर्टीज" }),
+      text: t({ en: "Complete solution for property needs", hi: "संपत्ति की सभी जरूरतों का संपूर्ण समाधान" }),
       to: "/services/properties",
     },
     {
       icon: HeartPulse,
-      title: "Pavitram Wellness",
-      text: "Healthy body, mind, and preventive care",
+      title: t({ en: "Pavitram Wellness", hi: "पवित्रम वेलनेस" }),
+      text: t({ en: "Healthy body, mind, and preventive care", hi: "स्वस्थ शरीर, मन और निवारक स्वास्थ्य देखभाल" }),
       to: "/services/wellness",
     },
     {
       icon: BookOpen,
-      title: "Pavitram Gyan",
-      text: "Awareness, skill building, and education",
+      title: t({ en: "Pavitram Gyan", hi: "पवित्रम ज्ञान" }),
+      text: t({ en: "Awareness, skill building, and education", hi: "जागरूकता, कौशल विकास और शिक्षा" }),
       to: "/services/gyan",
     },
     {
       icon: Landmark,
-      title: "Pavitram Finance",
-      text: "Banking, loans, and cooperative returns",
+      title: t({ en: "Pavitram Finance", hi: "पवित्रम फाइनेंस" }),
+      text: t({ en: "Banking, loans, and cooperative returns", hi: "बैंकिंग, ऋण और सहकारी लाभ" }),
       to: "/services/finance",
     },
     {
       icon: Plane,
-      title: "Pavitram Travels",
-      text: "Complete solution for tours and travels",
+      title: t({ en: "Pavitram Travels", hi: "पवित्रम ट्रेवल्स" }),
+      text: t({ en: "Complete solution for tours and travels", hi: "टूर और ट्रेवल्स का संपूर्ण समाधान" }),
       to: "/services/travels",
     },
     {
       icon: Heart,
-      title: "Pavitram Rishta",
-      text: "Trusted matrimonial matchmaking network",
+      title: t({ en: "Pavitram Rishta", hi: "पवित्रम रिश्ता" }),
+      text: t({ en: "Trusted matrimonial matchmaking network", hi: "विश्वसनीय वैवाहिक मिलान नेटवर्क" }),
       to: "/services/rishta",
     },
     {
       icon: Briefcase,
-      title: "Pavitram Rozgar",
-      text: "Dignified employment & job matching",
+      title: t({ en: "Pavitram Rozgar", hi: "पवित्रम रोजगार" }),
+      text: t({ en: "Dignified employment & job matching", hi: "सम्मानजनक रोजगार और नौकरी मिलान" }),
       to: "/services/rozgar",
     },
     {
       icon: Wrench,
-      title: "Pavitram Services",
-      text: "Verified household & maintenance fixes",
+      title: t({ en: "Pavitram Services", hi: "पवित्रम सर्विसेज" }),
+      text: t({ en: "Verified household & maintenance fixes", hi: "सत्यापित घरेलू और रखरखाव सेवाएं" }),
       to: "/services/services",
     },
     {
       icon: Radio,
-      title: "Pavitram Media",
-      text: "Electronic and social media, e-paper",
+      title: t({ en: "Pavitram Media", hi: "पवित्रम मीडिया" }),
+      text: t({ en: "Electronic and social media, e-paper", hi: "इलेक्ट्रॉनिक और सोशल मीडिया, ई-पेपर" }),
       to: "/services/media",
     },
     {
       icon: Truck,
-      title: "Pavitram Delivery",
-      text: "Logistics, anything, anywhere, anytime",
+      title: t({ en: "Pavitram Delivery", hi: "पवित्रम डिलीवरी" }),
+      text: t({ en: "Logistics, anything, anywhere, anytime", hi: "लॉजिस्टिक्स, कुछ भी, कहीं भी, कभी भी" }),
       to: "/services/delivery",
     },
     {
       icon: Cpu,
-      title: "Pavitram Technology",
-      text: "Technology, digital and software services",
+      title: t({ en: "Pavitram Technology", hi: "पवित्रम टेक्नोलॉजी" }),
+      text: t({ en: "Technology, digital and software services", hi: "प्रौद्योगिकी, डिजिटल और सॉफ्टवेयर सेवाएं" }),
       to: "/services/technology",
     },
   ];
@@ -2199,9 +2213,12 @@ function Services() {
     <section id="services" className="bg-haze py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          label="Our Ecosystem"
-          title="Core Services"
-          subtitle="A professional network of distinct services designed to handle every aspect of your personal and professional life."
+          label={t({ en: "Our Ecosystem", hi: "हमारा पारिस्थितिकी तंत्र" })}
+          title={t({ en: "Core Services", hi: "मुख्य सेवाएं" })}
+          subtitle={t({
+            en: "A professional network of distinct services designed to handle every aspect of your personal and professional life.",
+            hi: "आपके व्यक्तिगत और व्यावसायिक जीवन के हर पहलू को संभालने के लिए डिज़ाइन की गई विशिष्ट सेवाओं का एक पेशेवर नेटवर्क।"
+          })}
         />
         <motion.div
           variants={stagger}
@@ -2212,7 +2229,7 @@ function Services() {
         >
           {items.map((s) => (
             <motion.div
-              key={s.title}
+              key={s.to}
               variants={fadeUp}
               whileHover={{ y: -6 }}
               className="group relative flex flex-col justify-between rounded-[20px] border border-transparent bg-white p-6 card-shadow transition-all hover:border-gold hover:card-shadow-lg text-left"
@@ -2228,7 +2245,7 @@ function Services() {
                 to={s.to}
                 className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-gold transition group-hover:gap-2"
               >
-                Explore Portal <ArrowRight className="h-4 w-4" />
+                {t({ en: "Explore Portal", hi: "पोर्टल देखें" })} <ArrowRight className="h-4 w-4" />
               </Link>
             </motion.div>
           ))}
@@ -2238,7 +2255,7 @@ function Services() {
             to="/services"
             className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white transition hover:bg-gold hover:scale-[1.03]"
           >
-            Explore All Services <ArrowRight className="h-4 w-4" />
+            {t({ en: "Explore All Services", hi: "सभी सेवाएं देखें" })} <ArrowRight className="h-4 w-4" />
           </Link>
         </Reveal>
       </div>
@@ -2249,29 +2266,30 @@ function Services() {
 /* ─────────── Opportunities, Network, Testimonials, CTA ─────────── */
 
 function Opportunities() {
+  const { t } = useLanguage();
   const items = [
     {
       icon: User,
-      title: "As a Consumer",
-      hi: "उपभोक्ता के रूप में",
+      key: "As a Consumer",
+      title: t({ en: "As a Consumer", hi: "उपभोक्ता के रूप में" }),
       to: "/opportunities/consumer",
     },
     {
       icon: Store,
-      title: "As a Merchant",
-      hi: "व्यापारी के रूप में",
+      key: "As a Merchant",
+      title: t({ en: "As a Merchant", hi: "व्यापारी के रूप में" }),
       to: "/opportunities/merchant",
     },
     {
       icon: TrendingUp,
-      title: "As an Investor",
-      hi: "निवेश के रूप में",
+      key: "As an Investor",
+      title: t({ en: "As an Investor", hi: "निवेशक के रूप में" }),
       to: "/opportunities/investor",
     },
     {
       icon: BriefcaseBusiness,
-      title: "As a Career",
-      hi: "करियर के रूप में",
+      key: "As a Career",
+      title: t({ en: "As a Career", hi: "करियर के रूप में" }),
       to: "/opportunities/career",
     },
   ];
@@ -2279,9 +2297,12 @@ function Opportunities() {
     <section id="opportunities" className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          label="Opportunities"
-          title="Explore Opportunities"
-          subtitle="Join the Pavitram India community in a role that suits your goals."
+          label={t({ en: "Opportunities", hi: "अवसर" })}
+          title={t({ en: "Explore Opportunities", hi: "अवसरों की खोज करें" })}
+          subtitle={t({
+            en: "Join the Pavitram India community in a role that suits your goals.",
+            hi: "पवित्रम इंडिया समुदाय में अपनी रुचि और लक्ष्यों के अनुरूप भूमिका में शामिल हों।"
+          })}
         />
         <motion.div
           variants={stagger}
@@ -2291,7 +2312,7 @@ function Opportunities() {
           className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
           {items.map((it) => (
-            <motion.div key={it.title} variants={fadeUp} whileHover={{ y: -6 }} className="flex">
+            <motion.div key={it.key} variants={fadeUp} whileHover={{ y: -6 }} className="flex">
               <Link
                 to={it.to}
                 className="group flex flex-1 flex-col items-center justify-between rounded-[20px] border border-haze bg-white p-7 text-center card-shadow transition-all hover:border-gold hover:card-shadow-lg"
@@ -2301,10 +2322,9 @@ function Opportunities() {
                     <it.icon className="h-7 w-7" />
                   </div>
                   <h3 className="mt-6 font-display text-xl font-bold text-ink">{it.title}</h3>
-                  <p className="mt-1 font-deva text-sm font-semibold text-gold">{it.hi}</p>
                 </div>
                 <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-ink transition group-hover:text-gold">
-                  Register <ArrowRight className="h-4 w-4" />
+                  {t({ en: "Register", hi: "पंजीकरण करें" })} <ArrowRight className="h-4 w-4" />
                 </span>
               </Link>
             </motion.div>
@@ -2316,6 +2336,7 @@ function Opportunities() {
 }
 
 function NetworkRings() {
+  const { t } = useLanguage();
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[420px]">
       <div className="absolute inset-0 animate-spin-slower rounded-full border border-gold/30" />
@@ -2323,68 +2344,82 @@ function NetworkRings() {
       <div className="absolute inset-[28%] animate-spin-slow rounded-full border border-gold/50" />
 
       <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-haze px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-mist">
-        Country
+        {t({ en: "Country", hi: "देश / राष्ट्र" })}
       </span>
       <span className="absolute top-[14%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-mist shadow">
-        Society
+        {t({ en: "Society", hi: "समाज" })}
       </span>
       <span className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-haze px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-ink shadow">
-        Family
+        {t({ en: "Family", hi: "परिवार" })}
       </span>
     </div>
   );
 }
 
 function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
+  const { t, language } = useLanguage();
   const feats = [
     {
       icon: Factory,
-      title: "Manufacturer",
-      hi: "उत्पादक / निर्माता",
-      text: "Connecting local production units and raw material processors to build strong domestic supply chains.",
+      key: "Manufacturer",
+      title: t({ en: "Manufacturer", hi: "उत्पादक / निर्माता" }),
+      text: t({
+        en: "Connecting local production units and raw material processors to build strong domestic supply chains.",
+        hi: "मजबूत घरेलू आपूर्ति श्रृंखला बनाने के लिए स्थानीय उत्पादन इकाइयों और कच्चे माल के प्रसंस्करणकर्ताओं को जोड़ना।"
+      }),
     },
     {
       icon: Warehouse,
-      title: "Wholesaler",
-      hi: "थोक व्यापारी",
-      text: "Facilitating bulk inventory distribution and regional trade connectivity within the ecosystem.",
+      key: "Wholesaler",
+      title: t({ en: "Wholesaler", hi: "थोक व्यापारी" }),
+      text: t({
+        en: "Facilitating bulk inventory distribution and regional trade connectivity within the ecosystem.",
+        hi: "पारिस्थितिकी तंत्र के भीतर थोक सूची वितरण और क्षेत्रीय व्यापार संपर्क की सुविधा प्रदान करना।"
+      }),
     },
     {
       icon: Store,
-      title: "Retailer",
-      hi: "खुदरा विक्रेता",
-      text: "Powering local storefronts and retail markets to deliver products directly to community consumers.",
+      key: "Retailer",
+      title: t({ en: "Retailer", hi: "खुदरा विक्रेता" }),
+      text: t({
+        en: "Powering local storefronts and retail markets to deliver products directly to community consumers.",
+        hi: "सामुदायिक उपभोक्ताओं को सीधे उत्पाद वितरित करने के लिए स्थानीय दुकानों और खुदरा बाजारों को सशक्त बनाना।"
+      }),
     },
     {
       icon: Wrench,
-      title: "Service Provider",
-      hi: "सेवा प्रदाता",
-      text: "Deploying professional skills, digital services, and household maintenance directly to members.",
+      key: "Service Provider",
+      title: t({ en: "Service Provider", hi: "सेवा प्रदाता" }),
+      text: t({
+        en: "Deploying professional skills, digital services, and household maintenance directly to members.",
+        hi: "पेशेवर कौशल, डिजिटल सेवाएं और घरेलू रखरखाव सीधे सदस्यों तक पहुँचाना।"
+      }),
     },
   ];
 
   const stats = [
-    { icon: UsersRound, value: 10000, suffix: "+", label: "Community Members" },
-    { icon: Cpu, value: 12, suffix: "", label: "Service Sectors" },
-    { icon: BookOpen, value: 27, suffix: "", label: "Golden Rules" },
-    { icon: Globe, value: 15, suffix: "+", label: "States Covered" },
+    { icon: UsersRound, value: 10000, suffix: "+", label: t({ en: "Community Members", hi: "सामुदायिक सदस्य" }) },
+    { icon: Cpu, value: 12, suffix: "", label: t({ en: "Service Sectors", hi: "सेवा क्षेत्र" }) },
+    { icon: BookOpen, value: 27, suffix: "", label: t({ en: "Golden Rules", hi: "स्वर्ण नियम" }) },
+    { icon: Globe, value: 15, suffix: "+", label: t({ en: "States Covered", hi: "कवर किए गए राज्य" }) },
   ];
 
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <GoldLabel>Business Network</GoldLabel>
+          <GoldLabel>{t({ en: "Business Network", hi: "व्यापार नेटवर्क" })}</GoldLabel>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[52px]">
-            The Pavitram Business Network
+            {t({ en: "The Pavitram Business Network", hi: "पवित्रम बिजनेस नेटवर्क" })}
           </h2>
           <p className="mt-4 font-display text-xl italic text-gold">
-            Cooperative. Transparent. Nationwide.
+            {t({ en: "Cooperative. Transparent. Nationwide.", hi: "सहकारी। पारदर्शी। राष्ट्रव्यापी।" })}
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-mist">
-            Pavitram India is a professionally managed cooperative business network and a
-            self-reliant community where the needs of members are fulfilled by the members
-            themselves.
+            {t({
+              en: "Pavitram India is a professionally managed cooperative business network and a self-reliant community where the needs of members are fulfilled by the members themselves.",
+              hi: "पवित्रम इंडिया एक पेशेवर रूप से प्रबंधित सहकारी व्यवसाय नेटवर्क और एक आत्मनिर्भर समुदाय है जहाँ सदस्यों की आवश्यकताओं को स्वयं सदस्यों द्वारा पूरा किया जाता है।"
+            })}
           </p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
@@ -2398,10 +2433,10 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
         >
           {feats.map((f) => (
             <motion.div
-              key={f.title}
+              key={f.key}
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.02 }}
-              onClick={() => onOpenModal(NETWORK_MODALS[f.title])}
+              onClick={() => onOpenModal(NETWORK_MODALS[f.key])}
               className="group cursor-pointer flex flex-col justify-between rounded-[20px] border border-transparent bg-white p-7 card-shadow transition-all duration-300 hover:border-gold"
             >
               <div className="text-center flex flex-col items-center">
@@ -2409,12 +2444,11 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                   <f.icon className="h-6 w-6" />
                 </div>
                 <h4 className="mt-6 font-display text-xl font-bold text-ink">{f.title}</h4>
-                <p className="mt-1 font-deva text-base font-semibold text-gold">{f.hi}</p>
                 <p className="mt-3 text-sm leading-[1.7] text-mist">{f.text}</p>
               </div>
               <div className="mt-5 text-center">
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                  Click to explore <ArrowRight className="h-3.5 w-3.5" />
+                  {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
             </motion.div>
@@ -2430,7 +2464,7 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
               to="/about/network"
               className="inline-flex items-center gap-2 rounded-full border-2 border-ink px-7 py-3.5 text-sm font-bold text-ink transition hover:bg-ink hover:text-white"
             >
-              Learn About Our Network <ArrowRight className="h-4 w-4" />
+              {t({ en: "Learn About Our Network", hi: "हमारे नेटवर्क के बारे में जानें" })} <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
         </div>
@@ -2459,40 +2493,56 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
 }
 
 function Testimonials() {
+  const { t } = useLanguage();
   const items = [
     {
-      quote:
-        "Pavitram India helped me understand my constitutional rights and connect with others who share the same values of equality and dignity.",
-      name: "Suresh Kumar",
+      key: "suresh",
+      quote: t({
+        en: "Pavitram India helped me understand my constitutional rights and connect with others who share the same values of equality and dignity.",
+        hi: "पवित्रम इंडिया ने मुझे मेरे संवैधानिक अधिकारों को समझने और उन लोगों से जुड़ने में मदद की जो समानता और गरिमा के समान मूल्यों को साझा करते हैं।"
+      }),
+      name: t({ en: "Suresh Kumar", hi: "सुरेश कुमार" }),
       initial: "S",
-      role: "Government Employee · Bhopal",
+      role: t({ en: "Government Employee · Bhopal", hi: "सरकारी कर्मचारी · भोपाल" }),
     },
     {
-      quote:
-        "As a small business owner, I found a community that supports ethical business practices and gives me access to genuine customers.",
-      name: "Meena Devi",
+      key: "meena",
+      quote: t({
+        en: "As a small business owner, I found a community that supports ethical business practices and gives me access to genuine customers.",
+        hi: "एक छोटे व्यवसाय के मालिक के रूप में, मुझे एक ऐसा समुदाय मिला जो नैतिक व्यावसायिक प्रथाओं का समर्थन करता है और मुझे वास्तविक ग्राहकों तक पहुंच प्रदान करता है।"
+      }),
+      name: t({ en: "Meena Devi", hi: "मीना देवी" }),
       initial: "M",
-      role: "Business Associate · Indore",
+      role: t({ en: "Business Associate · Indore", hi: "व्यावसायिक सहयोगी · इंदौर" }),
     },
     {
-      quote:
-        "The health guidance and cooperative services have genuinely improved our family's quality of life. This is real community support.",
-      name: "Ramesh Patel",
+      key: "ramesh",
+      quote: t({
+        en: "The health guidance and cooperative services have genuinely improved our family's quality of life. This is real community support.",
+        hi: "स्वास्थ्य मार्गदर्शन और सहकारी सेवाओं ने वास्तव में हमारे परिवार के जीवन की गुणवत्ता में सुधार किया है। यह वास्तविक सामुदायिक समर्थन है।"
+      }),
+      name: t({ en: "Ramesh Patel", hi: "रमेश पटेल" }),
       initial: "R",
-      role: "Community Member · Jabalpur",
+      role: t({ en: "Community Member · Jabalpur", hi: "सामुदायिक सदस्य · जबलपुर" }),
     },
     {
-      quote:
-        "Through Pavitram Gyan and Rozgar, our youth are gaining valuable skills and dignified employment right within our region.",
-      name: "Sunita Sharma",
+      key: "sunita",
+      quote: t({
+        en: "Through Pavitram Gyan and Rozgar, our youth are gaining valuable skills and dignified employment right within our region.",
+        hi: "पवित्रम ज्ञान और रोजगार के माध्यम से, हमारे युवाओं को हमारे क्षेत्र के भीतर ही मूल्यवान कौशल और सम्मानजनक रोजगार मिल रहा है।"
+      }),
+      name: t({ en: "Sunita Sharma", hi: "सुनीता शर्मा" }),
       initial: "S",
-      role: "Education Coordinator · Gwalior",
+      role: t({ en: "Education Coordinator · Gwalior", hi: "शिक्षा समन्वयक · ग्वालियर" }),
     },
   ];
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeader label="Community Voices" title="What Our Members Say" />
+        <SectionHeader
+          label={t({ en: "Community Voices", hi: "सामुदायिक स्वर" })}
+          title={t({ en: "What Our Members Say", hi: "हमारे सदस्य क्या कहते हैं" })}
+        />
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -2502,7 +2552,7 @@ function Testimonials() {
         >
           {items.map((t) => (
             <motion.div
-              key={t.name}
+              key={t.key}
               variants={fadeUp}
               whileHover={{ y: -6 }}
               className="group relative flex flex-col justify-between rounded-[20px] border-l-4 border-transparent bg-haze p-8 transition hover:border-gold hover:card-shadow-lg text-left"

@@ -609,6 +609,7 @@ const MOTTO_MODALS: Record<string, ModalData> = {
 };
 
 export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => void }) {
+  const { t, language } = useLanguage();
   const cards = [
     {
       icon: UsersRound,
@@ -637,12 +638,11 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
-            OUR MOTTO
+            {t({ en: "OUR MOTTO", hi: "हमारा ध्येय" })}
           </div>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
-            Our Core Mantras
+            {t({ en: "Our Core Mantras", hi: "हमारे मूल मंत्र" })}
           </h2>
-          <p className="mt-3 font-deva text-lg font-semibold text-gold">हमारा मंत्र</p>
           <div className="mx-auto mt-6 h-0.5 w-20 bg-gold" />
         </Reveal>
 
@@ -672,15 +672,12 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
                 </div>
                 <div className="mt-6 text-left">
                   <h3 className="font-display text-2xl font-bold text-ink leading-snug transition-colors group-hover:text-gold">
-                    {c.en}
+                    {language === "en" ? c.en : c.hi}
                   </h3>
-                  <p className="mt-1 font-deva text-base font-semibold text-gold leading-relaxed">
-                    {c.hi}
-                  </p>
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                Click to explore <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -688,21 +685,23 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
 
         <Reveal delay={0.2} className="mt-16 text-center">
           <p className="mx-auto max-w-2xl text-mist">
-            Join thousands of network partners working together for a self-reliant, prosperous
-            India. Your contribution matters.
+            {t({
+              en: "Join thousands of network partners working together for a self-reliant, prosperous India. Your contribution matters.",
+              hi: "एक आत्मनिर्भर, समृद्ध भारत के लिए मिलकर काम करने वाले हजारों नेटवर्क भागीदारों में शामिल हों। आपका योगदान महत्वपूर्ण है।"
+            })}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
             <Link
               to="/join"
               className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white transition hover:bg-gold hover:text-navy hover:scale-[1.03]"
             >
-              Join Pavitram India <ArrowRight className="h-4 w-4" />
+              {t({ en: "Join Pavitram India", hi: "पवित्रम इंडिया से जुड़ें" })} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy transition hover:text-gold"
             >
-              Contact Us <ArrowRight className="h-4 w-4" />
+              {t({ en: "Contact Us", hi: "हमसे संपर्क करें" })} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </Reveal>

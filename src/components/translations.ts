@@ -38,7 +38,7 @@ export const translations = {
   pillars: {
     tag: { en: "OUR VISION", hi: "हमारा दृष्टिकोण" },
     title: { en: "The Four Pillars of Pavitram", hi: "चार मुख्य स्तंभ" },
-    subtitle: { en: "दृष्टिकोण और मूल्य", hi: "दृष्टिकोण और मूल्य" },
+    subtitle: { en: "Vision & Values", hi: "दृष्टिकोण और मूल्य" },
     desc: {
       en: "We believe that true national growth begins at home. By organizing our intellectual capital, empowering families financially, and building cooperative local networks, we lay the foundation for a truly developed India.",
       hi: "हमारा मानना है कि वास्तविक राष्ट्रीय विकास घर से शुरू होता है। अपनी बौद्धिक क्षमता को संगठित करके, परिवारों को आर्थिक रूप से सशक्त बनाकर और स्थानीय सहकारी नेटवर्क का निर्माण करके, हम एक विकसित भारत की नींव रखते हैं।"
@@ -63,7 +63,7 @@ export const translations = {
   mission: {
     tag: { en: "OUR MISSION", hi: "हमारा मिशन" },
     title: { en: "Reducing Expenses, Elevating Family Incomes", hi: "खर्चों में कमी, पारिवारिक आय में वृद्धि" },
-    subtitle: { en: "मिशन और लक्ष्य", hi: "मिशन और लक्ष्य" },
+    subtitle: { en: "Mission & Goals", hi: "मिशन और लक्ष्य" },
     desc: {
       en: "Our primary objective is practical and measurable: to lower the daily operational and living costs of our members while opening new avenues for micro-income, direct trade, and financial security.",
       hi: "हमारा मुख्य उद्देश्य व्यावहारिक और मापने योग्य है: हमारे सदस्यों के दैनिक परिचालन और जीवन स्तर की लागत को कम करना, साथ ही सूक्ष्म-आय, प्रत्यक्ष व्यापार और वित्तीय सुरक्षा के नए मार्ग खोलना।"
@@ -88,7 +88,7 @@ export const translations = {
   philosophy: {
     tag: { en: "OUR PHILOSOPHY", hi: "हमारा दर्शन" },
     title: { en: "Sabka Saath, Sabka Vikas, Sabka Vishwas, Sabka Prayaas", hi: "सबका साथ, सबका विकास, सबका विश्वास, सबका प्रयास" },
-    subtitle: { en: "मूल दर्शन", hi: "मूल दर्शन" },
+    subtitle: { en: "Core Philosophy", hi: "मूल दर्शन" },
     p1: {
       en: "Pavitram India operates on the foundational cooperative belief that individual growth is multiplier-linked to community strength. When independent families and local merchants combine their consumption and production power, they eliminate the middleman fees that keep them dependent.",
       hi: "पवित्रम इंडिया इस बुनियादी सहकारी विश्वास पर काम करता है कि व्यक्तिगत विकास सीधे तौर पर सामुदायिक ताकत से जुड़ा है। जब स्वतंत्र परिवार और स्थानीय व्यापारी अपनी उपभोग और उत्पादन शक्ति को मिलाते हैं, तो वे उन बिचौलियों के शुल्कों को समाप्त कर देते हैं जो उन्हें दूसरों पर निर्भर बनाए रखते हैं।"
@@ -101,7 +101,7 @@ export const translations = {
   coreValues: {
     tag: { en: "CORE VALUES", hi: "मुख्य मूल्य" },
     title: { en: "Core Values", hi: "मुख्य मूल्य" },
-    subtitle: { en: "मुख्य मूल्य", hi: "मुख्य मूल्य" },
+    subtitle: { en: "Core Values", hi: "मुख्य मूल्य" },
     equality: {
       title: { en: "Equality", hi: "समानता" },
       desc: { en: "We believe in equal rights, equal status, and equal opportunities for every member of our community, breaking all traditional barriers.", hi: "हम अपने समुदाय के प्रत्येक सदस्य के लिए समान अधिकार, समान स्थिति और समान अवसरों में विश्वास करते हैं, सभी पारंपरिक बाधाओं को तोड़ते हैं।" }
@@ -122,7 +122,7 @@ export const translations = {
   ethics: {
     tag: { en: "OUR ETHICS", hi: "हमारी नैतिकता" },
     title: { en: "Our Ethics", hi: "हमारी नैतिकता" },
-    subtitle: { en: "हमारी नैतिकता", hi: "हमारी नैतिकता" },
+    subtitle: { en: "Our Ethics", hi: "हमारी नैतिकता" },
     rights: {
       title: { en: "Rights", hi: "अधिकार" },
       desc: { en: "We protect and advocate for the rights of all farmers, workers, women, and service providers, ensuring they receive their fair due.", hi: "हम सभी किसानों, श्रमिकों, महिलाओं और सेवा प्रदाताओं के अधिकारों की रक्षा और वकालत करते हैं, यह सुनिश्चित करते हुए कि उन्हें उनका उचित लाभ मिले।" }
