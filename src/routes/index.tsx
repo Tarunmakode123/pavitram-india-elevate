@@ -1008,23 +1008,32 @@ const PRESENCE_MODALS: Record<string, ModalData> = {
     hindi: "गांव",
     title: "Village Presence",
     philosophy: "Bharat lives in its villages — so does Pavitram India.",
+    philosophyHi: "भारत की आत्मा गांवों में बसती है — और पवित्रम इंडिया का संकल्प गांवों से ही शुरू होता है।",
     tag: "Our Presence",
     highlights: [
       {
         point: "5,000+ Villages Reached",
         desc: "Active cooperative members in rural communities across multiple states",
+        pointHi: "5,000+ गांवों तक पहुंच",
+        descHi: "अनेक राज्यों के ग्रामीण समुदायों में सक्रिय सहकारी सदस्यों और परिवारों का सक्रिय नेटवर्क।"
       },
       {
         point: "Agricultural Support",
         desc: "Connecting farmers to fair markets through Pavitram Mart directly",
+        pointHi: "कृषि और बाजार सहयोग",
+        descHi: "किसानों को पवित्रम मार्ट के जरिए सीधे बाजार से जोड़कर बिचौलियों से मुक्त करना और उचित मूल्य दिलाना।"
       },
       {
         point: "Rural Employment",
         desc: "Pavitram Rozgar brings dignified work opportunities to village doorsteps",
+        pointHi: "ग्रामीण रोजगार सृजन",
+        descHi: "पवित्रम रोजगार के माध्यम से ग्रामीण क्षेत्रों में घर-द्वार पर सम्मानजनक रोजगार के अवसर उपलब्ध कराना।"
       },
       {
         point: "Essential Services",
         desc: "Health, education, and daily needs now accessible in rural India",
+        pointHi: "बुनियादी सेवाएं",
+        descHi: "स्वास्थ्य, शिक्षा और दैनिक आवश्यकताओं की गुणवत्तापूर्ण सेवाएं ग्रामीण भारत के हर घर तक पहुंचाना।"
       },
     ],
   },
@@ -1033,23 +1042,32 @@ const PRESENCE_MODALS: Record<string, ModalData> = {
     hindi: "शहर",
     title: "City Presence",
     philosophy: "Urban India powers the engine of our cooperative network.",
+    philosophyHi: "शहरी भारत हमारे सहकारी नेटवर्क की प्रगति और आधुनिक तकनीक का मुख्य इंजन है।",
     tag: "Our Presence",
     highlights: [
       {
         point: "200+ Cities Active",
         desc: "Business associates and cooperative networks thriving in urban centers",
+        pointHi: "200+ शहरों में सक्रिय",
+        descHi: "शहरी केंद्रों में व्यावसायिक सहयोगियों और सहकारी उपभोक्ताओं का तेजी से बढ़ता नेटवर्क।"
       },
       {
         point: "B2B & B2C Commerce",
         desc: "Pavitram Mart connecting urban businesses with community consumers",
+        pointHi: "B2B और B2C वाणिज्य",
+        descHi: "पवित्रम मार्ट के माध्यम से शहरी व्यवसायों और ग्राहकों को सीधे उत्पादक समूहों से जोड़ना।"
       },
       {
         point: "Professional Network",
         desc: "Skilled urban professionals driving Pavitram Technology and Finance",
+        pointHi: "पेशेवर नेटवर्क",
+        descHi: "कुशल शहरी पेशेवरों द्वारा पवित्रम की तकनीक, सॉफ्टवेयर और वित्तीय प्रणालियों का संचालन व मार्गदर्शन।"
       },
       {
         point: "Service Hubs",
         desc: "City centers serve as operational hubs for surrounding rural areas",
+        pointHi: "सेवा हब",
+        descHi: "शहरी केंद्र अपने आसपास के ग्रामीण और अर्ध-शहरी क्षेत्रों के लिए प्रमुख परिचालन और आपूर्ति हब के रूप में कार्य करते हैं।"
       },
     ],
   },
@@ -1058,23 +1076,32 @@ const PRESENCE_MODALS: Record<string, ModalData> = {
     hindi: "प्रदेश",
     title: "State Presence",
     philosophy: "15 states, one vision — a self-reliant India for all.",
+    philosophyHi: "15 राज्य, एक साझा दृष्टिकोण — सभी के लिए एक आत्मनिर्भर और समृद्ध भारत।",
     tag: "Our Presence",
     highlights: [
       {
         point: "15+ States Covered",
         desc: "Active operations spanning North, South, East, and West India",
+        pointHi: "15+ राज्यों में विस्तार",
+        descHi: "भारत के उत्तरी, दक्षिणी, पूर्वी और पश्चिमी क्षेत्रों में सक्रिय एवं अनुपालन आधारित संचालन।"
       },
       {
         point: "Regional Leadership",
         desc: "State-level coordinators managing the cooperative network locally",
+        pointHi: "क्षेत्रीय नेतृत्व",
+        descHi: "राज्य-स्तरीय संयोजकों द्वारा स्थानीय स्तर पर सहकारी नेटवर्क और गतिविधियों का कुशल प्रबंधन।"
       },
       {
         point: "Government Tie-ups",
         desc: "Working with state governments on scheme implementation and welfare",
+        pointHi: "सरकारी समन्वय",
+        descHi: "कल्याणकारी योजनाओं और नीतियों के क्रियान्वयन के लिए राज्य सरकारों और स्थानीय प्रशासनों के साथ मिलकर काम करना।"
       },
       {
         point: "Expanding Rapidly",
         desc: "New states being added as the community grows month by month",
+        pointHi: "तीव्र प्रगति",
+        descHi: "जैसे-जैसे हमारा समुदाय बढ़ रहा है, हर महीने नए राज्यों और क्षेत्रों को नेटवर्क में शामिल किया जा रहा है।"
       },
     ],
   },
@@ -1083,23 +1110,32 @@ const PRESENCE_MODALS: Record<string, ModalData> = {
     hindi: "देश",
     title: "National Vision",
     philosophy: "One nation, one cooperative movement, unlimited possibilities.",
+    philosophyHi: "एक राष्ट्र, एक सहकारी आंदोलन, और विकसित भारत के निर्माण की असीम संभावनाएं।",
     tag: "Our Presence",
     highlights: [
       {
         point: "Pan-India Network",
         desc: "A single unified platform connecting members from Kashmir to Kanyakumari",
+        pointHi: "अखिल भारतीय नेटवर्क",
+        descHi: "कश्मीर से कन्याकुमारी तक देश के कोने-कोने से सदस्यों को जोड़ने वाला एक एकीकृत साझा डिजिटल मंच।"
       },
       {
         point: "Viksit Bharat 2047",
-        desc: "Contributing to India's national goal of becoming a developed nation",
+        desc: "Contributing to India's goal of becoming a developed nation",
+        pointHi: "विकसित भारत 2047",
+        descHi: "वर्ष 2047 तक भारत को एक पूर्ण विकसित और आर्थिक रूप से आत्मनिर्भर राष्ट्र बनाने के संकल्प में सक्रिय भागीदारी।"
       },
       {
         point: "National Cooperative Movement",
         desc: "Reviving and modernizing India's cooperative tradition for the 21st century",
+        pointHi: "राष्ट्रीय सहकारी आंदोलन",
+        descHi: "21वीं सदी के लिए भारत की समृद्ध सहकारी परंपरा को आधुनिक तकनीक के साथ पुनर्जीवित करना।"
       },
       {
         point: "10,000+ Strong & Growing",
         desc: "A community that doubles in strength with every passing quarter",
+        pointHi: "लगातार बढ़ती ताकत",
+        descHi: "10,000+ से अधिक सदस्यों का एक ऐसा अटूट परिवार जो हर तिमाही में अपनी शक्ति और प्रभाव को दोगुना कर रहा है।"
       },
     ],
   },
