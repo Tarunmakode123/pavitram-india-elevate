@@ -1722,7 +1722,7 @@ function Pillars({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                 <p className="mt-3 text-[15px] leading-[1.7] text-mist">{c.text}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1822,7 +1822,7 @@ function Mission({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                 <p className="mt-3 text-[15px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -1922,7 +1922,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -2007,7 +2007,7 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -2092,7 +2092,7 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -2189,7 +2189,7 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -2371,7 +2371,7 @@ function Presence({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
                 <p className="mt-3 text-[14.5px] leading-[1.7] text-white/70">{c.body}</p>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
@@ -2463,7 +2463,7 @@ function AssociationWith({ onOpenModal }: { onOpenModal: (data: ModalData) => vo
               </div>
               <div>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                  {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                  {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
             </motion.div>
@@ -2777,7 +2777,7 @@ function Network({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
               </div>
               <div className="mt-5 text-center">
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                  {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                  {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
             </motion.div>

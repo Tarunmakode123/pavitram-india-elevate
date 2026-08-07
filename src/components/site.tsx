@@ -724,7 +724,7 @@ export function FinalCTA({ onOpenModal }: { onOpenModal?: (data: ModalData) => v
                 </div>
               </div>
               <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-gold transition group-hover:gap-2">
-                {t({ en: "Click to explore", hi: "अन्वेषण करने के लिए क्लिक करें" })} <ArrowRight className="h-3.5 w-3.5" />
+                {t({ en: "Click to explore", hi: "अधिक जानें" })} <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </motion.div>
           ))}
