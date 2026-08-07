@@ -1887,11 +1887,7 @@ function Philosophy({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {language === "en" ? t(translations.philosophy.title) : "हमारे सिद्धांत"}
           </h2>
-          {language === "en" && (
-            <p className="mt-3 font-deva text-lg font-semibold text-gold">
-              {t(translations.philosophy.subtitle)}
-            </p>
-          )}
+
         </Reveal>
 
         <motion.div
@@ -1979,9 +1975,7 @@ function CoreValues({ onOpenModal }: { onOpenModal: (data: ModalData) => void })
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {language === "en" ? t(translations.coreValues.title) : "हमारे आदर्श"}
           </h2>
-          {language === "en" && (
-            <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.coreValues.subtitle)}</p>
-          )}
+
         </Reveal>
 
         <motion.div
@@ -2066,9 +2060,7 @@ function OurEthics({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) 
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {language === "en" ? t(translations.ethics.title) : "हमारे कर्तव्य"}
           </h2>
-          {language === "en" && (
-            <p className="mt-3 font-deva text-lg font-semibold text-gold">{t(translations.ethics.subtitle)}</p>
-          )}
+
         </Reveal>
 
         <motion.div
@@ -2165,9 +2157,7 @@ function OurFocus({ onOpenModal }: { onOpenModal: (data: ModalData) => void }) {
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-ink md:text-[48px]">
             {language === "en" ? t({ en: "Our Primary Focus", hi: "हमारा मुख्य ध्यान क्षेत्र" }) : "हमारी प्राथमिकताएं"}
           </h2>
-          {language === "en" && (
-            <p className="mt-3 font-deva text-lg font-semibold text-gold">{t({ en: "Garib, Yuva, Mahila, Kisan", hi: "गरीब, युवा, महिला, किसान" })}</p>
-          )}
+
         </Reveal>
 
         <motion.div
